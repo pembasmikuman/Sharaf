@@ -15,7 +15,13 @@
     font-style: normal;
 }
 
+body {
+    overflow: scroll;
+    margin: 0;
+}
+
 .promo { 
+    margin-top: 0px;
     height: 94px; 
     position: relative;
     background: #BD8A41;
@@ -164,11 +170,30 @@
     height: 663px;
 }
 
-.new-arrival-sect {
+.new-arrival {
     margin-top: 60px;
+    height: 800px;
 }
 
 .new-arrival-text {
+    font-family: 'Inter', serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.line{
+    position: absolute;
+    left: 340px;
+    width: 1240px;
+    border: 1px  rgba(0, 0, 0, 0.10) solid;
+}
+
+.top-selling {
+    height: 800px;
+}
+
+.top-selling-text {
     font-family: 'Inter', serif;
     text-align: center;
     font-weight: 700;
