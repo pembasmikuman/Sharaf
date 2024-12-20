@@ -200,6 +200,33 @@ body {
     font-size: 48px;
 }
 
+.browse-box {
+    position: absolute;
+    top: 2473px;
+    left: 320px;
+    padding: 30px;
+    width: 1239px;
+    height: 866px;
+    background-color: #f0f0f0;
+    border-radius: 40px;
+    filter: drop-shadow( 13px gray);
+}
+
+.browse-title {
+    margin-top: 20px;
+    font-family: 'Inter', serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.review-title {
+    font-family: 'Inter', serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
 
 
 
