@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Satoshi Variable';
+    src: url('fonts\Satoshi-Variable.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Crelist';
+    src: url('fonts\Crelist.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Inter';
+    src: url('fonts\Inter-Variable.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.promo { 
+    height: 94px; 
+    position: relative;
+    background: #BD8A41;
+}
+
+.promo-text {
+    left: 781px; 
+    top: 66px; 
+    position: absolute;
+}
+
+.first-part {
+    color: white; 
+    font-size: 14px; 
+    font-family: 'Satoshi Variable'; 
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.second-part {
+    color: white; 
+    font-size: 14px; 
+    font-family: 'Satoshi Variable'; 
+    font-weight: 500; 
+    text-decoration: underline; 
+    word-wrap: break-word
+}
+
+.close-promo {
+    left: 1600px; 
+    top: 66px; 
+    position: absolute;
+    color: white;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    padding-top: 20px;
+    padding-left: 200px;
+    line-height: 23px;
+    font-family: 'Crelist';
+    font-size: 32px;
+    color: #bd8a41;
+}
+
+.bar-container {
+    display: flex;
+    align-content: space-around;
+    padding-left: 40px;
+    padding-left: 40px;
+    font-family: "Satoshi Variable";
+}
+
+.shop-dropdown{
+    color:#BD8A41;
+    padding: 20px;
+    padding-right: 30px;
+    font-family: "Satoshi Variable";
+    font-size: medium;
+    border: transparent;
+}
+
+.on-sale {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #BD8A41;
+}
+
+.new-arrivals {
+    padding: 20px;
+    padding-right: 40px;
+    color:#BD8A41;
+}
+
+.brands {
+    padding: 20px;
+    padding-right: 40px;
+    color: #BD8A41
+}
+
+.search-container {
+    position: absolute;
+    left: 860px;
+    height: 48px;
+    width: 730px;
+    margin-left: 20px;
+    margin-top: 8px;
+    background: #F0F0F0; 
+    border-radius: 62px; 
+    overflow: hidden; 
+    gap: 12px; 
+    display: inline-flex
+}
+
+.search-icon-box {
+    width: 24px; 
+    height: 24px; 
+    position: relative;
+    border-color: transparent;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.search-icon {
+    top: 15px;
+    font-size: 15px;
+    color: #757575;
+    position: absolute;
+}
+
+.search-box {
+    font-family: 'Satoshi Variable';
+    background-color: #F0F0F0;
+    border-color: transparent;
+    font-size: 16px;  
+}
+
+.cart-icon {
+    left: 1620px;
+    position: absolute;
+    margin-top: 18px;
+    padding-left: 30px;
+    font-size: 30px;
+    color:#BD8A41;
+}
+
+.profile-icon {
+    left: 1700px;
+    position: absolute;
+    margin-top: 18px;
+    padding-left: 10px;
+    font-size: 30px;
+    color: #BD8A41;
+}
+
+.intro {
+    background-color: #BD8A41;
+    height: 663px;
+}
+
+.new-arrival-sect {
+    margin-top: 60px;
+}
+
+.new-arrival-text {
+    font-family: 'Inter', serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+
+
+
+
