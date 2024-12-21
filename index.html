@@ -26,57 +26,24 @@
     </div>
 
     <!--navigation bar-->
-    <div class="nav-bar">
-        <div class="left-section" style="display: flex; gap: 20px;">
-            <div class="menu-dropdown">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
-            <div class="brand">SHARAF</div>
-            <div class="bar-container">
-                <div class="shop">
-                    <select class="shop-dropdown" name="option" id="shop-option">
-                        <option value="">Shop</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
-                <div class="on-sale">On Sale</div>
-                <div class="new-arrivals">New Arrivals</div>
-                <div class="brands">Brands</div>
-            </div>
+    <div class="navbar-container">
+        <div class="navbar-wrapper">
+            <ion-icon class="icon" name="menu-outline"></ion-icon>
+            <div class="brand-name">SHARAF</div>
         </div>
-
-        <div class="right-section" style="display: flex;">
-            <!--search box-->
-            <div class="search-container">
-                <div class="search-icon">
-                        <ion-icon name="search-outline"></ion-icon>
-                </div>
-                <input class="search-box" type="text" id="search-input" placeholder="Search for products...">
-            </div>
-
-            <div class="cart-icon">
-                    <ion-icon name="cart-outline"></ion-icon>
-            </div>
-
-            <div class="profile-icon">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-            </div>  
+        <div class="social-icons">
+            <ion-icon class="icon" name="search-outline"></ion-icon>
+            <ion-icon class="icon" name="cart-outline"></ion-icon>
+            <ion-icon class="icon" name="person-circle-outline"></ion-icon>
         </div>
-    </div>
+      </div>
 
     <!--Introduction-->
     <div class="intro-box">
+        <h1 class="intro-title">FIND FRAGRANCE THAT YOU LIKE</h1>
         
-        <div class="geometry">
-            <img src="resources\images\geometry.svg" alt="geometry">
-        </div>
-
-        <h1 class="intro-title">
-                FIND FRAGRANCE THAT YOU LIKE
-        </h1>
-        
-        <p class="intro-description">Browse through our diverse range of fragrances originated 
+        <p class="intro-description">
+            Browse through our diverse range of fragrances originated 
                 from all around the world. All at affordable price.
         </p>
 
@@ -87,65 +54,72 @@
         </div>
 
         <div class="stats-container">
-            <div class="stat-box">
-                <span class="stat-number">40+</span>
-                <span class="stat-label">International Brands</span>
-            </div>
-            <div class="divider"></div>
-            <div class="stat-box">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">High Quality Products</span>
+            <div class="first-stat">
+                <div class="stat-box">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">International Brands</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-box">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">High Quality Products</span>
+                </div>
             </div>
             <div class="stat-box">
                 <span class="stat-number">30,000+</span>
                 <span class="stat-label">Happy Customers
-        </div>
+            </div>
 
-        <div class="product-image">
-            <img src="resources\images\perfume-bottle.jpg" alt="perfume bottle">
+            <div class="product-image">
+                <img src="resources\images\perfume-bottle.jpg" alt="perfume bottle">
+            </div>
         </div>
-    </div>
 
     <!--New Arrivals section-->
     <div class="new-arrival">
         <div class="new-arrival-text">NEW ARRIVALS</div>
         <div class="product-card">
-            <div class="product-image"></div>
-            <h2 class="product-title">Khadlaj Island</h2>
-            <div class="rating-container">
-                <div class="stars-wrapper">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half"></ion-icon>
+            <div class="first-product">
+                <div class="product-image"></div>
+                <h2 class="product-title">Khadlaj Island</h2>
+                <div class="rating-container">
+                    <div class="stars-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    </div>
+                    <div class="rating-text">4.5/<span class="black-text">5</span></div>
                 </div>
-                <div class="rating-text">4.5/<span class="black-text">5</span></div>
+                <div class="price">RM 120
+                    <span class="original-price" style="text-decoration: line-through;"></span>
+                </div>
+                <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
             </div>
-            <div class="price">RM 120
-                <span class="original-price" style="text-decoration: line-through;"></span>
-            </div>
-            <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
 
-            <div class="product-image"></div>
-            <h2 class="product-title">Rirana Salty Citrus</h2>
-            <div class="rating-container">
-                <div class="stars-wrapper">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-half"></ion-icon>
+            <div class="second-product">
+                <div class="product-image"></div>
+                <h2 class="product-title">Rirana Salty Citrus</h2>
+                <div class="rating-container">
+                    <div class="stars-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half"></ion-icon>
+                    </div>
+                    <div class="rating-text">4.5/<span class="black-text">5</span></div>
                 </div>
-                <div class="rating-text">4.5/<span class="black-text">5</span></div>
+                <div class="price">
+                    RM 80
+                    <span class="original-price" style="text-decoration: line-through;">
+                        RM 100
+                    </span>
+                    <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
+                </div>
+                
             </div>
-            <div class="price">
-                RM 80
-                <span class="original-price" style="text-decoration: line-through;">
-                    RM 100
-                </span>
-            </div>
-            <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
         </div>
         <button class="view-all-button" id="viewAll-button">View All</button>
         <div class="horizontal-divider"></div>
@@ -155,40 +129,46 @@
     <div class="top-selling">
         <div class="top-selling-text">top selling</div>
         <div class="product-card">
-            <div class="product-image"></div>
-            <h2 class="product-title">Club De Nuit Intense</h2>
-            <div class="rating-container">
-                <div class="stars-wrapper">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
+            <div class="first-product">
+                <div class="product-image"></div>
+                <h2 class="product-title">Club De Nuit Intense</h2>
+                <div class="rating-container">
+                    <div class="stars-wrapper">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="rating-text">5/<span class="black-text">5</span></div>
                 </div>
-                <div class="rating-text">5/<span class="black-text">5</span></div>
+                <div class="price">RM 180
+                    <span class="original-price" style="text-decoration: line-through;">RM 200</span>
+                    <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
+                </div>
+                
             </div>
-            <div class="price">RM 180
-                <span class="original-price" style="text-decoration: line-through;">RM 200</span>
-            </div>
-            <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
 
-            <div class="product-image"></div>
-            <h2 class="product-title">Odyssey Mega</h2>
-            <div class="rating-container">
-                <div class="stars-wrapper">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
+           <div class="second-product">
+                <div class="product-image"></div>
+                <h2 class="product-title">Odyssey Mega</h2>
+                <div class="rating-container">
+                    <div class="stars-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="rating-text">4.0/<span class="black-text">5</span></div>
                 </div>
-                <div class="rating-text">4.0/<span class="black-text">5</span></div>
-            </div>
-            <div class="price">
-                RM 130
-                <span class="original-price" style="text-decoration: line-through;">
-                </span>
-            </div>
-            <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
+                <div class="price">
+                    RM 130
+                    <span class="original-price" style="text-decoration: line-through;">
+                    </span>
+                    <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
+                </div>
+                
+           </div>
         </div>
         <button class="view-all-button" id="viewAll-button">View All</button>
         <div class="horizontal-divider"></div>
@@ -210,16 +190,16 @@
         <div class="top-sect">
             <div class="review-title">OUR HAPPY CUSTOMER</div>
             <div class="arrow-container">
-                <span class="arrowback">
+                <span class="arrow">
                     <ion-icon name="arrow-back"></ion-icon>
                 </span>
 
-                <span class="arrowforward">
+                <span class="arrow">
                     <ion-icon name="arrow-forward"></ion-icon>
                 </span>
             </div>
         </div>
-        <div class="bot-part">
+        <div class="bot-sect">
             <div class="review-card">
                 <div class="stars-container">
                     <div class="stars-wrapper">
@@ -227,22 +207,25 @@
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
                     </div>                    
                 </div>
 
-                <div class="customer-name">Sarah M.</div>
+                <div class="reviewer-info">
+                    <div class="customer-name">Sarah M.</div>
 
-                <div class="verification-badge">
-                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
+                    <div class="verification-badge">
+                        <ion-icon name="checkmark-circle-sharp"></ion-icon>
+                    </div>
                 </div>
 
-                <div class="review-text">
+                <p class="review-text">
                     "I was blown away by the variety of fragrances and the helpful descriptions on the site. 
                     Shipping was super fast, and the scent I 
                     picked was exactly what I was looking for. 
                     It came in a stunning package that made it feel like a gift to myself. 
                     Highly recommend to anyone looking for quality fragrances online!”
-                </div>
+                </p>
             </div>
         </div>
     </div>
