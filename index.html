@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta namne="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Sharaf International</title>
 </head>
@@ -24,6 +25,9 @@
 
     <!--navigation bar-->
     <div class="nav-bar">
+        <div class="menu-dropdown">
+                <ion-icon name="menu-outline"></ion-icon>
+        </div>
         <div class="brand">SHARAF</div>
         <div class="bar-container">
             <div class="shop">
@@ -40,11 +44,11 @@
 
          <!--search box-->
         <div class="search-container">
-            <button class="search-icon-box" id="search-button" >
+            <div class="search-icon-box">
                 <span class="search-icon">
                     <ion-icon name="search-outline"></ion-icon>
                 </span>
-            </button>
+            </div>
             <input class="search-box" type="text" id="search-input" placeholder="Search for products...">
         </div>
 
@@ -58,27 +62,142 @@
     </div>
 
     <!--Introduction-->
-    <div class="intro">
+    <div class="intro-box">
+        
+        <div class="geometry">
+            <img src="resources\images\geometry.svg" alt="geometry">
+        </div>
+
+        <h1 class="intro-title">
+                FIND FRAGRANCE THAT YOU LIKE
+        </h1>
+        
+        <p class="intro-description">Browse through our diverse range of fragrances originated 
+                from all around the world. All at affordable price.
+        </p>
+
+        <div class="shop-now-box">
+            <button class="shop-now-button" id="shopNow-button">
+                Shop Now
+            </button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-number">40+</span>
+                <span class="stat-label">International Brands</span>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-box">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">High Quality Products</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">30,000+</span>
+                <span class="stat-label">Happy Customers
+        </div>
+
+        <div class="product-image">
+            <img src="resources\images\perfume-bottle.jpg" alt="perfume bottle">
+        </div>
     </div>
 
     <!--New Arrivals section-->
     <div class="new-arrival">
         <div class="new-arrival-text">NEW ARRIVALS</div>
-        <div class="line"></div>
+        <div class="product-card">
+            <div class="product-image"></div>
+            <h2 class="product-title">Khadlaj Island</h2>
+            <div class="rating-container">
+                <div class="stars-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </div>
+                <div class="rating-text">4.5/<span class="black-text">5</span></div>
+            </div>
+            <div class="price">RM 120
+                <span class="original-price" style="text-decoration: line-through;"></span>
+            </div>
+            <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
+
+            <div class="product-image"></div>
+            <h2 class="product-title">Rirana Salty Citrus</h2>
+            <div class="rating-container">
+                <div class="stars-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </div>
+                <div class="rating-text">4.5/<span class="black-text">5</span></div>
+            </div>
+            <div class="price">
+                RM 80
+                <span class="original-price" style="text-decoration: line-through;">
+                    RM 100
+                </span>
+            </div>
+            <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
+        </div>
+        <button class="view-all-button" id="viewAll-button">View All</button>
+        <div class="horizontal-divider"></div>
     </div>
 
     <!--Top Selling section-->
     <div class="top-selling">
         <div class="top-selling-text">top selling</div>
-        <div class="line"></div>
+        <div class="product-card">
+            <div class="product-image"></div>
+            <h2 class="product-title">Club De Nuit Intense</h2>
+            <div class="rating-container">
+                <div class="stars-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <div class="rating-text">5/<span class="black-text">5</span></div>
+            </div>
+            <div class="price">RM 180
+                <span class="original-price" style="text-decoration: line-through;">RM 200</span>
+            </div>
+            <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
+
+            <div class="product-image"></div>
+            <h2 class="product-title">Odyssey Mega</h2>
+            <div class="rating-container">
+                <div class="stars-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <div class="rating-text">4.0/<span class="black-text">5</span></div>
+            </div>
+            <div class="price">
+                RM 130
+                <span class="original-price" style="text-decoration: line-through;">
+                </span>
+            </div>
+            <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
+        </div>
+        <button class="view-all-button" id="viewAll-button">View All</button>
+        <div class="horizontal-divider"></div>
     </div>
 
     <!--By Occassion section-->
     <div class="browse-by">
         <div class="browse-box">
             <div class="browse-title">BROWSE BY occasion</div>
-            <div class="first-part-occasion"></div>
-            <div class="second-part-occasion"></div>
+            <div class="occasion-card">Casual</div>
+            <div class="occasion-card">Formal</div>
+            <div class="occasion-card">Date</div>
+            <div class="occasion-card">Active</div>
         </div>
     </div>
 
@@ -86,17 +205,182 @@
     <div class="review-sect">
         <div class="top-sect">
             <div class="review-title">OUR HAPPY CUSTOMER</div>
+            <div class="arrow-container">
+                <span class="arrowback">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </span>
+
+                <span class="arrowforward">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </span>
+            </div>
         </div>
         <div class="bot-part">
-            <div class="review-card"></div>
+            <div class="review-card">
+                <div class="stars-container">
+                    <div class="stars-wrapper">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>                    
+                </div>
+
+                <div class="customer-name">Sarah M.</div>
+
+                <div class="verification-badge">
+                    <ion-icon name="checkmark-circle-sharp"></ion-icon>
+                </div>
+
+                <div class="review-text">
+                    "I was blown away by the variety of fragrances and the helpful descriptions on the site. 
+                    Shipping was super fast, and the scent I 
+                    picked was exactly what I was looking for. 
+                    It came in a stunning package that made it feel like a gift to myself. 
+                    Highly recommend to anyone looking for quality fragrances online!”
+                </div>
+            </div>
         </div>
     </div>
 
     <!--Newsletter section-->
-    <div class="newsletter"></div>
+    <div class="newsletter">
+        <div class="newsletter-box">
+            <div class="box-title">
+                STAY UPTO DATE ABOUT OUR LATEST OFFERS
+            </div>
+
+            <div class="mail-wrapper">
+                <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="mail-box" type="text" id="mailBox" placeholder="Enter your email address">
+            </div>
+
+            <div class="subscribe-button">
+                <button class="subscribe-pill" id="subscribeButton">Subscribe to Newsletter</button>
+            </div>
+        </div>
+    </div>
 
     <!--Outro-->
-    <div class="outro"></div>
+    <div class="outro-wrapper">
+        <div class="footer">
+            <span class="footer-title">SHARAF</span>
+            <span class="footer-description">
+                We are authorised reseller of fragrances from around 
+                the world with quality and affordable in mind.
+            </span>
+        </div>
+
+        <div class="social-media-container">
+            <span class="x"><ion-icon name="logo-twitter"></ion-icon></span>
+            <span class="facebook"><ion-icon name="logo-facebook"></ion-icon></span>
+            <span class="insta"><ion-icon name="logo-instagram"></ion-icon></span>
+        </div>
+
+        <nav class="footer-menu" aria-label="Footer Navigation">
+            <div class="menu-column">
+              <div class="menu-section">
+                <h2 class="menu-title">Company</h2>
+                <div class="menu-links">
+                  <a href="#about" tabindex="0">About</a>
+                  <br /><br />
+                  <a href="#features" tabindex="0">Features</a>
+                  <br /><br />
+                  <a href="#works" tabindex="0">Works</a>
+                  <br /><br />
+                  <a href="#career" tabindex="0">Career</a>
+                </div>
+              </div>
+              <div class="menu-section-spaced">
+                <h2 class="menu-title">FAQ</h2>
+                <div class="menu-links">
+                  <a href="#account" tabindex="0">Account</a>
+                  <br /><br />
+                  <a href="#deliveries" tabindex="0">Manage Deliveries</a>
+                  <br /><br />
+                  <a href="#orders" tabindex="0">Orders</a>
+                  <br /><br />
+                  <a href="#payment" tabindex="0">Payment</a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-column">
+              <div class="help-section">
+                <h2 class="menu-title">HELP</h2>
+                <div class="menu-links">
+                  <a href="#support" tabindex="0">Customer Support</a>
+                  <br /><br />
+                  <a href="#delivery" tabindex="0">Delivery Details</a>
+                  <br /><br />
+                  <a href="#terms" tabindex="0">Terms & Conditions</a>
+                  <br /><br />
+                  <a href="#privacy" tabindex="0">Privacy Policy</a>
+                </div>
+              </div>
+              <div class="menu-section-spaced">
+                <h2 class="menu-title">RESOURCES</h2>
+                <div class="menu-links">
+                  <a href="#ebook" tabindex="0">Free eBook</a>
+                  <br /><br />
+                  <a href="#tutorial" tabindex="0">Development Tutorial</a>
+                  <br /><br />
+                  <a href="#blog" tabindex="0">How to - Blog</a>
+                  <br /><br />
+                  <a href="#playlist" tabindex="0">Youtube Playlist</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="horizontal-divider"></div>
+
+          <div class="super-footer">
+            Sharaf © 2000-2024, All Rights Reserved
+          </div>
+
+          <div class="payment-accept-container">
+            <span class="visa">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9bc555770aade8ae2ea67e64d20f54628040816316e8eebd501002f9086dfce?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
+                class="partner-logo"
+                alt="Partner company logo 1"
+              />
+            </span>
+            <span class="mastercard">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/516039ee8f501b6ebddd9b7f56b4a8d077fa0af0d2dbf35d5d51e638417129a7?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
+                class="partner-logo"
+                alt="Partner company logo 2"
+              />
+            </span>
+            <span class="paypal">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/554f9657649cda48ad8c5009211628367357505ae929d7f35c3277fe89eef3e9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
+                class="partner-logo"
+                alt="Partner company logo 3"
+              />
+            </span>
+            <span class="apay">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d50d740e003048aebcbc7bce4daf07f781c7bfe7189f680f951080c8f7129d52?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
+                class="partner-logo"
+                alt="Partner company logo 4"
+              />
+            </span>
+            <span class="gpay">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e1881b3f780aed38acb01dae3014630f92244c830f3a5f5b1c50678d5cb2f9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
+                class="partner-logo"
+                alt="Partner company logo 5"
+            />
+            </span>
+          </div>
+    </div>
 
     <!--external icon usage-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
