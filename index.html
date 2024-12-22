@@ -29,9 +29,9 @@
     <div class="navbar-container">
         <div class="navbar-wrapper">
             <ion-icon class="icon" name="menu-outline"></ion-icon>
-            <div class="brand-name">SHARAF</div>
+            <div class="brand-name-1">SHARAF</div>
         </div>
-        <div class="social-icons">
+        <div class="payment-icons">
             <ion-icon class="icon" name="search-outline"></ion-icon>
             <ion-icon class="icon" name="cart-outline"></ion-icon>
             <ion-icon class="icon" name="person-circle-outline"></ion-icon>
@@ -40,40 +40,41 @@
 
     <!--Introduction-->
     <div class="intro-box">
-        <h1 class="intro-title">FIND FRAGRANCE THAT YOU LIKE</h1>
         
-        <p class="intro-description">
-            Browse through our diverse range of fragrances originated 
-                from all around the world. All at affordable price.
-        </p>
+        <div class="geometry-wrapper">
+            <h1 class="intro-title">FIND FRAGRANCE THAT YOU LIKE</h1>
+            <p class="intro-description">
+                Browse through our diverse range of fragrances originated 
+                    from all around the world. All at affordable price.
+            </p>
 
-        <div class="shop-now-box">
-            <button class="shop-now-button" id="shopNow-button">
-                Shop Now
-            </button>
+            <div class="shop-now-box">
+                <button class="shop-now-button" id="shopNow-button">
+                    Shop Now
+                </button>
+            </div>
+
+            <div class="stats-container">
+                <div class="first-stat">
+                    <div class="stat-box">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">International Brands</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">High Quality Products</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">30,000+</span>
+                    <span class="stat-label">Happy Customers
+                </div>
+            </div>
         </div>
 
-        <div class="stats-container">
-            <div class="first-stat">
-                <div class="stat-box">
-                    <span class="stat-number">40+</span>
-                    <span class="stat-label">International Brands</span>
-                </div>
-                <div class="divider"></div>
-                <div class="stat-box">
-                    <span class="stat-number">200+</span>
-                    <span class="stat-label">High Quality Products</span>
-                </div>
-            </div>
-            <div class="stat-box">
-                <span class="stat-number">30,000+</span>
-                <span class="stat-label">Happy Customers
-            </div>
-
-            <div class="product-image">
-                <img src="resources\images\perfume-bottle.jpg" alt="perfume bottle">
-            </div>
-        </div>
+        <div class="product-image"></div>
+    </div>
 
     <!--New Arrivals section-->
     <div class="new-arrival">
@@ -230,143 +231,83 @@
         </div>
     </div>
 
-    <!--Newsletter section-->
-    <div class="newsletter">
-        <div class="newsletter-box">
-            <div class="box-title">
-                STAY UPTO DATE ABOUT OUR LATEST OFFERS
+    <!--Footer section-->
+    <div class="bottom-container">
+        <div class="bottom-wrapper">
+            
+          <form class="newsletter-card">
+
+            <h2 class="newsletter-title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+            <div class="email-input-wrapper">
+                <ion-icon class="email-icon" name="mail-outline"></ion-icon>
+                <label for="emailInput" class="visually-hidden">Enter your email address</label>
+                <input type="email" id="emailInput" class="email-input" placeholder="Enter your email address" aria-label="Enter your email address" />
             </div>
-
-            <div class="mail-wrapper">
-                <span class="mail-icon"><ion-icon name="mail-outline"></ion-icon></span>
-                <input class="mail-box" type="text" id="mailBox" placeholder="Enter your email address">
-            </div>
-
-            <div class="subscribe-button">
-                <button class="subscribe-pill" id="subscribeButton">Subscribe to Newsletter</button>
-            </div>
-        </div>
-    </div>
-
-    <!--Outro-->
-    <div class="outro-wrapper">
-        <div class="footer">
-            <span class="footer-title">SHARAF</span>
-            <span class="footer-description">
-                We are authorised reseller of fragrances from around 
-                the world with quality and affordable in mind.
-            </span>
-        </div>
-
-        <div class="social-media-container">
-            <span class="x"><ion-icon name="logo-twitter"></ion-icon></span>
-            <span class="facebook"><ion-icon name="logo-facebook"></ion-icon></span>
-            <span class="insta"><ion-icon name="logo-instagram"></ion-icon></span>
-        </div>
-
-        <nav class="footer-menu" aria-label="Footer Navigation">
-            <div class="menu-column">
-              <div class="menu-section">
-                <h2 class="menu-title">Company</h2>
-                <div class="menu-links">
-                  <a href="#about" tabindex="0">About</a>
-                  <br /><br />
-                  <a href="#features" tabindex="0">Features</a>
-                  <br /><br />
-                  <a href="#works" tabindex="0">Works</a>
-                  <br /><br />
-                  <a href="#career" tabindex="0">Career</a>
-                </div>
+            <button type="submit" class="subscribe-button">Subscribe to Newsletter</button>
+          </form>
+          
+          <h1 class="brand-name">SHARAF</h1>
+          <p class="brand-description">We are authorised reseller of fragrances from around the world with quality and affordable in mind.</p>
+          <div class="social-media-container">
+            <ion-icon class="social-media-icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social-media-icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social-media-icon" name="logo-instagram"></ion-icon>
+          </div>
+          
+          <div class="footer-links-container">
+            <div class="footer-column">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">Company</h3>
+                <nav class="footer-menu-links">
+                  About<br /><br />
+                  Features<br /><br />
+                  Works<br /><br />
+                  Career
+                </nav>
               </div>
-              <div class="menu-section-spaced">
-                <h2 class="menu-title">FAQ</h2>
-                <div class="menu-links">
-                  <a href="#account" tabindex="0">Account</a>
-                  <br /><br />
-                  <a href="#deliveries" tabindex="0">Manage Deliveries</a>
-                  <br /><br />
-                  <a href="#orders" tabindex="0">Orders</a>
-                  <br /><br />
-                  <a href="#payment" tabindex="0">Payment</a>
-                </div>
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">FAQ</h3>
+                <nav class="footer-menu-links">
+                  Account<br /><br />
+                  Manage Deliveries<br /><br />
+                  Orders<br /><br />
+                  Payment
+                </nav>
               </div>
             </div>
-            <div class="menu-column">
-              <div class="help-section">
-                <h2 class="menu-title">HELP</h2>
-                <div class="menu-links">
-                  <a href="#support" tabindex="0">Customer Support</a>
-                  <br /><br />
-                  <a href="#delivery" tabindex="0">Delivery Details</a>
-                  <br /><br />
-                  <a href="#terms" tabindex="0">Terms & Conditions</a>
-                  <br /><br />
-                  <a href="#privacy" tabindex="0">Privacy Policy</a>
-                </div>
+            <div class="footer-column">
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">HELP</h3>
+                <nav class="footer-menu-links">
+                  Customer Support<br />
+                  Delivery Details<br /><br />
+                  Terms & Conditions<br /><br />
+                  Privacy Policy
+                </nav>
               </div>
-              <div class="menu-section-spaced">
-                <h2 class="menu-title">RESOURCES</h2>
-                <div class="menu-links">
-                  <a href="#ebook" tabindex="0">Free eBook</a>
-                  <br /><br />
-                  <a href="#tutorial" tabindex="0">Development Tutorial</a>
-                  <br /><br />
-                  <a href="#blog" tabindex="0">How to - Blog</a>
-                  <br /><br />
-                  <a href="#playlist" tabindex="0">Youtube Playlist</a>
-                </div>
+              <div class="footer-menu">
+                <h3 class="footer-menu-title">RESOURCES</h3>
+                <nav class="footer-menu-links">
+                  Free eBook<br /><br />
+                  Development Tutorial<br /><br />
+                  How to - Blog<br /><br />
+                  Youtube Playlist
+                </nav>
               </div>
             </div>
-          </nav>
-
+          </div>
+          
           <div class="horizontal-divider"></div>
-
-          <div class="super-footer">
-            Sharaf © 2000-2024, All Rights Reserved
+          <div class="copyright-text">Sharaf © 2000-2023, All Rights Reserved</div>
+          
+          <div class="payment-icons-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9bc555770aade8ae2ea67e64d20f54628040816316e8eebd501002f9086dfce?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/516039ee8f501b6ebddd9b7f56b4a8d077fa0af0d2dbf35d5d51e638417129a7?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/554f9657649cda48ad8c5009211628367357505ae929d7f35c3277fe89eef3e9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d50d740e003048aebcbc7bce4daf07f781c7bfe7189f680f951080c8f7129d52?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e1881b3f780aed38acb01dae3014630f92244c830f3a5f5b1c50678d5cb2f9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
           </div>
-
-          <div class="payment-accept-container">
-            <span class="visa">
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9bc555770aade8ae2ea67e64d20f54628040816316e8eebd501002f9086dfce?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
-                class="partner-logo"
-                alt="Partner company logo 1"
-              />
-            </span>
-            <span class="mastercard">
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/516039ee8f501b6ebddd9b7f56b4a8d077fa0af0d2dbf35d5d51e638417129a7?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
-                class="partner-logo"
-                alt="Partner company logo 2"
-              />
-            </span>
-            <span class="paypal">
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/554f9657649cda48ad8c5009211628367357505ae929d7f35c3277fe89eef3e9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
-                class="partner-logo"
-                alt="Partner company logo 3"
-              />
-            </span>
-            <span class="apay">
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d50d740e003048aebcbc7bce4daf07f781c7bfe7189f680f951080c8f7129d52?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
-                class="partner-logo"
-                alt="Partner company logo 4"
-              />
-            </span>
-            <span class="gpay">
-                <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e1881b3f780aed38acb01dae3014630f92244c830f3a5f5b1c50678d5cb2f9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9"
-                class="partner-logo"
-                alt="Partner company logo 5"
-            />
-            </span>
-          </div>
+        </div>
     </div>
 
     <!--external icon usage-->

@@ -27,7 +27,7 @@
     width: 358px;
     max-width: 100%;
     height: 1px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #e6e6e6;
 }
 
 * {
@@ -98,12 +98,16 @@
 }
 
 /* Introduction Section */
-.intro-box {
-    padding: 24px 16px;
+.intro-box {    
     text-align: center;
     background-color: #bd8a41;
     height: 960px;
-    background-image: url('resources/images/geometry.svg');
+}
+
+.geometry-wrapper {
+    margin: 0;
+    background-image: url(resources/images/Geometry.svg);
+    padding: 24px 16px;
 }
 
 .intro-title {
@@ -187,13 +191,19 @@
 }
 
 .product-card {
+    padding: 24px 16px;
     width: 100%;
-    margin-bottom: 24px;
 }
 
-.first-product,
+.first-product {
+    padding: 24px 16px;
+    margin-top: 0px;
+    font-family: 'Satoshi Variable';
+}
+
 .second-product {
-    margin-top: 60px;
+    padding: 24px 16px;
+    margin-top: 20px;
     font-family: 'Satoshi Variable';
 }
 
@@ -258,14 +268,19 @@
     width: 100%;
     padding: 12px;
     margin: 16px 0;
-    border: 1px solid #666666;
+    border: 1px solid #e6e6e6;
     background: transparent;
     border-radius: 62px;
+    
 }
 
 /* Browse By Section */
-.browse-box {
+.browse-by {
     padding: 24px 16px;
+}
+
+.browse-box {
+    padding: 24px;
     background-color: #f0f0f0;
     border-radius: 20px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -308,7 +323,7 @@
 
 /*Review Section*/
 .review-sect {
-    margin-top: 65px;
+    padding: 24px 16px
 }
 
 .top-sect {
@@ -346,7 +361,6 @@
     overflow: hidden;
     padding: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
 .stars-container {
@@ -387,118 +401,171 @@
     font-size: 12px;
 }
 
-/* Newsletter Section */
-.newsletter-box {
-    padding: 24px 16px;
-    text-align: center;
-    background: #f5f5f5;
-}
-
-.box-title {
-    font-family: 'Inter';
-    font-weight: bold;
-    text-align: left;
-    color: white;
-    font-size: 32px;
-    margin-bottom: 24px;
-}
-
-.mail-wrapper {
+/* Footer section */
+.bottom-container {
+    border-radius: 0;
     display: flex;
-    align-items: center;
-    padding: 12px;
-    background: #fff;
-    border-radius: 4px;
-    margin-bottom: 16px;
-}
-
-.mail-box {
-    border: none;
-    outline: none;
+    max-width: 480px;
     width: 100%;
-    font-size: 16px;
+    padding-top: 81px;
+    flex-direction: column;
+    margin: 0 auto;
 }
-
-.subscribe-pill {
+  
+.bottom-wrapper {
+    background-color: rgba(240, 240, 240, 1);
+    display: flex;
     width: 100%;
-    padding: 12px;
-    border: none;
-    background: #000;
+    flex-direction: column;
+    padding: 0 15px 23px;
+}
+  
+.newsletter-card {
+    border-radius: 20px;
+    background-color: rgba(189, 138, 65, 1);
+    z-index: 10;
+    display: flex;
+    margin-top: -81px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 30px 24px;
+    font: 700 14px Satoshi Variable, -apple-system, Roboto, Helvetica, sans-serif;
+}
+  
+.newsletter-title {
     color: #fff;
-    border-radius: 4px;
-}
-
-/* Footer */
-.outro-wrapper {
-    padding: 24px 16px;
-    background: #f5f5f5;
-}
-
-.footer {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.footer-title {
-    font-size: 24px;
+    font: 32px 'Inter';
     font-weight: bold;
-    margin-bottom: 16px;
-    display: block;
 }
-
-.footer-description {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.social-media-container {
+  
+.email-input-wrapper {
+    border-radius: 62px;
+    background-color: #fff;
     display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
+    margin-top: 28px;
+    min-height: 42px;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    padding: 11px 16px;
 }
 
-.footer-menu {
+.email-input {
+    border-color: transparent;
+    font-family: 'Satoshi Variable';
+    font-size: 14px;
+    width: 100%;
+}
+  
+.email-icon {
+    object-fit: contain;
+    object-position: center;
+    font-size: 20px;
+    color: #999999;
+    align-self: stretch;
+    margin: auto 0;
+}
+  
+.subscribe-button {
+    width: 100%;
+    border-radius: 62px;
+    background-color: #fff;
+    margin-top: 12px;
+    min-height: 42px;
+    color: rgba(189, 138, 65, 1);
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Satoshi Variable';
+    font-weight: bold
+}
+  
+.brand-name {
+    color: rgba(189, 138, 65, 1);
+    margin-top: 32px;
+    font: 400 29px Crelist, sans-serif;
+}
+  
+.brand-description {
+    color: rgba(189, 138, 65, 1);
+    margin-top: 13px;
+    font: 400 14px/22px Satoshi Variable, -apple-system, Roboto, Helvetica, sans-serif;
+}
+  
+.social-media-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 28px;
+    margin-top: 16px;
+    font-size: 20px;
+    color: #bd8a41;
+}
+  
+.footer-links-container {
+    display: flex;
+    margin-top: 24px;
+    gap: 40px 58px;
+    color: rgba(189, 138, 65, 1);
+    font: 14px Satoshi Variable, sans-serif;
+}
+  
+.footer-column {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-}
-
-.menu-title {
-    font-size: 16px;
-    margin-bottom: 16px;
+ }
+  
+.footer-menu-title {
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
-
-.menu-links a {
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
+  
+.footer-menu-links {
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 16px;
+    margin-bottom: 30px;
 }
-
-.horizontal-divider {
-    height: 1px;
-    background: #ddd;
-    margin: 24px 0;
+  
+.copyright-text {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    align-self: center;
+    margin-top: 16px;
+    font: 400 14px Satoshi Variable, -apple-system, Roboto, Helvetica, sans-serif;
 }
-
-.super-footer {
-    text-align: center;
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 24px;
-}
-
-.payment-accept-container {
+  
+.payment-icons-wrapper {
+    align-self: center;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    margin-top: 16px;
+    align-items: end;
+    gap: 10px;
+}
+  
+.payment-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 50px;
+    fill: var(--Neutral-Colors-White, #fff);
+    stroke-width: 0.192px;
+    stroke: var(--Neutral-Colors-400, #d6dce5);
+    filter: drop-shadow(0px 0.384px 3.842px rgba(183, 183, 183, 0.08))
+      drop-shadow(0px 3.842px 7.684px rgba(183, 183, 183, 0.08));
 }
 
-.partner-logo {
-    height: 24px;
-    width: auto;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    color: #999999;
+    border-color: transparent;
 }
 
 /* Utility Classes */
