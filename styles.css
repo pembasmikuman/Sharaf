@@ -543,7 +543,6 @@
     display: flex;
     margin-top: 16px;
     align-items: end;
-    gap: 10px;
 }
   
 .payment-icon {
