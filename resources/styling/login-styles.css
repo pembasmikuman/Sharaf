@@ -161,6 +161,10 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.span:hover {
+    text-decoration: underline;
+}
   
 .button-submit {
     margin: 20px 0 10px 0;
