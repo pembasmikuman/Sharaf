@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Sharaf International</title>
-    <link rel="stylesheet" href="resources/styling/styles.css">
+    <meta namne="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -30,7 +31,7 @@
             <ion-icon class="icon" name="menu-outline"></ion-icon>
             <div class="brand-name-1">SHARAF</div>
         </div>
-        <div class="nav-icons">
+        <div class="payment-icons">
             <ion-icon class="icon" name="search-outline"></ion-icon>
             <ion-icon class="icon" name="cart-outline"></ion-icon>
             <ion-icon class="icon" name="person-circle-outline"></ion-icon>
@@ -38,198 +39,100 @@
       </div>
 
     <!--Introduction-->
-    <div class="intro-box">
-        
-        <div class="geometry-wrapper">
-            <h1 class="intro-title">FIND FRAGRANCE THAT YOU LIKE</h1>
-            <p class="intro-description">
-                Browse through our diverse range of fragrances originated 
-                    from all around the world. All at affordable price.
-            </p>
-
-            <div class="shop-now-box">
-                <button class="shop-now-button" id="shopNow-button">
-                    Shop Now
-                </button>
-            </div>
-
-            <div class="stats-container">
-                <div class="first-stat">
-                    <div class="stat-box">
-                        <span class="stat-number">40+</span>
-                        <span class="stat-label">International Brands</span>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="stat-box">
-                        <span class="stat-number">200+</span>
-                        <span class="stat-label">High Quality Products</span>
-                    </div>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">30,000+</span>
-                    <span class="stat-label">Happy Customers
-                </div>
-            </div>
-
-            <div class="empty-box" style="color: #bd8a41;">test</div>
-        </div>
-
-        <div class="intro-image"></div>
+    <div class="intro">
+        <span class="intro-item">Home</span>
+        <span class="arrow-icon"><ion-icon name="chevron-back-outline"> </ion-icon></span>
+        <span class="intro-item">Cart</span>
     </div>
 
-    <!--New Arrivals section-->
-    <div class="new-arrival">
-        <div class="new-arrival-text">NEW ARRIVALS</div>
-        <div class="product-card">
-            <div class="first-product">
-                <div class="product-image"></div>
-                <h2 class="product-title">Khadlaj Island</h2>
-                <div class="rating-container">
-                    <div class="stars-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half"></ion-icon>
+    <!-- Cart Section -->
+    <div class="cart-section">
+        <h1 class="cart-title">Your cart</h1>
+        <div class="cart-items">
+            <!-- Add product -->
+            <div class="cart-item">
+                <div class="item-image"></div>
+                <div class="item-details">
+                    <div class="item-name">Pandan Sticky Rice</div>
+                    <div class="item-size">Size: 100 ml</div>
+                    <div class="item-price">RM 200</div>
+                </div>
+                <div class="item-actions">
+                    <span class="remove-icon"><ion-icon name="trash-outline"></ion-icon></span>
+                    <div class="quantity-control">
+                        <span class="quantity-decrease"><ion-icon name="remove-outline"></ion-icon></span>
+                        <div class="quantity">1</div>
+                        <span class="quantity-increase"><ion-icon name="add-outline"></ion-icon></span>
                     </div>
-                    <div class="rating-text">4.5/<span class="black-text">5</span></div>
                 </div>
-                <div class="price">RM 120
-                    <span class="original-price" style="text-decoration: line-through;"></span>
-                </div>
-                <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
             </div>
-
-            <div class="second-product">
-                <div class="product-image"></div>
-                <h2 class="product-title">Rirana Salty Citrus</h2>
-                <div class="rating-container">
-                    <div class="stars-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-half"></ion-icon>
+            <div class="cart-divider"></div>
+            <!-- Add product -->
+            <div class="cart-item">
+                <div class="item-image"></div>
+                <div class="item-details">
+                    <div class="item-name">Armani Code</div>
+                    <div class="item-size">Size: 50 ml</div>
+                    <div class="item-price">RM 300</div>
+                </div>
+                <div class="item-actions">
+                    <span class="remove-icon"><ion-icon name="trash-outline"></ion-icon></span>
+                    <div class="quantity-control">
+                        <span class="quantity-decrease"><ion-icon name="remove-outline"></ion-icon></span>
+                        <div class="quantity">1</div>
+                        <span class="quantity-increase"><ion-icon name="add-outline"></ion-icon></span>
                     </div>
-                    <div class="rating-text">4.5/<span class="black-text">5</span></div>
                 </div>
-                <div class="price">
-                    RM 80
-                    <span class="original-price" style="text-decoration: line-through;">
-                        RM 100
-                    </span>
-                    <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
-                </div>
-                
             </div>
-        </div>
-        <button class="view-all-button" id="viewAll-button">View All</button>
-        <div class="horizontal-divider"></div>
-    </div>
-
-    <!--Top Selling section-->
-    <div class="top-selling">
-        <div class="top-selling-text">top selling</div>
-        <div class="product-card">
-            <div class="first-product">
-                <div class="product-image"></div>
-                <h2 class="product-title">Club De Nuit Intense</h2>
-                <div class="rating-container">
-                    <div class="stars-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
+            <div class="cart-divider"></div>
+            <!-- Add product -->
+            <div class="cart-item">
+                <div class="item-image"></div>
+                <div class="item-details">
+                    <div class="item-name">Lancome La Vie Est Belle</div>
+                    <div class="item-size">Size: 50 ml</div>
+                    <div class="item-price">RM 220</div>
+                </div>
+                <div class="item-actions">
+                    <span class="remove-icon"><ion-icon name="trash-outline"></ion-icon></span>
+                    <div class="quantity-control">
+                        <span class="quantity-decrease"><ion-icon name="remove-outline"></ion-icon></span>
+                        <div class="quantity">1</div>
+                        <span class="quantity-increase"><ion-icon name="add-outline"></ion-icon></span>
                     </div>
-                    <div class="rating-text">5/<span class="black-text">5</span></div>
                 </div>
-                <div class="price">RM 180
-                    <span class="original-price" style="text-decoration: line-through;">RM 200</span>
-                    <div class="discount-badge" role="text" aria-label="20 percent discount">-20%</div>
-                </div>
-                
             </div>
-
-           <div class="second-product">
-                <div class="product-image"></div>
-                <h2 class="product-title">Odyssey Mega</h2>
-                <div class="rating-container">
-                    <div class="stars-wrapper">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    </div>
-                    <div class="rating-text">4.0/<span class="black-text">5</span></div>
-                </div>
-                <div class="price">
-                    RM 130
-                    <span class="original-price" style="text-decoration: line-through;">
-                    </span>
-                    <div class="discount-badge" role="text" aria-label="20 percent discount"></div>
-                </div>
-                
-           </div>
-        </div>
-        <button class="view-all-button" id="viewAll-button">View All</button>
-        <div class="horizontal-divider"></div>
-    </div>
-
-    <!--By Occassion section-->
-    <div class="browse-by">
-        <div class="browse-box">
-            <div class="browse-title">BROWSE BY occasion</div>
-            <div class="occasion-card">Casual</div>
-            <div class="occasion-card">Formal</div>
-            <div class="occasion-card">Date</div>
-            <div class="occasion-card">Active</div>
+            <div class="cart-divider"></div>
         </div>
     </div>
 
-    <!--Review section-->
-    <div class="review-sect">
-        <div class="top-sect">
-            <div class="review-title">OUR HAPPY CUSTOMER</div>
-            <div class="arrow-container">
-                <span class="arrow">
-                    <ion-icon name="arrow-back"></ion-icon>
-                </span>
-
-                <span class="arrow">
-                    <ion-icon name="arrow-forward"></ion-icon>
-                </span>
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <h2 class="summary-title">Order Summary</h2>
+        <div class="summary-details">
+            <div class="summary-item">
+                <span class="label">Subtotal</span>
+                <span class="value">RM 720</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Discount (-20%)</span>
+                <span class="value discount">-RM 144</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Delivery Fee</span>
+                <span class="value">RM 5</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item total">
+                <span class="label">Total</span>
+                <span class="value">RM 581</span>
             </div>
         </div>
-        <div class="bot-sect">
-            <div class="review-card">
-                <div class="stars-container">
-                    <div class="stars-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>                    
-                </div>
-
-                <div class="reviewer-info">
-                    <div class="customer-name">Sarah M.</div>
-
-                    <div class="verification-badge">
-                        <ion-icon name="checkmark-circle-sharp"></ion-icon>
-                    </div>
-                </div>
-
-                <p class="review-text">
-                    "I was blown away by the variety of fragrances and the helpful descriptions on the site. 
-                    Shipping was super fast, and the scent I 
-                    picked was exactly what I was looking for. 
-                    It came in a stunning package that made it feel like a gift to myself. 
-                    Highly recommend to anyone looking for quality fragrances online!”
-                </p>
-            </div>
+        <div class="promo-code">
+            <input class="input" type="text" placeholder="Add promo code" />
+            <button class="apply-button">Apply</button>
         </div>
+        <button class="checkout-button">Go to Checkout</button>
     </div>
 
     <!--Footer section-->
