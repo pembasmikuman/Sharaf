@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/styling/login-styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--promo banner-->
+    <div class="promo">
+        <div class="promo-wrapper">
+            <div class="promo-text">
+                <span class="first-part">Sign up and get 20% off to your first order.</span>
+                <span class="second-part" style="text-decoration: underline;" id="signup-link">Sign up now</span>
+            </div>
+            <div class="close-promo">
+                <ion-icon name="close"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <!--navigation bar-->
+    <div class="navbar-container">
+        <div class="navbar-wrapper">
+            <ion-icon class="icon" name="menu-outline"></ion-icon>
+            <div class="brand-name-1">SHARAF</div>
+        </div>
+        <div class="nav-icons">
+            <ion-icon class="icon" name="search-outline"></ion-icon>
+            <ion-icon class="icon" name="cart-outline"></ion-icon>
+            <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+        </div>
+    </div>
+
+   <div class="form-container">
+    <form class="form">
+        <div class="flex-column">
+        <label>Email </label></div>
+        <div class="inputForm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20"><g data-name="Layer 3" id="Layer_3"><path d="
+                m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 
+                -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135
+                0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></g></svg>
+            <input placeholder="Enter your Email" class="input" type="text">
+        </div>
+        
+        <div class="flex-column">
+        <label>Password </label></div>
+        <div class="inputForm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
+                <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 
+                0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125
+                0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 
+                16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0">
+            </path>
+                <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 
+                96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 
+                128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
+                </path></svg>        
+            <input placeholder="Enter your Password" class="input" type="password">
+        </div>
+        
+        <div class="flex-row">
+        <div>
+        <input type="radio">
+        <label>Remember me </label>
+        </div>
+        <span class="span">Forgot password?</span>
+        </div>
+        <button class="button-submit">Sign In</button>
+        <p class="p">Don't have an account? <span class="span">Sign Up</span>
+
+        </p><p class="p line">Or With</p>
+
+        <div class="flex-row">
+            <button class="btn google">
+
+                <svg xml:space="preserve" style="enable-background:new 0 0 512 512;" 
+                    viewBox="0 0 512 512" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" version="1.1">
+
+                    <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                    C103.821,274.792,107.225,292.797,113.47,309.408z" style="fill:#FBBB00;">
+                    </path>
+                    <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z" style="fill:#518EF8;">
+                    </path>
+                    <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" style="fill:#28B446;">
+                    </path>
+                    <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                    C318.115,0,375.068,22.126,419.404,58.936z" style="fill:#F14336;">
+                    </path>
+                </svg>
+    
+            Google 
+            </button>
+        
+            <button class="btn apple">
+
+                <svg xml:space="preserve" style="enable-background:new 0 0 22.773 22.773;" 
+                viewBox="0 0 22.773 22.773" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                xmlns="http://www.w3.org/2000/svg" id="Capa_1" width="20" height="20" version="1.1"> 
+                <g> 
+                    <g> 
+                    <path 
+                    d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,
+                    1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z">        
+                    </path> 
+                    <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,
+                    2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,
+                    0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,
+                    2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,
+                    1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z">
+                    </path> 
+                    </g>
+                </g>
+                </svg>
+
+                Apple 
+            
+            </button>
+        </div>
+    </form>
+   </div>
+
+    <!--Footer section-->
+    <div class="bottom-container">
+        <div class="bottom-wrapper">
+            
+            <form class="newsletter-card">
+
+            <h2 class="newsletter-title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+            <div class="email-input-wrapper">
+                <ion-icon class="email-icon" name="mail-outline"></ion-icon>
+                <label for="emailInput" class="visually-hidden">Enter your email address</label>
+                <input type="email" id="emailInput" class="email-input" placeholder="Enter your email address" aria-label="Enter your email address" />
+            </div>
+            <button type="submit" class="subscribe-button">Subscribe to Newsletter</button>
+            </form>
+            
+            <h1 class="brand-name">SHARAF</h1>
+            <p class="brand-description">We are authorised reseller of fragrances from around the world with quality and affordable in mind.</p>
+            <div class="social-media-container">
+            <ion-icon class="social-media-icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social-media-icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social-media-icon" name="logo-instagram"></ion-icon>
+            </div>
+            
+            <div class="footer-links-container">
+            <div class="footer-column">
+                <div class="footer-menu">
+                <h3 class="footer-menu-title">Company</h3>
+                <nav class="footer-menu-links">
+                    About<br /><br />
+                    Features<br /><br />
+                    Works<br /><br />
+                    Career
+                </nav>
+                </div>
+                <div class="footer-menu">
+                <h3 class="footer-menu-title">FAQ</h3>
+                <nav class="footer-menu-links">
+                    Account<br /><br />
+                    Manage Deliveries<br /><br />
+                    Orders<br /><br />
+                    Payment
+                </nav>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-menu">
+                <h3 class="footer-menu-title">HELP</h3>
+                <nav class="footer-menu-links">
+                    Customer Support<br />
+                    Delivery Details<br /><br />
+                    Terms & Conditions<br /><br />
+                    Privacy Policy
+                </nav>
+                </div>
+                <div class="footer-menu">
+                <h3 class="footer-menu-title">RESOURCES</h3>
+                <nav class="footer-menu-links">
+                    Free eBook<br /><br />
+                    Development Tutorial<br /><br />
+                    How to - Blog<br /><br />
+                    Youtube Playlist
+                </nav>
+                </div>
+            </div>
+            </div>
+            
+            <div class="horizontal-divider"></div>
+            <div class="copyright-text">Sharaf © 2000-2023, All Rights Reserved</div>
+            
+            <div class="payment-icons-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9bc555770aade8ae2ea67e64d20f54628040816316e8eebd501002f9086dfce?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/516039ee8f501b6ebddd9b7f56b4a8d077fa0af0d2dbf35d5d51e638417129a7?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/554f9657649cda48ad8c5009211628367357505ae929d7f35c3277fe89eef3e9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d50d740e003048aebcbc7bce4daf07f781c7bfe7189f680f951080c8f7129d52?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9e1881b3f780aed38acb01dae3014630f92244c830f3a5f5b1c50678d5cb2f9?placeholderIfAbsent=true&apiKey=b10f70cc77814b9faaff3aed5d5026b9" class="payment-icon" alt="payment accept icon" />
+            </div>
+        </div>
+    </div>
+
+    <!--external icon usage-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
