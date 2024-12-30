@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========= PAGE ICON ========= -->
+    <link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon">
+
+    <!-- ========== ICON LIBRARY ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+
+    <!-- =========== SWIPER CSS =========== -->
+     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/homepage.css">
+    <title>Sharaf fragrance</title>
+</head>
+<body>
+    <!-- ================= HEADER =================== -->
+     <header class="header" id="header">
+        <div class="header_container">
+
+            <!-- Promo Bar -->
+            <div class="promo_bar" id="promo-bar">
+
+                <div class="promo_wrapper">Sign up and get 20% off to your first order.
+                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                        Sign up now
+                    </button>
+                </div>
+
+                <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <!-- Navigation bar -->
+             <nav class="navbar">
+                <div class="nav_container">
+                    <div class="nav_left">
+
+                        <button class="menu_btn" onclick="toggleSidePanel()">
+                            <i class="ri-menu-line"></i>
+                        </button>
+
+                        <div class="brand_logo">SHARAF</div>
+
+                        <div class="desktop_nav">
+                            <a href="#">On Sale</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Desktop search -->
+                    <div class="search_container">
+                        <button class="search_btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input type="text" class="search_box" placeholder="Search for products...">
+                    </div>
+                    
+                    <div class="nav_right">
+
+                        <!-- Mobile search icon -->
+                        <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
+                            <i class="ri-search-line"></i>
+                        </button>
+
+                        <!-- Your existing cart and account icons -->
+                        <button class="nav_icon">
+                            <i class="ri-shopping-cart-2-line cart_icon"></i>
+                        </button>
+                        <button class="nav_icon">
+                            <i class="ri-account-circle-line account_icon"></i>
+                        </button>
+                    </div>
+
+                </div>
+             </nav>
+
+             <div class="side_panel" id="side-panel">
+                <div class="panel_header">
+                    <h2>Menu</h2>
+                    <button class="close_btn" onclick="toggleSidePanel()">
+                        <i class="ri-close-line side_panel_close"></i>
+                    </button>
+                </div>
+
+                <div class="mobile_nav">
+                    <a href="#">On Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Contact Us</a>
+                </div>
+             </div>
+
+             <!-- Overlay for Mobile Menu -->
+             <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+
+             <div class="search_overlay" id="search-overlay">
+                <div class="search_overlay_wrapper">
+                    <button class="close_search_btn" onclick="toggleSearch()">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <h2>Search</h2>
+                    <div class="mobile_search_container">
+                        <input type="text" class="mobile_search_box" placeholder="Search products...">
+                        <button class="nav_icon">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                </div>
+             </div>
+        </div>
+     </header>
+
+     <!-- ================ HERO ================== -->
+     <section class="hero">
+        <div class="hero_container">
+            <div class="grid_1">
+                <h1 class="hero_title">FIND FRAGRANCE THAT YOU LIKE</h1>
+                <p class="hero_desc">Browse through our diverse range of fragrances originated from all around the world. All at affordable price.</p>
+                <button class="shop_now_btn">Shop Now</button>
+
+                <div class="stats_container">
+                    <div class="top_row">
+                        <div class="top_box stat_divider">
+                            <h3 class="stat_number">40+</h3>
+                            <p class="stat_label">International Brands</p>
+                        </div>
+                        <div class="top_box">
+                            <h3 class="stat_number">200+</h3>
+                            <p class="stat_label">High-Quality Products</p>
+                        </div>
+                    </div>
+
+                    <div class="bottom_box">
+                        <h3 class="stat_number">30,000+</h3>
+                        <p class="stat_label">Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid_2">
+                <div class="hero_image">
+                    <i class="ri-shining-fill first_star"></i>
+                    <img class="hero_img" src="assets/images/perfume-placeholder.svg" alt="hero image">
+                    <i class="ri-shining-fill second_star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- =================== MAIN ======================= -->
+     <main class="main">
+        <section class="home">
+            <div class="home_container">
+                <div class="home_content">
+                    <h1 class="main_title">NEW ARRIVALS</h1>
+
+                    <div class="home__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Club De Nuit</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 120
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/jpg-elixir.png" alt="JPG elixir">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Le Male Elixir</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        5 /
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 320
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/y-edp.png" alt="Y EDP">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Y EDP</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 320
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/asad-zanzibar.png" alt="Asad Zanzibar">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Asad Zanzibar</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 145
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/9pm-rebel.png" alt="9pm Rebel">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">9PM Rebel</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 214
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/Badee Al-Oud Sublime.png" alt="BAO Sublime">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Badee Al Oud Sublime</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 122
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/versace-pour-hommw.png" alt="Pour Homme">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Pour Homme</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 132
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/eros.png" alt="Eros">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Eros</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 270
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-line"></i>
+                         </div>
+                         <div class="swiper-button-next">
+                            <i class="ri-arrow-right-line"></i>
+                         </div>
+
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
+                    <div class="button_wrapper">
+                        <button href=# class="view_all_btn">View All</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="home">
+            <div class="home_container">
+                <div class="home_content">
+                    <h1 class="main_title">top selling</h1>
+
+                    <div class="home__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Club De Nuit</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 120
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/jpg-elixir.png" alt="JPG elixir">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Le Male Elixir</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        5 /
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 320
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/y-edp.png" alt="Y EDP">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Y</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 320
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/asad-zanzibar.png" alt="Asad Zanzibar">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Asad Zanzibar</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 145
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/9pm-rebel.png" alt="9pm Rebel">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">9PM Rebel</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 214
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/Badee Al-Oud Sublime.png" alt="BAO Sublime">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Badee Al Oud Sublime</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 122
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/versace-pour-hommw.png" alt="Pour Homme">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Pour Homme</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 132
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="product swiper-slide">
+                                <div class="product_image">
+                                    <img class="product_img" src="assets/images/eros.png" alt="Eros">
+                                </div>
+                                <div class="product_details">
+                                    <h3 class="product_name">Eros</h3>
+
+                                    <div class="rating-wrapper">
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-fill star_icon"></i>
+                                        <i class="ri-star-half-fill star_icon"></i>
+                                        4.5/
+                                        <span style="font-weight: 100;">5</span>
+                                    </div>
+
+                                    <div class="price_wrapper">
+                                        <h3>RM 270
+                                            <h3 style="text-decoration: line-through; color: #999999;">
+                                                <span class="discount-badge">
+                                                </span>
+                                            </h3>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-line"></i>
+                         </div>
+                         <div class="swiper-button-next">
+                            <i class="ri-arrow-right-line"></i>
+                         </div>
+                         
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
+                    <div class="button_wrapper">
+                        <button href=# class="view_all_btn">View All</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="browse_by">
+            
+        </section>
+     </main>
+
+    <!--=============== FOOTER ===============-->
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- ========== HOMEPAGE JS ============ -->
+    <script src="assets/js/homepage.js"></script>
+</body>
+</html>
