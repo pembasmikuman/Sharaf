@@ -71,20 +71,9 @@ body{
     font-size: var(--normal-font-size);
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
 a{
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-a:hover{
-    text-decoration: underline;
 }
 
 button{
@@ -184,6 +173,7 @@ header{
     font-family: var(--logo-font);
     font-size: 2rem; /* 32px */
     font-weight: normal;
+    color: var(--main-color);
 }
 
 .desktop_nav{
@@ -206,6 +196,10 @@ header{
     padding: 0.5rem;
     display: block;
     color: var(--main-color);
+}
+
+.menu_btn:hover{
+    transform: scale(1.2);
 }
 
 .nav_right{
@@ -293,7 +287,6 @@ header{
     visibility: visible;
 }
 
-/* Icon styles */
 .ri-menu-line,
 .ri-search-line,
 .ri-shopping-cart-2-line,
@@ -303,22 +296,22 @@ header{
 }
 
 .search_container {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     position: relative;
-    background-color: #F5F5F5; /* Light gray background */
-    border-radius: 9999px; /* Fully rounded corners */
+    background-color: #F5F5F5; 
+    border-radius: 9999px; 
     padding: 0.5rem 1rem;
-    width: 350px; /* Increased width to match image */
+    width: 350px; 
 }
 
 .search_box {
-    border: none; /* Remove border */
-    background: transparent; /* Transparent background */
-    padding: 0.5rem 2rem 0.5rem 2rem; /* Padding for search icon on both sides */
+    border: none;
+    background: transparent;
+    padding: 0.5rem 2rem 0.5rem 2rem; 
     width: 100%;
     font-size: var(--small-font-size);
-    color: #666666; /* Darker gray for text */
-    outline: none; /* Remove focus outline */
+    color: #666666;
+    outline: none; 
 }
 
 .search_box::placeholder {
@@ -328,10 +321,10 @@ header{
 
 .search_btn {
     position: absolute;
-    left: 0.75rem; /* Move to left side */
+    left: 0.75rem; 
     top: 50%;
     transform: translateY(-50%);
-    color: #666666; /* Match text color */
+    color: #666666;
     cursor: pointer;
 }
 
@@ -548,7 +541,7 @@ header{
 
 .home__swiper{
     width: 100%;
-    margin-bottom: 4%;
+    margin-bottom: 0.5rem;
 }
 
 .product {
@@ -615,7 +608,6 @@ header{
     padding: 1rem;
     border: #e6e6e6 .0625rem solid;
     cursor: pointer;
-    margin-bottom: 10%;
 }
 
 .view_all_btn:hover{
@@ -630,7 +622,170 @@ header{
 }
 
 /* ================ BROWSE BY SECTION ============== */
+.browse_by{
+    padding: 1rem;
+    margin-bottom: 2%;
+}
 
+.browse_box {
+    background-color: var(--second-color);
+    border-radius: 1.25rem;
+    padding: 1rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.browse_box h1{
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1.2rem;
+}
+
+.occasion_card{
+    position: relative;
+    width: 100%;
+    height: 9.8rem;
+    border-radius: 1.25rem;
+    background: var(--white-color);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.occasion_card img{
+    object-fit: cover;
+    object-position: right;
+}
+
+.occasion_card h3 {
+    position: absolute;
+    top: .625rem;
+    left: .625rem; 
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: .3125rem;
+}
+
+.occasion_card h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.occasion_card img:hover{
+    transform: scale(1.1);
+}
+
+.casual_occasion_img{
+    width: 150%;
+    height: 100%;
+}
+
+.formal_occasion_img{
+    width: 100%;
+    height: 100%;
+}
+
+.date_occasion_img{
+    width: 100%;
+    height: 100%;
+}
+
+.active_occasion_img{
+    width: 160%;
+    height: 100%;
+}
+
+/* ================ FOOTER ================= */
+.footer {
+    border-radius: 0;
+    display: flex;
+    width: 100%;
+    padding-top: 5rem;
+    flex-direction: column;
+    margin: 0 auto;
+}
+  
+.footer_container {
+    background-color: rgba(240, 240, 240, 1);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 .9375rem 1.4375rem;
+}
+  
+.newsletter_card{
+    border-radius: 1.25rem;
+    background-color: var(--main-color);
+    z-index: 10;
+    display: flex;
+    margin-top: -5rem;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem 1.1rem;
+    font: var(--normal-font-size) 'Satoshi Variable';
+}
+  
+.newsletter_card h2{
+    color: var(--white-color);
+    font: var(--h2-font-size) 'Inter';
+    font-weight: bold;
+}
+  
+.email_input_container {
+    border-radius: 3.875rem;
+    background-color: var(--white-color);
+    display: flex;
+    margin: 1.75rem 0 0;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 0.7rem 1rem;
+}
+
+.email_input {
+    border-color: transparent;
+    font-family: 'Satoshi Variable';
+    font-size: var(--normal-font-size);
+    width: 100%;
+}
+
+.email_input:focus {
+    outline: none;
+}
+  
+.email_icon {
+    font-size: 1.25rem;
+    color: #999999;
+    margin: auto 0;
+}
+  
+.subscribe_btn {
+    width: 100%;
+    border-radius: 3.875rem;
+    background-color: var(--white-color);
+    margin: .75rem 0 0;
+    color: var(--main-color);
+    padding: 0.7rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Satoshi Variable';
+    font-weight: 600;
+}
+  
+.logo_footer {
+    margin: 2rem 0 .8125rem;
+}
+  
+.brand_desc {
+    color: var(--main-color);
+    font: 400 var(--normal-font-size) 'Satoshi Variable';
+    margin: 0 0 .75rem;
+}
+  
+.social_media_icon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
 
 /* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */
 @media screen and (min-width: 768px){
@@ -685,7 +840,7 @@ header{
     }
 
     .main_title{
-        font-size: 2.75;
+        font-size: 2.75rem;
         margin-bottom: 5%;
     }
 
@@ -714,7 +869,6 @@ header{
     .view_all_btn{
         font-size: 1rem;
         width: 30%;
-        margin-bottom: 5%;
     }
 
     .swiper-button-prev::after,
@@ -739,11 +893,63 @@ header{
     }
 
     .divider{
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-top: 6%;
+        margin-bottom: 6%;
         width: 80%;
     }
 
+    .browse_box{
+        padding: 1.5rem;
+    }
+
+    .browse_box h1{
+        margin: 1.7rem;
+    }
+
+    .first_row{
+        display: grid; 
+        grid-template-columns: 0.75fr 1.25fr; 
+        grid-template-rows: 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          ". .";
+    }
+
+    .second_row{
+        display: grid; 
+        grid-template-columns: 1.25fr 0.75fr; 
+        grid-template-rows: 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          ". .";
+    }
+
+    .casual_occasion_img{
+        width: 160%;
+    }
+
+    .active_occasion_img{
+        width: 160%;
+    }
+
+    .newsletter_card{
+        flex-direction: row;
+        padding: 3rem 1.5rem;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .newsletter_card h2{
+        width: 55%;
+    }
+
+    .email_input_wrapper{
+        flex: 1;
+    }
+
+    .brand_desc{
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -824,6 +1030,39 @@ header{
         margin: 0;
     }
 
+    .browse_by{
+        padding: 0 5rem;
+    }
+
+    .browse_box h1{
+        font-size: 3rem;
+    }
+
+    .occasion_card{
+        height: 14rem;
+    }
+
+    .occasion_card h3{
+        font-size: 2.25rem;
+    }
+
+    .footer_container{
+        align-items: center;
+    }
+
+    .newsletter_card{
+        padding: 2rem 1.5rem;
+        width: 92%;
+        justify-content: space-between
+    }
+
+    .newsletter_card h2{
+        width: 38%;
+    }
+
+    .email_input_wrapper{
+        flex: 0.5;
+    }
 }
 
 @media screen and (min-width: 1440px){
@@ -880,6 +1119,18 @@ header{
     .swiper-button-next,
     .swiper-button-prev{
         font-size: 2rem;
+    }
+
+    .browse_box h1{
+        font-size: 4rem;
+    }
+
+    .occasion_card{
+        height: 18rem;
+    }
+
+    .occasion_card h3{
+        font-size: 2.5rem;
     }
 
 }
@@ -952,6 +1203,27 @@ header{
 
     .swiper-button-prev{
         left: 30rem;
+    }
+
+    .browse_by{
+        margin-top: 10%;
+        padding: 0 7em;
+    }
+
+    .browse_box{
+        padding: 4rem;
+    }
+
+    .browse_box h1{
+        font-size: 5rem;
+    }
+
+    .occasion_card{
+        height: 18rem;
+    }
+
+    .occasion_card h3{
+        font-size: 3rem;
     }
 }
     
