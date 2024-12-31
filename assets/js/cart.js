@@ -51,15 +51,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applyButton.addEventListener('click', () => {
         const promoCode = promoCodeInput.value.trim().toLowerCase();
+        const discountLabel = document.querySelector('.discount-label'); // Locate discount label
+    
         if (promoCode === 'webtech') {
             isPromoCodeApplied = true;
             updateCartSummary();
-            alert('Promo code applied successfully! You now get a 40% discount.');
+    
+            // Update the discount label to show -40%
+            if (discountLabel) {
+                discountLabel.textContent = 'Discount (-40%)';
+            }
         } else {
             isPromoCodeApplied = false;
-            alert('Invalid promo code. Please try again.');
+    
+            // Revert the discount label to -20%
+            if (discountLabel) {
+                discountLabel.textContent = 'Discount (-20%)';
+            }
         }
     });
+    
+    
 
     // Checkout button functionality
     const checkoutButton = document.querySelector('.checkout-button');
