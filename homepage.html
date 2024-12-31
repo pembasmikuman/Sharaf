@@ -69,12 +69,12 @@
                         </button>
 
                         <!-- Your existing cart and account icons -->
-                        <button href="login.html" class="nav_icon">
+                        <button class="nav_icon">
                             <i class="ri-shopping-cart-2-line cart_icon"></i>
                         </button>
-                        <button class="nav_icon">
+                        <a href="/login.html" class="nav_icon">
                             <i class="ri-account-circle-line account_icon"></i>
-                        </button>
+                        </a>
                     </div>
 
                 </div>
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-    </section>
+     </section>
 
      <!-- =================== MAIN ======================= -->
      <main class="main">
@@ -653,14 +653,71 @@
                 </div>
             </div>
         </section>
-
-        <section class="browse_by">
-            
-        </section>
      </main>
+
+    <!-- ==================== BROWSE BY SECTION =================== -->
+     <section class="browse_by">
+        <div class="browse_by_container">
+            <div class="browse_box">
+                <h1>BROWSE BY occasion</h1>
+
+                <div class="first_row">
+                    <div class="occasion_card">
+                        <img class ="casual_occasion_img" src="assets/images/casual.svg" alt="casual occasion">
+                        
+                        <h3>Casual</h3>
+                    </div>
+    
+                    <div class="occasion_card">
+                        <img class="formal_occasion_img" src="assets/images/formal.svg" alt="formal occasion">
+                        
+                        <h3>Formal</h3>
+                    </div>
+                </div>
+
+                <div class="second_row">
+                    <div class="occasion_card">
+                        <img class="date_occasion_img" src="assets/images/date.svg" alt="date occasion">
+                        
+                        <h3>Date</h3>
+                    </div>
+    
+                    <div class="occasion_card">
+                        <img class="active_occasion_img" src="assets/images/active.svg" alt="active occasion">
+                        
+                        <h3>Active</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>  
 
     <!--=============== FOOTER ===============-->
 
+    <footer class="footer">
+        <div class="footer_container">
+            <form class="newsletter_card">
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <div class="email_input_wrapper">
+                    <div class="email_input_container">
+                        <i class="ri-mail-line email_icon"></i>
+                        <input type="email" id="email-input" class="email_input" placeholder="Enter your email address" aria-label="Enter your email address" />
+                    </div>
+                    <button type="submit" class="subscribe_btn">Subscribe to Newsletter</button>
+                </div>
+            </form>
+            
+            <div class="brand_logo logo_footer">SHARAF</div>
+            <p class="brand_desc">We are authorised reseller of fragrances from around the world with quality and affordable in mind.</p>
+            <div class="social_media_container">
+                <i class="ri-twitter-fill social_media_icon"></i>
+                <i class="ri-facebook-circle-fill social_media_icon"></i>
+                <i class="ri-instagram-line social_media_icon"></i>
+                <i class="ri-github-fill social_media_icon"></i>
+            </div>
+        </div>
+    </footer>
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
 
