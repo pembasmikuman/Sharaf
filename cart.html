@@ -16,103 +16,104 @@
 </head>
 <body>
 
-        <!-- ================= HEADER =================== -->
-        <header class="header" id="header">
-            <div class="header_container">
-    
-                <!-- Promo Bar -->
-                <div class="promo_bar" id="promo-bar">
-    
-                    <div class="promo_wrapper">Sign up and get 20% off to your first order.
-                        <a href="#" class="sign_up_btn" style="text-decoration: underline;">
-                            Sign up now
+    <!-- ================= HEADER =================== -->
+    <header class="header" id="header">
+        <div class="header_container">
+
+            <!-- Promo Bar -->
+            <div class="promo_bar" id="promo-bar">
+
+                <div class="promo_wrapper">Sign up and get 20% off to your first order.
+                    <a href="#" class="sign_up_btn" style="text-decoration: underline;">
+                        Sign up now
+                    </a>
+                </div>
+
+                <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <!-- Navigation bar -->
+            <nav class="navbar">
+                <div class="nav_container">
+                    <div class="nav_left">
+
+                        <button class="menu_btn" onclick="toggleSidePanel()">
+                            <i class="ri-menu-line"></i>
+                        </button>
+
+                        <div class="brand_logo">SHARAF</div>
+
+                        <div class="desktop_nav">
+                            <a href="#">On Sale</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Desktop search -->
+                    <div class="search_container">
+                        <button class="search_btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input type="text" class="search_box" placeholder="Search for products...">
+                    </div>
+                    
+                    <div class="nav_right">
+
+                        <!-- Mobile search icon -->
+                        <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
+                            <i class="ri-search-line"></i>
+                        </button>
+
+                        <!-- Your existing cart and account icons -->
+                        <a href="cart.html" class="nav_icon">
+                            <i class="ri-shopping-cart-2-line cart_icon"></i>
+                        </a>
+                        <a href="/login.html" class="nav_icon">
+                            <i class="ri-account-circle-line account_icon"></i>
                         </a>
                     </div>
-    
-                    <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
-                        <i class="ri-close-line"></i>
+
+                </div>
+            </nav>
+
+            <div class="side_panel" id="side-panel">
+                <div class="panel_header">
+                    <h2>Menu</h2>
+                    <button class="close_btn" onclick="toggleSidePanel()">
+                        <i class="ri-close-line side_panel_close"></i>
                     </button>
                 </div>
-    
-                <!-- Navigation bar -->
-                 <nav class="navbar">
-                    <div class="nav_container">
-                        <div class="nav_left">
-    
-                            <button class="menu_btn" onclick="toggleSidePanel()">
-                                <i class="ri-menu-line"></i>
-                            </button>
-    
-                            <div class="brand_logo">SHARAF</div>
-    
-                            <div class="desktop_nav">
-                                <a href="#">On Sale</a>
-                                <a href="#">New Arrivals</a>
-                                <a href="#">Contact Us</a>
-                            </div>
-                        </div>
-    
-                        <!-- Desktop search -->
-                        <div class="search_container">
-                            <button class="search_btn">
-                                <i class="ri-search-line"></i>
-                            </button>
-                            <input type="text" class="search_box" placeholder="Search for products...">
-                        </div>
-                        
-                        <div class="nav_right">
-    
-                            <!-- Mobile search icon -->
-                            <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
-                                <i class="ri-search-line"></i>
-                            </button>
-    
-                            <!-- Your existing cart and account icons -->
-                            <a href="cart.html" class="nav_icon">
-                                <i class="ri-shopping-cart-2-line cart_icon"></i>
-                            </a>
-                            <a href="/login.html" class="nav_icon">
-                                <i class="ri-account-circle-line account_icon"></i>
-                            </a>
-                        </div>
-    
-                    </div>
-                 </nav>
-    
-                 <div class="side_panel" id="side-panel">
-                    <div class="panel_header">
-                        <h2>Menu</h2>
-                        <button class="close_btn" onclick="toggleSidePanel()">
-                            <i class="ri-close-line side_panel_close"></i>
-                        </button>
-                    </div>
-    
-                    <div class="mobile_nav">
-                        <a href="#">On Sale</a>
-                        <a href="#">New Arrivals</a>
-                        <a href="#">Contact Us</a>
-                    </div>
-                 </div>
-    
-                 <!-- Overlay for Mobile Menu -->
-                 <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
-    
-                 <div class="search_overlay" id="search-overlay">
-                    <div class="search_overlay_wrapper">
-                        <button class="close_search_btn" onclick="toggleSearch()">
-                            <i class="ri-close-line"></i>
-                        </button>
-                        <h2>Search</h2>
-                        <div class="mobile_search_container">
-                            <input type="text" class="mobile_search_box" placeholder="Search products...">
-                            <button class="nav_icon">
-                                <i class="ri-search-line"></i>
-                            </button>
-                        </div>
-                    </div>
-                 </div>
+
+                <div class="mobile_nav">
+                    <a href="#">On Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Contact Us</a>
+                </div>
             </div>
-         </header>
+
+            <!-- Overlay for Mobile Menu -->
+            <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+
+            <div class="search_overlay" id="search-overlay">
+                <div class="search_overlay_wrapper">
+                    <button class="close_search_btn" onclick="toggleSearch()">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <h2>Search</h2>
+                    <div class="mobile_search_container">
+                        <input type="text" class="mobile_search_box" placeholder="Search products...">
+                        <button class="nav_icon">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
 
     <!--Introduction-->
     <div class="intro">
