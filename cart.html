@@ -3,40 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Sharaf International</title>
+
+    <!-- ========= PAGE ICON ========= -->
+    <link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon">
+
+    <!-- ========== ICON LIBRARY ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+
+    <title>Add to cart</title>
     <meta namne="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/cart.css">
 </head>
 <body>
 
-    <!--promo banner-->
-    <div class="promo">
-        <div class="promo-wrapper">
-            <div class="promo-text">
-                <span class="first-part">Sign up and get 20% off to your first order.</span>
-                <span class="second-part" style="text-decoration: underline;" id="signup-link">Sign up now</span>
+        <!-- ================= HEADER =================== -->
+        <header class="header" id="header">
+            <div class="header_container">
+    
+                <!-- Promo Bar -->
+                <div class="promo_bar" id="promo-bar">
+    
+                    <div class="promo_wrapper">Sign up and get 20% off to your first order.
+                        <a href="#" class="sign_up_btn" style="text-decoration: underline;">
+                            Sign up now
+                        </a>
+                    </div>
+    
+                    <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+    
+                <!-- Navigation bar -->
+                 <nav class="navbar">
+                    <div class="nav_container">
+                        <div class="nav_left">
+    
+                            <button class="menu_btn" onclick="toggleSidePanel()">
+                                <i class="ri-menu-line"></i>
+                            </button>
+    
+                            <div class="brand_logo">SHARAF</div>
+    
+                            <div class="desktop_nav">
+                                <a href="#">On Sale</a>
+                                <a href="#">New Arrivals</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                        </div>
+    
+                        <!-- Desktop search -->
+                        <div class="search_container">
+                            <button class="search_btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                            <input type="text" class="search_box" placeholder="Search for products...">
+                        </div>
+                        
+                        <div class="nav_right">
+    
+                            <!-- Mobile search icon -->
+                            <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
+                                <i class="ri-search-line"></i>
+                            </button>
+    
+                            <!-- Your existing cart and account icons -->
+                            <a href="cart.html" class="nav_icon">
+                                <i class="ri-shopping-cart-2-line cart_icon"></i>
+                            </a>
+                            <a href="/login.html" class="nav_icon">
+                                <i class="ri-account-circle-line account_icon"></i>
+                            </a>
+                        </div>
+    
+                    </div>
+                 </nav>
+    
+                 <div class="side_panel" id="side-panel">
+                    <div class="panel_header">
+                        <h2>Menu</h2>
+                        <button class="close_btn" onclick="toggleSidePanel()">
+                            <i class="ri-close-line side_panel_close"></i>
+                        </button>
+                    </div>
+    
+                    <div class="mobile_nav">
+                        <a href="#">On Sale</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                 </div>
+    
+                 <!-- Overlay for Mobile Menu -->
+                 <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+    
+                 <div class="search_overlay" id="search-overlay">
+                    <div class="search_overlay_wrapper">
+                        <button class="close_search_btn" onclick="toggleSearch()">
+                            <i class="ri-close-line"></i>
+                        </button>
+                        <h2>Search</h2>
+                        <div class="mobile_search_container">
+                            <input type="text" class="mobile_search_box" placeholder="Search products...">
+                            <button class="nav_icon">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                 </div>
             </div>
-            <div class="close-promo">
-                <ion-icon name="close"></ion-icon>
-            </div>
-        </div>
-    </div>
-
-    <!--navigation bar-->
-    <div class="navbar-container">
-        <div class="navbar-wrapper">
-            <ion-icon class="icon" name="menu-outline"></ion-icon>
-            <div class="brand-name-1">SHARAF</div>
-        </div>
-        <div class="payment-icons">
-            <ion-icon class="icon" name="search-outline"></ion-icon>
-            <ion-icon class="icon" name="cart-outline"></ion-icon>
-            <ion-icon class="icon" name="person-circle-outline"></ion-icon>
-        </div>
-      </div>
+         </header>
 
     <!--Introduction-->
     <div class="intro">
@@ -231,6 +307,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/homepage.js"></script>
 
 </body>
 </html>
