@@ -70,7 +70,21 @@ let swiperHome = new Swiper('.home__swiper', {
             spacebetween: 30
         }
     }
+});
 
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    reset: false // Animation repeat
+})
 
-  });
+sr.reveal(`.hero_title, .shop_now_btn`, {transition: 1000, origin:'left'})
+sr.reveal(`.hero_img`, {transition: 1000, origin:'bottom', delay: 100})
+sr.reveal(`.hero_stars`, {scale: 1.5, origin:'bottom', delay: 300})
+sr.reveal(`.main_title`, {transition: 1000, origin:'left'})
+sr.reveal(`.product_prev, .product_next`, {origin:'bottom', duration: 1500})
+sr.reveal(`.occasion_card`, {transition: 500, origin:'bottom'})
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 300})
   

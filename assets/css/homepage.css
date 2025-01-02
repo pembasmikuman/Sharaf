@@ -576,7 +576,7 @@ header{
     color: #ffc633;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.product_next, .product_prev {
     display: none;
 }
 
@@ -694,6 +694,55 @@ header{
     height: 100%;
 }
 
+/* ============== REVIEW SECTION =============== */
+.review_swiper{
+    padding: 1rem;
+}
+
+.review_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.review_header h1{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    width: 60%;
+    font-family: 'Inter';
+}
+
+.swiper_button_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+
+}
+
+.review_prev, .review_next{
+    position: absolute;
+    top: initial;
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.review_prev{
+    left: 14rem;
+}
+
+.review_next{
+    left: 16rem;
+}
+
+.review_prev::after,
+.review_next::after {
+    content: '';
+}
+
+
+
 /* ================ FOOTER ================= */
 .footer {
     border-radius: 0;
@@ -710,6 +759,7 @@ header{
     width: 100%;
     flex-direction: column;
     padding: 0 .9375rem 1.4375rem;
+    
 }
   
 .newsletter_card{
@@ -771,6 +821,21 @@ header{
     font-family: 'Satoshi Variable';
     font-weight: 600;
 }
+
+.subscribe_btn:hover{
+    text-decoration: underline;
+    filter: drop-shadow(-8px 8px 16px hsla(34, 51%, 8%, .4));
+}
+
+.right_footer_wrapper{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+        ". ."
+        ". ."; 
+}
   
 .logo_footer {
     margin: 2rem 0 .8125rem;
@@ -779,12 +844,53 @@ header{
 .brand_desc {
     color: var(--main-color);
     font: 400 var(--normal-font-size) 'Satoshi Variable';
-    margin: 0 0 .75rem;
+    margin: 0 0 .8125rem;
 }
-  
+
+.social_media_container{
+    margin: 0 0 .8125rem;
+}
+
 .social_media_icon {
     font-size: 1.5rem;
     color: var(--main-color);
+}
+
+.social_media_icon:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.footer_links{
+    color: var(--main-color);
+}
+
+.nav_links:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer_divider{
+    margin: 10% 0 0;
+}
+
+.bottom_wrapper{
+    margin: 2% 0 0;
+    text-align: center;
+    color: #606060;
+    align-self: center;
+}
+
+.payment_partner_wrapper{
+    font-size: var(--normal-font-size);
+    display: flex;
+    gap: 0.1rem;
+    filter: drop-shadow(-8px 8px 16px hsla(30, 1%, 37%, 0.4));
+}
+
+.payment_icon{
+    max-width: 3.4rem;
+    height: auto;
 }
 
 /* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */
@@ -852,8 +958,8 @@ header{
         display: none;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .product_prev,
+    .product_next {
         display: block;
         top:initial;
         bottom: 0;
@@ -871,24 +977,24 @@ header{
         width: 30%;
     }
 
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
+    .product_prev::after,
+    .product_next::after {
         content: '';
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .product_prev,
+    .product_next {
         top:initial;
         bottom: 0;
         font-size: 1.5rem;
         color: var(--black-color);
     }
 
-    .swiper-button-prev{
+    .product_prev{
         left: 8rem;
     }
 
-    .swiper-button-next{
+    .product_next{
         right: 8rem;
     }
 
@@ -949,6 +1055,48 @@ header{
 
     .brand_desc{
         width: 50%;
+    }
+    
+    .footer_container{
+        padding: 0 1.5rem 1.4375rem;
+        display: block;;
+    }
+
+    .footer_link_wrapper{
+        padding: 0 2rem 1.4375rem;
+        display: flex;
+        font-size: 110%;
+    }
+
+    .logo_footer{
+        font-size: 2.5rem;
+    }
+
+    .brand_desc{
+        font-size: 110%;
+        width:80%;
+    }
+
+    .social_media_icon{
+        font-size: 2.2rem;
+    }
+
+    .left_footer_wrapper{
+        flex: 1;
+    }
+
+    .right_footer_wrapper{
+        margin: 3% 0 0;
+    }
+
+    .footer_divider{
+        width: 100%;
+        margin: 2% 0 2%;
+    }
+
+    .bottom_wrapper{
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -1046,14 +1194,16 @@ header{
         font-size: 2.25rem;
     }
 
-    .footer_container{
+    .newsletter_wrapper{
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
     .newsletter_card{
         padding: 2rem 1.5rem;
-        width: 92%;
-        justify-content: space-between
+        width: 90%;
+        justify-content: space-between;
     }
 
     .newsletter_card h2{
@@ -1063,6 +1213,37 @@ header{
     .email_input_wrapper{
         flex: 0.5;
     }
+
+    .left_footer_wrapper{
+        flex: 0.5;
+    }
+
+    .brand_desc{
+        font-size: 1.5rem;
+    }
+
+    .social_media_icon{
+        font-size: 3rem;
+    }
+
+    .right_footer_wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    .footer_links{
+        font-size: 1.5rem;
+    }
+
+    .bottom_wrapper{
+        font-size: 1.5em;
+    }
+
+    .payment_icon{
+        max-width: 4rem;
+    }
+    
 }
 
 @media screen and (min-width: 1440px){
