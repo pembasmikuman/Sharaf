@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .product-page {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.filters {
+    width: 250px;
+    background: #fff;
+    padding: 1rem;
+    height: 100vh;
+}
+
+.products-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.filter-toggle {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+    }
+
+    .filter-toggle {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .filters {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 80%;
+        max-width: 300px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .filters.active {
+        left: 0;
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-filters {
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .overlay.active {
+        display: block;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <!-- Filter Toggle Button (visible on mobile) -->
+        <button class="filter-toggle" id="filterToggle">
+            <i class="fas fa-filter"></i> Filters
+        </button>
+    
+        <!-- Filters Sidebar -->
+        <aside class="filters" id="filterPanel">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <button class="close-filters" id="closeFilters">&times;</button>
+            </div>
+            <div class="filter-content">
+                <!-- Add your filter options here -->
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox"> Electronics</label>
+                    <label><input type="checkbox"> Clothing</label>
+                </div>
+                <!-- More filter groups -->
+            </div>
+        </aside>
+    
+        <!-- Products Grid -->
+        <main class="products-grid">
+            <!-- Product cards go here -->
+            <div class="product-card">
+                <img src="product.jpg" alt="Product">
+                <h3>Product Title</h3>
+                <p>$99.99</p>
+            </div>
+            <!-- More product cards -->
+        </main>
+    </div>
+    
+    <script>
+        const filterToggle = document.getElementById('filterToggle');
+const filterPanel = document.getElementById('filterPanel');
+const closeFilters = document.getElementById('closeFilters');
+
+filterToggle.addEventListener('click', () => {
+    filterPanel.classList.add('active');
+});
+
+closeFilters.addEventListener('click', () => {
+    filterPanel.classList.remove('active');
+});
+
+// Close panel when clicking outside
+document.addEventListener('click', (e) => {
+    if (e.target !== filterPanel && 
+        !filterPanel.contains(e.target) && 
+        e.target !== filterToggle) {
+        filterPanel.classList.remove('active');
+    }
+});
+
+// Optional: Close on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        filterPanel.classList.remove('active');
+    }
+});
+
+    </script>
+</body>
+</html>

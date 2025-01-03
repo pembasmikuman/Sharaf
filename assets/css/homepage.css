@@ -1251,6 +1251,14 @@ header{
         width: 38%;
     }
 
+    .email_icon{
+        font-size: 1.5rem;
+    }
+    .email_input,
+    .subscribe_btn{
+        font-size: 1rem;
+    }
+
     .email_input_wrapper{
         flex: 0.5;
     }
@@ -1260,7 +1268,7 @@ header{
     }
 
     .brand_desc{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .social_media_icon{
@@ -1274,7 +1282,7 @@ header{
     }
 
     .footer_links{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .bottom_wrapper{
@@ -1350,6 +1358,10 @@ header{
     .swiper-button-next,
     .swiper-button-prev{
         font-size: 2rem;
+    }
+
+    .browse_box{
+        border-radius: 2rem;
     }
 
     .browse_box h1{
