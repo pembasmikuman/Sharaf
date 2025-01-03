@@ -49,6 +49,18 @@
     --z-fixed: 100;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--black-color);
+    line-height: 1.5;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--normal-font-size);
+}
 
 a{
     text-decoration: none;
@@ -61,6 +73,11 @@ button{
     cursor: pointer;
     padding: 0;
 }
+
+ul{
+    list-style: none;
+}
+
 
 /* ============= PROMO BAR =============== */
 .promo_bar{
@@ -460,7 +477,6 @@ button{
 
     /* Cart Section */
     .cart-section {
-        margin: 20px 10px;
         padding: 10px;
     }
 
@@ -839,6 +855,10 @@ button{
         padding: 15px 20px;
     }
 
+    .intro{
+        padding: 1rem;
+    }
+
     /* Cart Section */
     .cart-items {
         gap: 20px;
@@ -906,15 +926,20 @@ button{
 /* Desktop Styles */
 @media (min-width: 1024px) {
 
+    .intro{
+        padding: 0 1rem;
+    }
+
     .cart-title{
         font-size: 40px;
+        padding: 0 1.8rem;
     }
 
     .main-content{
         display: flex;
         justify-content: space-between; 
         gap: 20px;
-    
+        padding: 0 5% 3%;
     }
 
     .order-summary{
@@ -957,6 +982,163 @@ button{
     10% { opacity: 1; }
     90% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+/* ================ FOOTER ================= */
+.footer {
+    border-radius: 0;
+    display: flex;
+    width: 100%;
+    padding-top: 5rem;
+    flex-direction: column;
+    margin: 0 auto;
+}
+  
+.footer_container {
+    background-color: rgba(240, 240, 240, 1);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 .9375rem 1.4375rem;
+    
+}
+  
+.newsletter_card{
+    border-radius: 1.25rem;
+    background-color: var(--main-color);
+    z-index: 10;
+    display: flex;
+    margin-top: -5rem;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem 1.1rem;
+    font: var(--normal-font-size) 'Satoshi Variable';
+}
+  
+.newsletter_card h2{
+    color: var(--white-color);
+    font: var(--h2-font-size) 'Inter';
+    font-weight: bold;
+}
+  
+.email_input_container {
+    border-radius: 3.875rem;
+    background-color: var(--white-color);
+    display: flex;
+    margin: 1.75rem 0 0;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 0.7rem 1rem;
+}
+
+.email_input {
+    border-color: transparent;
+    font-family: 'Satoshi Variable';
+    font-size: var(--normal-font-size);
+    width: 100%;
+}
+
+.email_input:focus {
+    outline: none;
+}
+  
+.email_icon {
+    font-size: 1.25rem;
+    color: #999999;
+    margin: auto 0;
+}
+  
+.subscribe_btn {
+    width: 100%;
+    border-radius: 3.875rem;
+    background-color: var(--white-color);
+    margin: .75rem 0 0;
+    color: var(--main-color);
+    padding: 0.7rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Satoshi Variable';
+    font-weight: 600;
+}
+
+.subscribe_btn:hover{
+    text-decoration: underline;
+    filter: drop-shadow(-8px 8px 16px hsla(34, 51%, 8%, .4));
+}
+
+.right_footer_wrapper{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+        ". ."
+        ". ."; 
+}
+  
+.logo_footer {
+    margin: 2rem 0 .8125rem;
+}
+  
+.brand_desc {
+    color: var(--main-color);
+    font: 400 var(--normal-font-size) 'Satoshi Variable';
+    margin: 0 0 .8125rem;
+}
+
+.social_media_container{
+    margin: 0 0 .8125rem;
+}
+
+.social_media_icon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.social_media_icon:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.footer_links{
+    color: var(--main-color);
+}
+
+.nav_links:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer_divider{
+    margin: 10% 0 0;
+}
+
+.bottom_wrapper{
+    margin: 2% 0 0;
+    text-align: center;
+    color: #606060;
+    align-self: center;
+}
+
+.payment_partner_wrapper{
+    font-size: var(--normal-font-size);
+    display: flex;
+    gap: 0.1rem;
+    filter: drop-shadow(-8px 8px 16px hsla(30, 1%, 37%, 0.4));
+}
+
+.payment_icon{
+    max-width: 3.4rem;
+    height: auto;
+}
+
+.footer_divider{
+    margin-top: 20%;
+    width: 100%;
+    border: #e6e6e6 1px solid;
+    margin-bottom: 20%;
 }
 
 /* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */
@@ -1024,8 +1206,8 @@ button{
         display: none;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .product_prev,
+    .product_next {
         display: block;
         top:initial;
         bottom: 0;
@@ -1043,24 +1225,24 @@ button{
         width: 30%;
     }
 
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
+    .product_prev::after,
+    .product_next::after {
         content: '';
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .product_prev,
+    .product_next {
         top:initial;
         bottom: 0;
         font-size: 1.5rem;
         color: var(--black-color);
     }
 
-    .swiper-button-prev{
+    .product_prev{
         left: 8rem;
     }
 
-    .swiper-button-next{
+    .product_next{
         right: 8rem;
     }
 
@@ -1104,6 +1286,19 @@ button{
         width: 160%;
     }
 
+    .review_content_header{
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+    }
+
+    .review_content_header h1{
+        font-size: 2rem;
+    }
+
+    .swiper_button_wrapper{
+        flex: 0.1;
+    }
+
     .newsletter_card{
         flex-direction: row;
         padding: 3rem 1.5rem;
@@ -1121,6 +1316,52 @@ button{
 
     .brand_desc{
         width: 50%;
+    }
+    
+    .footer_container{
+        padding: 0 1.5rem 1.4375rem;
+        display: block;;
+    }
+
+    .footer_link_wrapper{
+        padding: 0 2rem 1.4375rem;
+        display: flex;
+        font-size: 100%;
+    }
+
+    .logo_footer{
+        font-size: 2.5rem;
+    }
+
+    .brand_desc{
+        font-size: 100%;
+        width:80%;
+    }
+
+    .social_media_icon{
+        font-size: 1.7rem;
+    }
+
+    .left_footer_wrapper{
+        flex: 1;
+    }
+
+    .right_footer_wrapper{
+        margin: 3% 0 0;
+    }
+
+    .footer_divider{
+        width: 100%;
+        margin: 2% 0 2%;
+    }
+
+    .bottom_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-container{
+        padding: 2rem 27%;
     }
 }
 
@@ -1218,23 +1459,78 @@ button{
         font-size: 2.25rem;
     }
 
-    .footer_container{
+    .newsletter_wrapper{
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
     .newsletter_card{
         padding: 2rem 1.5rem;
-        width: 92%;
-        justify-content: space-between
+        width: 90%;
+        justify-content: space-between;
     }
 
     .newsletter_card h2{
         width: 38%;
     }
 
+    .email_icon{
+        font-size: 1.5rem;
+    }
+    
+    .email_input,
+    .subscribe_btn{
+        font-size: 1rem;
+    }
+
     .email_input_wrapper{
         flex: 0.5;
     }
+
+    .left_footer_wrapper{
+        flex: 0.5;
+    }
+
+    .brand_desc{
+        font-size: 1rem;
+    }
+
+    .social_media_icon{
+        font-size: 2rem;
+    }
+
+    .right_footer_wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    .footer_links{
+        font-size: 1rem;
+    }
+
+    .bottom_wrapper{
+        font-size: 1rem;
+    }
+
+    .payment_icon{
+        max-width: 3.5rem;
+    }
+
+    .review{
+        padding: 0 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .review_wrapper{
+        gap: 1.5rem;
+    }
+
+    .form-container{
+        padding: 2rem 38%;
+    }
+    
 }
 
 @media screen and (min-width: 1440px){
@@ -1247,7 +1543,7 @@ button{
     .sign_up_btn,
     .desktop_nav,
     .search_box{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .cart_icon,
@@ -1256,7 +1552,7 @@ button{
     }
 
     .brand_logo{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero_title{
@@ -1293,6 +1589,10 @@ button{
         font-size: 2rem;
     }
 
+    .browse_box{
+        border-radius: 2rem;
+    }
+
     .browse_box h1{
         font-size: 4rem;
     }
@@ -1316,12 +1616,12 @@ button{
 
     .promo_wrapper{
         flex: 0.5;
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .sign_up_btn,
     .close_promo_btn{
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .nav_container{

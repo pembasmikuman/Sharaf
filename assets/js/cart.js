@@ -1,3 +1,50 @@
+// ========== CLOSE PROMO BAR =========
+const promoBar = document.getElementById('promo-bar');
+const promoCloseBtn = document.getElementById('close-promo-btn');
+const resetPromoBtn = document.getElementById('reset-promo-btn');
+
+promoBar.classList.remove('hidden');
+localStorage.removeItem('promo-bar-closed');
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Check if promo bar state is saved in localStorage
+    const isPromoClosed = localStorage.getItem('promo-bar-closed') === 'true';
+    
+    if (isPromoClosed) {
+        promoBar.classList.add('hidden');
+    }
+
+    // Close Promo Bar
+    promoCloseBtn.addEventListener('click', () => {
+        promoBar.classList.add('hidden');
+        localStorage.setItem('promo-bar-closed', 'true');
+    });
+});
+
+// ============= MENU OVERLAY TOGGLE =============
+function toggleSidePanel() {
+    const sidePanel = document.getElementById('side-panel');
+    const overlay = document.getElementById('overlay');
+    
+    sidePanel.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+// ============ SEARCH OVERLAY TOGGLE =============
+function toggleSearch() {
+    const searchOverlay = document.getElementById('search-overlay');
+    searchOverlay.classList.toggle('active');
+    
+    // Focus the search input when overlay opens
+    if (searchOverlay.classList.contains('active')) {
+        searchOverlay.querySelector('.mobile_search_container').focus();
+    }
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Select all quantity controls
     const quantityControls = document.querySelectorAll('.quantity-control');
@@ -146,3 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial cart summary update
     updateCartSummary();
 });
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    reset: false // Animation repeat
+});
+
+sr.reveal(`.main-content`, {transition: 1000, origin:'left'})
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom'})

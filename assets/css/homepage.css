@@ -1106,7 +1106,7 @@ header{
     .footer_link_wrapper{
         padding: 0 2rem 1.4375rem;
         display: flex;
-        font-size: 110%;
+        font-size: 100%;
     }
 
     .logo_footer{
@@ -1114,12 +1114,11 @@ header{
     }
 
     .brand_desc{
-        font-size: 110%;
         width:80%;
     }
 
     .social_media_icon{
-        font-size: 2.2rem;
+        font-size: 1.7rem;
     }
 
     .left_footer_wrapper{
@@ -1254,6 +1253,7 @@ header{
     .email_icon{
         font-size: 1.5rem;
     }
+
     .email_input,
     .subscribe_btn{
         font-size: 1rem;
@@ -1268,11 +1268,11 @@ header{
     }
 
     .brand_desc{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .social_media_icon{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .right_footer_wrapper{
@@ -1282,15 +1282,15 @@ header{
     }
 
     .footer_links{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .bottom_wrapper{
-        font-size: 1.5em;
+        font-size: 1rem;
     }
 
     .payment_icon{
-        max-width: 4rem;
+        max-width: 3.5rem;
     }
 
     .review{
@@ -1314,7 +1314,7 @@ header{
     .sign_up_btn,
     .desktop_nav,
     .search_box{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .cart_icon,
@@ -1323,7 +1323,7 @@ header{
     }
 
     .brand_logo{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero_title{
@@ -1387,12 +1387,12 @@ header{
 
     .promo_wrapper{
         flex: 0.5;
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .sign_up_btn,
     .close_promo_btn{
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .nav_container{

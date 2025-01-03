@@ -15,101 +15,272 @@
 </head>
 <body>
 
-   <div class="form-container">
-    <form class="form">
-        <div class="flex-column">
-            <label>Email </label>
-        </div>
-        <div class="inputForm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20"><g data-name="Layer 3" id="Layer_3"><path d="
-                m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 
-                -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135
-                0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></g></svg>
-            <input placeholder="Enter your Email" class="input" type="text">
-        </div>
-        
-        <div class="flex-column">
-        <label>Password </label></div>
-        <div class="inputForm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
-                <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 
-                0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125
-                0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 
-                16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0">
-            </path>
-                <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 
-                96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 
-                128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
-                </path></svg>        
-            <input placeholder="Enter your Password" class="input" type="password">
-        </div>
-        
-        <div class="flex-row">
-            <div>
-                <input type="radio">
-                <label>Remember me </label>
+    <!-- ================= HEADER =================== -->
+    <header class="header" id="header">
+        <div class="header_container">
+
+            <!-- Promo Bar -->
+            <div class="promo_bar" id="promo-bar">
+
+                <div class="promo_wrapper">Sign up and get 20% off to your first order.
+                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                        Sign up now
+                    </button>
+                </div>
+
+                <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
+                    <i class="ri-close-line"></i>
+                </button>
             </div>
-            <span class="span">Forgot password?</span>
+
+            <!-- Navigation bar -->
+                <nav class="navbar">
+                <div class="nav_container">
+                    <div class="nav_left">
+
+                        <button class="menu_btn" onclick="toggleSidePanel()">
+                            <i class="ri-menu-line"></i>
+                        </button>
+
+                        <a href="homepage.html" class="brand_logo">SHARAF</a>
+
+                        <div class="desktop_nav">
+                            <a href="#">On Sale</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Desktop search -->
+                    <div class="search_container">
+                        <button class="search_btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input type="text" class="search_box" placeholder="Search for products...">
+                    </div>
+                    
+                    <div class="nav_right">
+
+                        <!-- Mobile search icon -->
+                        <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
+                            <i class="ri-search-line"></i>
+                        </button>
+
+                        <!-- Your existing cart and account icons -->
+                        <a href="cart.html" class="nav_icon">
+                            <i class="ri-shopping-cart-2-line cart_icon"></i>
+                        </a>
+                        <a href="/login.html" class="nav_icon">
+                            <i class="ri-account-circle-line account_icon"></i>
+                        </a>
+                    </div>
+
+                </div>
+                </nav>
+
+                <div class="side_panel" id="side-panel">
+                <div class="panel_header">
+                    <h2>Menu</h2>
+                    <button class="close_btn" onclick="toggleSidePanel()">
+                        <i class="ri-close-line side_panel_close"></i>
+                    </button>
+                </div>
+
+                <div class="mobile_nav">
+                    <a href="#">On Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                </div>
+
+                <!-- Overlay for Mobile Menu -->
+                <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+
+                <div class="search_overlay" id="search-overlay">
+                <div class="search_overlay_wrapper">
+                    <button class="close_search_btn" onclick="toggleSearch()">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <h2>Search</h2>
+                    <div class="mobile_search_container">
+                        <input type="text" class="mobile_search_box" placeholder="Search products...">
+                        <button class="nav_icon">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
         </div>
-        <button class="button-submit">Sign In</button>
-        <p class="p">
-            Don't have an account? <span class="span">Sign Up</span>
-        </p>
-        <p class="p line">Or With</p>
-        <div class="flex-row">
-            <button class="btn google">
+    </header>
 
-                <svg xml:space="preserve" style="enable-background:new 0 0 512 512;" 
-                    viewBox="0 0 512 512" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" version="1.1">
-
-                    <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
-                    c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-                    C103.821,274.792,107.225,292.797,113.47,309.408z" style="fill:#FBBB00;">
-                    </path>
-                    <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
-                    c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
-                    c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z" style="fill:#518EF8;">
-                    </path>
-                    <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
-                    c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-                    c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" style="fill:#28B446;">
-                    </path>
-                    <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
-                    c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-                    C318.115,0,375.068,22.126,419.404,58.936z" style="fill:#F14336;">
-                    </path>
-                </svg>
-    
-            Google 
-            </button>
-        
-            <button class="btn apple">
-
-                <svg xml:space="preserve" style="enable-background:new 0 0 22.773 22.773;" 
-                viewBox="0 0 22.773 22.773" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                xmlns="http://www.w3.org/2000/svg" id="Capa_1" width="20" height="20" version="1.1"> 
-                <g> 
-                    <g> 
-                    <path 
-                    d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,
-                    1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z">        
-                    </path> 
-                    <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,
-                    2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,
-                    0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,
-                    2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,
-                    1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z">
-                    </path> 
-                    </g>
-                </g>
-                </svg>
-
-                Apple 
+    <!-- ================== MAIN SECTION ================ -->
+   <main class="form-container">
+        <form class="form">
+            <div class="flex-column">
+                <label>Email </label>
+            </div>
+            <div class="inputForm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20"><g data-name="Layer 3" id="Layer_3"><path d="
+                    m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 
+                    -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135
+                    0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></g></svg>
+                <input placeholder="Enter your Email" class="input" type="text">
+            </div>
             
-            </button>
+            <div class="flex-column">
+            <label>Password </label></div>
+            <div class="inputForm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
+                    <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 
+                    0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125
+                    0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 
+                    16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0">
+                </path>
+                    <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 
+                    96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 
+                    128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
+                    </path></svg>        
+                <input placeholder="Enter your Password" class="input" type="password">
+            </div>
+            
+            <div class="flex-row">
+                <div>
+                    <input type="radio">
+                    <label>Remember me </label>
+                </div>
+                <span class="span">Forgot password?</span>
+            </div>
+            <button class="button-submit">Sign In</button>
+            <p class="p">
+                Don't have an account? <span class="span">Sign Up</span>
+            </p>
+            <p class="p line">Or With</p>
+            <div class="flex-row">
+                <button class="btn google">
+
+                    <svg xml:space="preserve" style="enable-background:new 0 0 512 512;" 
+                        viewBox="0 0 512 512" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" version="1.1">
+
+                        <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                        c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                        C103.821,274.792,107.225,292.797,113.47,309.408z" style="fill:#FBBB00;">
+                        </path>
+                        <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                        c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                        c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z" style="fill:#518EF8;">
+                        </path>
+                        <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                        c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                        c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" style="fill:#28B446;">
+                        </path>
+                        <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                        c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                        C318.115,0,375.068,22.126,419.404,58.936z" style="fill:#F14336;">
+                        </path>
+                    </svg>
+        
+                Google 
+                </button>
+            
+                <button class="btn apple">
+
+                    <svg xml:space="preserve" style="enable-background:new 0 0 22.773 22.773;" 
+                    viewBox="0 0 22.773 22.773" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    xmlns="http://www.w3.org/2000/svg" id="Capa_1" width="20" height="20" version="1.1"> 
+                    <g> 
+                        <g> 
+                        <path 
+                        d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,
+                        1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z">        
+                        </path> 
+                        <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,
+                        2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,
+                        0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,
+                        2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,
+                        1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z">
+                        </path> 
+                        </g>
+                    </g>
+                    </svg>
+
+                    Apple 
+                
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer_container">
+            
+            <div class="newsletter_wrapper">
+                
+            </div>
+            
+            <div class="footer_link_wrapper">
+                <div class="left_footer_wrapper">
+                    <div class="brand_logo logo_footer">SHARAF</div>
+                    <p class="brand_desc">We are authorised reseller of fragrances from around the world with quality and affordable in mind.</p>
+                    <div class="social_media_container">
+                        <a class="social_media_icon" href="https://www.x.com"><i class="ri-twitter-fill"></i></a>
+                        <a class="social_media_icon" href="https://www.facebook.com"><i class="ri-facebook-circle-fill"></i></a>
+                        <a class="social_media_icon" href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+                        <a class="social_media_icon" href="https://github.com/pembasmikuman/Sharaf"><i class="ri-github-fill"></i></a>
+                    </div>
+                </div>
+    
+                <div class="right_footer_wrapper">
+                    <div class="footer_links">
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">About</a></li>
+                            <li><a href="#" class="nav_links">Works</a></li>
+                            <li><a href="#" class="nav_links">Career</a></li>
+                            <li><a href="#" class="nav_links">Features</a></li>
+                    </div>
+    
+                    <div class="footer_links">
+                        <h3>HELP</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">Contact Us</a></li>
+                            <li><a href="#" class="nav_links">Delivery Details</a></li>
+                            <li><a href="#" class="nav_links">Term & Conditions</a></li>
+                            <li><a href="#" class="nav_links">Privacy Policy</a></li>
+                    </div>
+    
+                    <div class="footer_links">
+                        <h3>FAQ</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">Account</a></li>
+                            <li><a href="#" class="nav_links">Manage Deliveries</a></li>
+                            <li><a href="#" class="nav_links">Orders</a></li>
+                            <li><a href="#" class="nav_links">Payment</a></li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider_wrapper">
+                <div class="divider footer_divider"></div>
+            </div>
+
+            <div class="bottom_wrapper">
+                <p style="margin: 0 0 ;">SHARAF © 2024-2025. All rights reserved</p>
+                <div class="payment_partner_wrapper">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Visa.svg" alt="Visa payment icon">
+
+                    <img loading="lazy" class="payment_icon" src="assets/images/Mastercard.svg" alt="Mastercard payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Paypal.svg" alt="PayPal payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Applepay.svg" alt="Apple pay payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Gpay.svg" alt="Google pay payment icon">
+                </div>
+            </div>
         </div>
-    </form>
-   </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
