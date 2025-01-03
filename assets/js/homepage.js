@@ -72,6 +72,30 @@ let swiperHome = new Swiper('.home__swiper', {
     }
 });
 
+let swiperReview = new Swiper('.review_swiper', {
+
+    loop : true,
+    grabCursor: true,
+    slidesPerView: '1',
+
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: '2',
+            spacebetween: 20
+        },
+        1024: {
+            slidesPerView: '3',
+            spacebetween: 30
+        }
+    }
+
+});
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -86,5 +110,6 @@ sr.reveal(`.hero_stars`, {scale: 1.5, origin:'bottom', delay: 300})
 sr.reveal(`.main_title`, {transition: 1000, origin:'left'})
 sr.reveal(`.product_prev, .product_next`, {origin:'bottom', duration: 1500})
 sr.reveal(`.occasion_card`, {transition: 500, origin:'bottom'})
+sr.reveal(`.review_swiper`, {transition: 500, origin:'left'})
 sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 300})
   

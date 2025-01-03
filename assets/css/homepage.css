@@ -695,50 +695,78 @@ header{
 }
 
 /* ============== REVIEW SECTION =============== */
+.review{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review_container {
+    display: grid;
+    align-items: center;
+    row-gap: 6rem;
+}
+  
+.review_content {
+    position: relative;
+    display: grid;
+}
+
+.review_content_header{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.review_content_header h1{
+    flex: 0.9;
+    text-align: left;
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
 .review_swiper{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.review_wrapper{
+    gap: 1rem;
+}
+
+.review_card {
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: 10%;
+    border: #e6e6e6 1px solid;
+    border-radius: 1.25rem;
     padding: 1rem;
 }
 
-.review_header{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-
-.review_header h1{
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    width: 60%;
-    font-family: 'Inter';
+.star_icon{
+    color: #ffc633;
 }
 
 .swiper_button_wrapper{
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1.5rem;
-
-}
-
-.review_prev, .review_next{
-    position: absolute;
-    top: initial;
-    font-size: 1.5rem;
-    color: var(--black-color);
-}
-
-.review_prev{
-    left: 14rem;
-}
-
-.review_next{
-    left: 16rem;
 }
 
 .review_prev::after,
 .review_next::after {
     content: '';
+}
+
+.review_prev,
+.review_next {
+    position: initial;
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+
+.verified_badge{
+    color: #01ab31;
 }
 
 
@@ -1038,6 +1066,19 @@ header{
         width: 160%;
     }
 
+    .review_content_header{
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+    }
+
+    .review_content_header h1{
+        font-size: 2rem;
+    }
+
+    .swiper_button_wrapper{
+        flex: 0.1;
+    }
+
     .newsletter_card{
         flex-direction: row;
         padding: 3rem 1.5rem;
@@ -1242,6 +1283,15 @@ header{
 
     .payment_icon{
         max-width: 4rem;
+    }
+
+    .review{
+        padding: 0 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .review_wrapper{
+        gap: 1.5rem;
     }
     
 }
