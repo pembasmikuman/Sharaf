@@ -1,0 +1,630 @@
+{
+    "fragrances":
+    [
+        {
+            "id": 1,
+            "name": "Eternity",
+            "prices": {
+                "200ml": 228,
+                "100ml": 145,
+                "50ml": 75,
+                "5ml": 15,
+                "original": 200
+            },
+            "description": "Designed in Spain in 1990, Eternity cologne is a strong, floral fragrance that can be worn all day long. This fragrance has been a fan favorite for over 30 years. It's no wonder it was named “Eternity”--you can wear it every day and still feel as hypnotized as you were the day you first experienced it!",
+            "rating": 4.5,
+            "image": "assets/images/ck-eternity.png",
+            "type": "active",
+            "reviews": {
+                "total_count": 156,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "50ml"
+                    }
+                ]
+            },
+            "category": ""
+        },
+
+        {
+            "id": 2,
+            "name": "Asad Zanzibar",
+            "prices": {
+                "100ml": 145,
+                "5ml": 15,
+                "original": 200
+            },
+            "description": "The scent profile of Lattafa Asad Zanzibar is a masterful blend of energetic top notes, intriguing middle notes, and a grounding base. It becomes notable as it starts the show with an oriental spices that are generally very lively, creating a really nice first impression. As the flowers begin to blossom, the scent unfolds beautifully, like a rich cloth weaved with different types of flowers and wood notes that Zanzibar is famous for. Ultimately, the basic notes are set to a soft combination of amber and incense, which creates a warm earthly feel and lends a smoky trace that warmly stays on the skin.",
+            "rating": 5,
+            "image": "assets/images/asad-zanzibar.png",
+            "type": "formal",
+            "reviews": {
+                "total_count": 4,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "100ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 3,
+            "name": "Acqua Di Gio",
+            "prices": {
+                "200ml": 467,
+                "100ml": 315,
+                "50ml": 254,
+                "5ml": 15,
+                "original": 400
+            },
+            "description": "You'll be greeted with fresh, flirty top notes of lime, lemon, bergamot, jasmine, orange, mandarin and neroli followed by juicy middle notes of peach, freesia, rosemary, violet, rose and nutmeg. Grounding this light yet masculine fragrance are earthy base notes of white musk, cedar, oakmoss, patchouli and amber. These fragrance notes blend wonderfully to create a fresh masculine scent that's sure to tantalize and delight the senses.",
+            "rating": 4.5,
+            "image": "assets/images/adg.png",
+            "type": "casual",
+            "reviews": {
+                "total_count": 156,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "50ml"
+                    }
+                ]
+            },
+            "category": "top"
+        },
+
+        {
+            "id": 4,
+            "name": "Eros",
+            "prices": {
+                "200ml": 435,
+                "100ml": 293,
+                "50ml": 219,
+                "5ml": 15,
+                "original": 300
+            },
+            "description": " Versace Eros Cologne by Versace, When it comes to men's fragrances that exude power, confidence, and seduction, Versace Eros stands out as a true masterpiece, a scent that is subtle yet suggestive and has a quiet strength that any modern man will appreciate. Inspired by Eros, the Greek god of love and desire, this fragrance captures the essence of masculinity in a captivating and alluring manner.",
+            "rating": 4.5,
+            "image": "assets/images/eros.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 156,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "50ml"
+                    }
+                ]
+            },
+            "category": "top"
+        },
+
+        {
+            "id": 5,
+            "name": "Badee Al-Oud Sublime",
+            "prices": {
+                "100ml": 122,
+                "5ml": 15,
+                "original": 200
+            },
+            "description": "This Lattafa fragrance begins with sweet top notes of saffron, lavender and nutmeg before mingling with earthy middle notes of patchouli and oud. Woody and earthy base notes of additional oud and patchouli, as well as musk, create a seductive and elegant scent. ",
+            "rating": 5,
+            "image": "assets/images/Badee Al-Oud Sublime.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 6,
+            "name": "Club De Nuit",
+            "prices": {
+                "200ml": 268,
+                "100ml": 134,
+                "5ml": 15,
+                "original": 200
+            },
+            "description": "Club De Nuit Intense Man starts off with a fun fruit-filled top layer of lemon, pineapple, black currant, bergamot and apple. Fruits give way to a middle layer of jasmine, rose and birch. Finally, a base layer of musk, ambergris, patchouli and vanilla anchors this intense scent, leaving behind a sense of refined masculinity.",
+            "rating": 3,
+            "image": "assets/images/club-de-nuit.png",
+            "type": "formal",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 3,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 2,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "200ml"
+                    }
+                ]
+            },
+            "category": "top"
+        },
+
+        {
+            "id": 7,
+            "name": "Le Male Elixir",
+            "prices": {
+                "125ml": 625,
+                "100ml": 536,
+                "5ml": 15,
+                "original": 536
+            },
+            "description": "Jean Paul Gaultier Le Male Elixir opens with a fresh burst of mint and bergamot, delivering a refreshing and invigorating start. The central part of the perfume is a combination of lavender and spicy cinnamon, which is a wonderful and aromatic core of the fragrance that is both calming and stimulating. The perfume is closed by a rich base of vanilla, amber and tonka bean, which gives a creamy and intoxicating warmth that is left on the skin for a long time and adds a special touch to your scent.",
+            "rating": 5,
+            "image": "assets/images/jpg-elixir.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "125ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 8,
+            "name": "Pour Homme",
+            "prices": {
+                "200ml": 360,
+                "100ml": 241,
+                "5ml": 15,
+                "original": 300
+            },
+            "description": "Versace Pour Homme Cologne by Versace is a popular aromatic fougere for the modern man that features a blend of Mediterranean-inspired ingredients, starting with top notes of neroli, lemon, bergamot, and rose de Mai. The Versace cologne Pour Homme then delves into warm heart notes of clary sage, geranium, cedar, and hyacinth before finishing off with base notes of amber, tonka bean, and musk, creating a sensual fragrance that's warm and inviting while still being light. Versace Pour Homme cologne has moderate sillage and longevity, which makes it a perfect choice for a finishing touch to your everyday wardrobe all year round. It also makes a great gift! Treat someone special to a bottle of Versace Pour Homme eau de toilette today, or stock up on this designer cologne for yourself: ",
+            "rating": 4.5,
+            "image": "assets/images/versace-pour-hommw.png",
+            "type": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": ""
+        },
+
+        {
+            "id": 9,
+            "name": "Y EDP",
+            "prices": {
+                "100ml": 580,
+                "5ml": 15,
+                "original": 580
+            },
+            "description": "Y for Men opens with aldehydes, bergamot, ginger, lemon and mint. This clean and exhilarating introduction leads into a sweet and green heart of apple, geranium, pineapple, sage and violet leaf notes. Ambergris and musk combine with balsam fir, cedar, incense and vetiver for an earthy, smoky and evergreen finish.",
+            "rating": 4.5,
+            "image": "assets/images/y-edp.png",
+            "type": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "top"
+        },
+
+        {
+            "id": 10,
+            "name": "9PM Rebel",
+            "prices": {
+                "100ml": 214,
+                "5ml": 15,
+                "original": 320
+            },
+            "description": "Afnan 9pm Rebel opens with a dynamic burst of freshness, featuring top notes of zesty citrus and vibrant spices that immediately captivate the senses. The charm of the perfume is changed to a heart where the sweet floral scents are mixed with the seductive spices creating a tricky yet attractive aura. The woody deep notes of the base make the fragrance lasting, the warmth and the depth of it are emphasized with the almost unnoticeable hints of amber and musk that create an attractive ending.",
+            "rating": 4.5,
+            "image": "assets/images/9pm-rebel.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+        
+        {
+            "id": 11,
+            "name": "Mankind Rise",
+            "prices": {
+                "100ml": 164,
+                "5ml": 15,
+                "original": 240
+            },
+            "description": "The allure of Kenneth Cole Mankind Rise begins with an invigorating blend of top notes that awaken the senses. It is like bright citrus and shimmering green chlorophyll, both of which give an easy and a model of the course, the fresh, lively awakening of nature, for a treasured centerpiece of the floral fragrance. In the middle notes, a rich fusion of aromatic spices and softwoods give depth and character, thus, scent imbibed with a sophisticated warmth. As for the base notes, they leave a profound hint mixed with earthly vetiver, strong mosslike oak, and small cloud of a friendly amber, which is the final tone that acidifies strength and integrity.",
+            "rating": 2.5,
+            "image": "assets/images/mankind.png",
+            "type": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 2.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 3,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 2,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 12,
+            "name": "Amazonas Solstice",
+            "prices": {
+                "100ml": 119,
+                "5ml": 15,
+                "original": 119
+            },
+            "description": "Atralia Amazonas Solstice Perfume by Atralia",
+            "rating": 4.5,
+            "image": "assets/images/amazonas.png",
+            "type": "active",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 13,
+            "name": "Narcotic Delight",
+            "prices": {
+                "100ml": 1402,
+                "5ml": 15,
+                "original": 1500
+            },
+            "description": "Initio Narcotic Delight is composed of an exquisite combination of notes that offers a unique olfactory experience. The top notes of pink pepper and spicy accords form the majestic spice entrance, which rules your sense of perception with an active mood. The thick bouquet of flowers in the heart of the perfume, which contains jasmine and tuberose as the dominant odors, creates a romantic and intoxicating floral atmosphere. Upon the fragrance lingering, it soothingly transforms to a warm and inviting base of vanilla and amber, which are the remnants of a long but sweet journey that is both cozy and sensual.",
+            "rating": 4.5,
+            "image": "assets/images/narcotic.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "new"
+        },
+
+        {
+            "id": 14,
+            "name": "Light Blue",
+            "prices": {
+                "100ml": 315,
+                "5ml": 15,
+                "original": 330
+            },
+            "description": "Delight in the fresh, citrus notes of Light Blue Eau Intense Cologne. Starting with the top notes of mandarin orange and frozen grapefruit, this cologne blends into the heart notes of juniper and salty marine accords. It finishes with a smooth base of amber, wood and musk.",
+            "rating": 4.5,
+            "image": "assets/images/light-blue.png",
+            "type": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 4.5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 4,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "top"
+        },
+
+        {
+            "id": 15,
+            "name": "Spicebomb Extreme",
+            "prices": {
+                "100ml": 499,
+                "5ml": 15,
+                "original": 499
+            },
+            "description": "Spicebomb Extreme starts off with a kick as cumin, cinnamon and saffron provide heat and presence. Subtle grapefruit opens up the scent. A hint of lavender weaves through the middle notes, connecting the spices to a rich and sweet base of vanilla, bourbon and tobacco.",
+            "rating": 5,
+            "image": "assets/images/extreme.png",
+            "type": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "category": "top"
+        }
+    ]
+}
+
+  

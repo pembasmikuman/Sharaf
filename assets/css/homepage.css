@@ -573,7 +573,22 @@ header{
 }
 
 .star_icon{
-    color: #ffc633;
+    color: #ffc205
+}
+
+.price_wrapper{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+.discount_badge{
+    background-color: #ffebeb;
+    color: #ff3333;
+    font-size: .8rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    width: 20%;
 }
 
 .product_next, .product_prev {
