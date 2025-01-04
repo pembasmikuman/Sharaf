@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- ========= PAGE ICON ========= -->
+     <link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon">
+
+     <!-- ========== ICON LIBRARY ========== -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+
+    <link rel="stylesheet" href="assets/css/browse.css">
+    <title>Find your fragrance</title>
+</head>
+<body>
+
+    <!-- ================== MAIN SECTION ================ -->
+    <main class="main">
+        <div class="breadcrumb">
+            <a href="index.html" style="color: #666666;">
+                Home
+            </a>
+            <span style="color: #666666;"><i class="ri-arrow-right-s-line"></i></span>
+            All Products
+        </div>
+
+        <div class="main_content">
+            <div class="filter_wrapper">
+
+                <div class="filter_header">
+                    <h2>Filters</h2>
+                    <span class="filter_icon"><i class="ri-sound-module-fill"></i></span>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="department_filter">
+                    <h3>Department</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">New Arrivals</button>
+                        <button class="filter-btn">Top Selling</button>
+                    </div>
+                </div>
+                
+    
+                <div class="divider"></div>
+    
+                <div class="price-filter">
+                    <h3>Price</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">Under RM 100</button>
+                        <button class="filter-btn">RM 100 - 500</button>
+                        <button class="filter-btn">RM 500 - 1000</button>
+                        <button class="filter-btn">RM 1000++</button>
+                    </div>
+                </div>
+    
+                <div class="divider"></div>
+    
+                <div class="occasion-filter">
+                    <h3>Occasion</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn">Casual</button>
+                        <button class="filter-btn">Formal</button>
+                        <button class="filter-btn">Date</button>
+                        <button class="filter-btn">Active</button>
+                    </div>
+                </div>
+
+                <div class="apply">
+                    <button class="apply_btn">
+                        Apply Filter
+                    </button>
+                </div>
+            </div>
+    
+            <div class="product_wrapper">
+                <div class="product_header" style="display: flex; justify-content: space-between;">
+                    <h1>All Products</h1>
+
+                    <p id="product-count"></p>
+
+                    <div class="sort_by">
+                        <label for="sort-select">Sort by</label>
+                        <select id="sort-select">
+                          <option value="default">Default</option>
+                          <option value="price-low-high">Price: Low to High</option>
+                          <option value="price-high-low">Price: High to Low</option>
+                          <option value="name-a-z">Name: A to Z</option>
+                          <option value="name-z-a">Name: Z to A</option>
+                        </select>
+                      </div>                      
+                </div>
+                
+                <div class="product_grid"></div>
+
+                <div class="divider"></div>
+                
+                <div class="pagination">
+                    <button class="page-btn prev" id="prevBtn">
+                        <i class="ri-arrow-left-line"></i>
+                        Previous
+                    </button>
+                    
+                    <div class="page-numbers" id="pageNumbers">
+                        <span class="page-num active">1</span>
+                        <span class="page-num">2</span>
+                        <span class="page-num">3</span>
+                        <span class="dots">...</span>
+                        <span class="page-num">8</span>
+                        <span class="page-num">9</span>
+                        <span class="page-num">10</span>
+                    </div>
+                    
+                    <button class="page-btn next" id="nextBtn">
+                        Next
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>   
+    </main>
+
+    <script src="assets/js/browse.js"></script>
+</body>
+</html>
