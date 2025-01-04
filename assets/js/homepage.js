@@ -110,6 +110,6 @@ sr.reveal(`.hero_stars`, {scale: 1.5, origin:'bottom', delay: 300})
 sr.reveal(`.main_title`, {transition: 1000, origin:'left'})
 sr.reveal(`.product_prev, .product_next`, {origin:'bottom', duration: 1500})
 sr.reveal(`.occasion_card`, {transition: 500, origin:'bottom'})
-sr.reveal(`.review_swiper`, {transition: 500, origin:'left'})
-sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 300})
+sr.reveal(`.review_swiper`, {transition: 500, origin:'left', duration: 1000})
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
   
