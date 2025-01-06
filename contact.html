@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Page</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+    <div class="contact-container">
+        <div class="left-section">
+            <h2>Got a question?</h2>
+            <p>
+                Fill out the form below and we'll get back to you as soon as possible
+            </p>
+        </div>
+        <div class="right-section">
+            <h3>Contact</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Message -->
+    <div id="thankYouPopup" class="popup hidden">
+        <div class="popup-content">
+            <p>Thank you for your message! We'll get back to you soon.</p>
+            <button id="closePopup" class="popup-close-button">Close</button>
+        </div>
+    </div>
+
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>
