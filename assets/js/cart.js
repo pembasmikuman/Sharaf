@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 discountLabel.textContent = 'Discount (-20%)';
             }
     
-            // Optional: Show an error popup
+            // Show an error popup
             showPopup('Invalid promo code!', true);
         }
     });
