@@ -14,6 +14,103 @@
     <title>Find your fragrance</title>
 </head>
 <body>
+    <!-- ================= HEADER =================== -->
+    <header class="header" id="header">
+        <div class="header_container">
+
+            <!-- Promo Bar -->
+            <div class="promo_bar" id="promo-bar">
+
+                <div class="promo_wrapper">Sign up and get 20% off to your first order.
+                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                        Sign up now
+                    </button>
+                </div>
+
+                <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <!-- Navigation bar -->
+                <nav class="navbar">
+                <div class="nav_container">
+                    <div class="nav_left">
+
+                        <button class="menu_btn" onclick="toggleSidePanel()">
+                            <i class="ri-menu-line"></i>
+                        </button>
+
+                        <a href="index.html" class="brand_logo">SHARAF</a>
+
+                        <div class="desktop_nav">
+                            <a href="#">On Sale</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Desktop search -->
+                    <div class="search_container">
+                        <button class="search_btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input type="text" class="search_box" placeholder="Search for products...">
+                    </div>
+                    
+                    <div class="nav_right">
+
+                        <!-- Mobile search icon -->
+                        <button class="nav_icon mobile_search_icon" onclick="toggleSearch()">
+                            <i class="ri-search-line"></i>
+                        </button>
+
+                        <!-- Your existing cart and account icons -->
+                        <a href="cart.html" class="nav_icon">
+                            <i class="ri-shopping-cart-2-line cart_icon"></i>
+                        </a>
+                        <a href="login.html" class="nav_icon">
+                            <i class="ri-account-circle-line account_icon"></i>
+                        </a>
+                    </div>
+
+                </div>
+                </nav>
+
+                <div class="side_panel" id="side-panel">
+                <div class="panel_header">
+                    <h2>Menu</h2>
+                    <button class="close_btn" onclick="toggleSidePanel()">
+                        <i class="ri-close-line side_panel_close"></i>
+                    </button>
+                </div>
+
+                <div class="mobile_nav">
+                    <a href="#">On Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                </div>
+
+                <!-- Overlay for Mobile Menu -->
+                <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+
+                <div class="search_overlay" id="search-overlay">
+                <div class="search_overlay_wrapper">
+                    <button class="close_search_btn" onclick="toggleSearch()">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <h2>Search</h2>
+                    <div class="mobile_search_container">
+                        <input type="text" class="mobile_search_box" placeholder="Search products...">
+                        <button class="nav_icon">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </header>
 
     <!-- ================== MAIN SECTION ================ -->
     <main class="main">
@@ -25,75 +122,139 @@
             All Products
         </div>
 
-        <div class="main_content">
+        <div class="content_area">
+
+            <!-- filter for desktop -->
             <div class="filter_wrapper">
-
-                <div class="filter_header">
+                <div class="filter-panel-header">
                     <h2>Filters</h2>
-                    <span class="filter_icon"><i class="ri-sound-module-fill"></i></span>
+                    <i class="ri-sound-module-fill filter_icon"></i>
                 </div>
-                
-                <div class="divider"></div>
-
-                <div class="department_filter">
-                    <h3>Department</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn">New Arrivals</button>
-                        <button class="filter-btn">Top Selling</button>
+                <div class="filter-panel-content">
+                    <div class="department_filter">
+                        <h3>Department</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="new">New Arrivals</button>
+                            <button class="filter-btn" data-filter="top">Top Selling</button>
+                        </div>
                     </div>
-                </div>
-                
-    
-                <div class="divider"></div>
-    
-                <div class="price-filter">
-                    <h3>Price</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn">Under RM 100</button>
-                        <button class="filter-btn">RM 100 - 500</button>
-                        <button class="filter-btn">RM 500 - 1000</button>
-                        <button class="filter-btn">RM 1000++</button>
+                    <div class="divider"></div>
+                    <div class="price-filter">
+                        <h3>Price</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="under100">Under RM 100</button>
+                            <button class="filter-btn" data-filter="100to500">RM 100 - 500</button>
+                            <button class="filter-btn" data-filter="500t01000">RM 500 - 1000</button>
+                            <button class="filter-btn" data-filter="moreThan1000">RM 1000++</button>
+                        </div>
                     </div>
-                </div>
-    
-                <div class="divider"></div>
-    
-                <div class="occasion-filter">
-                    <h3>Occasion</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn">Casual</button>
-                        <button class="filter-btn">Formal</button>
-                        <button class="filter-btn">Date</button>
-                        <button class="filter-btn">Active</button>
+                    <div class="divider"></div>
+                    <div class="occasion-filter">
+                        <h3>Occasion</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="casual">Casual</button>
+                            <button class="filter-btn" data-filter="formal">Formal</button>
+                            <button class="filter-btn" data-filter="date">Date</button>
+                            <button class="filter-btn" data-filter="active">Active</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="apply">
-                    <button class="apply_btn">
-                        Apply Filter
-                    </button>
+                    <div class="apply">
+                        <button class="apply_btn" id="applyBtn">Apply Filter</button>
+                    </div>
                 </div>
             </div>
     
-            <div class="product_wrapper">
-                <div class="product_header" style="display: flex; justify-content: space-between;">
+            <div class="display">
+                <div class="display_header">
                     <h1>All Products</h1>
+    
+                    <button class="filter_mobile">
+                        <span class="filter_icon_mobile"><i class="ri-sound-module-fill"></i></span>
+                    </button>
+                </div>
 
-                    <p id="product-count"></p>
+                <div class="filter-panel">
+                    <div class="filter-panel-header">
+                        <h2>Filters</h2>
+                        <button class="close-filter"><i class="ri-close-line"></i></button>
+                    </div>
+                    <div class="filter-panel-content">
+                        <div class="department_filter">
+                            <h3>Department</h3>
+                            <div class="filter-buttons">
+                                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                                <button class="filter-btn" data-filter="top">Top Selling</button>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="price-filter">
+                            <h3>Price</h3>
+                            <div class="filter-buttons">
+                                <button class="filter-btn" data-filter="under100">Under RM 100</button>
+                                <button class="filter-btn" data-filter="100to500">RM 100 - 500</button>
+                                <button class="filter-btn" data-filter="500t01000">RM 500 - 1000</button>
+                                <button class="filter-btn" data-filter="moreThan1000">RM 1000++</button>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="occasion-filter">
+                            <h3>Occasion</h3>
+                            <div class="filter-buttons">
+                                <button class="filter-btn" data-filter="casual">Casual</button>
+                                <button class="filter-btn" data-filter="formal">Formal</button>
+                                <button class="filter-btn" data-filter="date">Date</button>
+                                <button class="filter-btn" data-filter="active">Active</button>
+                            </div>
+                        </div>
+                        <div class="apply">
+                            <button class="apply_btn" id="applyBtn">Apply Filter</button>
+                        </div>
+                    </div>
+                </div>
+                
 
+                <div class="sort_wrapper">
                     <div class="sort_by">
                         <label for="sort-select">Sort by</label>
                         <select id="sort-select">
-                          <option value="default">Default</option>
-                          <option value="price-low-high">Price: Low to High</option>
-                          <option value="price-high-low">Price: High to Low</option>
-                          <option value="name-a-z">Name: A to Z</option>
-                          <option value="name-z-a">Name: Z to A</option>
+                            <option value="default">Default</option>
+                            <option value="price-low-high">Price: Low to High</option>
+                            <option value="price-high-low">Price: High to Low</option>
+                            <option value="name-a-z">Name: A to Z</option>
+                            <option value="name-z-a">Name: Z to A</option>
                         </select>
-                      </div>                      
+                    </div>
                 </div>
                 
-                <div class="product_grid"></div>
+                <div class="product_grid">
+                    <article class="product swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                        <span class="discount-badge">
+                                        </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
                 <div class="divider"></div>
                 
@@ -106,9 +267,7 @@
                     <div class="page-numbers" id="pageNumbers">
                         <span class="page-num active">1</span>
                         <span class="page-num">2</span>
-                        <span class="page-num">3</span>
                         <span class="dots">...</span>
-                        <span class="page-num">8</span>
                         <span class="page-num">9</span>
                         <span class="page-num">10</span>
                     </div>
@@ -119,9 +278,73 @@
                     </button>
                 </div>
             </div>
-        </div>   
+
+        </div>  
     </main>
 
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer_container">
+            
+            <div class="footer_link_wrapper">
+                <div class="left_footer_wrapper">
+                    <div class="brand_logo logo_footer">SHARAF</div>
+                    <p class="brand_desc">We are authorised reseller of fragrances from around the world with quality and affordable in mind.</p>
+                    <div class="social_media_container">
+                        <a class="social_media_icon" href="https://www.x.com"><i class="ri-twitter-fill"></i></a>
+                        <a class="social_media_icon" href="https://www.facebook.com"><i class="ri-facebook-circle-fill"></i></a>
+                        <a class="social_media_icon" href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+                        <a class="social_media_icon" href="https://github.com/pembasmikuman/Sharaf"><i class="ri-github-fill"></i></a>
+                    </div>
+                </div>
+    
+                <div class="right_footer_wrapper">
+                    <div class="footer_links">
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">About</a></li>
+                            <li><a href="#" class="nav_links">Works</a></li>
+                            <li><a href="#" class="nav_links">Career</a></li>
+                            <li><a href="#" class="nav_links">Features</a></li>
+                    </div>
+    
+                    <div class="footer_links">
+                        <h3>HELP</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">Contact Us</a></li>
+                            <li><a href="#" class="nav_links">Delivery Details</a></li>
+                            <li><a href="#" class="nav_links">Term & Conditions</a></li>
+                            <li><a href="#" class="nav_links">Privacy Policy</a></li>
+                    </div>
+    
+                    <div class="footer_links">
+                        <h3>FAQ</h3>
+                        <ul>
+                            <li><a href="#" class="nav_links">Account</a></li>
+                            <li><a href="#" class="nav_links">Manage Deliveries</a></li>
+                            <li><a href="#" class="nav_links">Orders</a></li>
+                            <li><a href="#" class="nav_links">Payment</a></li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_divider"></div>
+
+            <div class="bottom_wrapper">
+                <p style="margin: 0 0 ;">SHARAF © 2024-2025. All rights reserved</p>
+                <div class="payment_partner_wrapper">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Visa.svg" alt="Visa payment icon">
+
+                    <img loading="lazy" class="payment_icon" src="assets/images/Mastercard.svg" alt="Mastercard payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Paypal.svg" alt="PayPal payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Applepay.svg" alt="Apple pay payment icon">
+                    <img loading="lazy" class="payment_icon" src="assets/images/Gpay.svg" alt="Google pay payment icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/browse.js"></script>
 </body>
 </html>

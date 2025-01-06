@@ -118,9 +118,9 @@ sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
 // Fetch product data
 async function fetchProductsNew() {
     try {
-        const response = await fetch('assets/products.json');
+        const response = await fetch('assets/fragrances.json');
         const data = await response.json();
-        const newProducts = data.fragrances.filter(product => product.category === "new");
+        newProducts = data.fragrances.filter(product => product.department === "new");
         renderProductsNew(newProducts);
     } catch (error) {
         console.error('Error fetching products:', error);
@@ -129,9 +129,9 @@ async function fetchProductsNew() {
 
 async function fetchProductsTop() {
     try {
-        const response = await fetch('assets/products.json');
+        const response = await fetch('assets/fragrances.json');
         const data = await response.json();
-        const topProducts = data.fragrances.filter(product => product.category === "top");
+        const topProducts = data.fragrances.filter(product => product.department === "top");
         renderProductsTop(topProducts);
     } catch (error) {
         console.error('Error fetching products:', error);

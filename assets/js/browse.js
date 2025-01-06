@@ -1,169 +1,191 @@
-// ================ FETCH PRODUCT ================
-const ITEMS_PER_PAGE = 9;
-let currentPage = 1;
-let allProducts = [];
+// ========== CLOSE PROMO BAR =========
+const promoBar = document.getElementById('promo-bar');
+const promoCloseBtn = document.getElementById('close-promo-btn');
+const resetPromoBtn = document.getElementById('reset-promo-btn');
 
-async function fetchProducts() {
-  try {
-    const response = await fetch('assets/products.json');
-    const data = await response.json();
-    allProducts = data.fragrances;
-    renderProductsPage(currentPage);
-    setupPagination();
-    updateProductCount();
-  } catch (error) {
-    console.error('Error fetching products:', error);
-  }
-}
+promoBar.classList.remove('hidden');
+localStorage.removeItem('promo-bar-closed');
 
-function setItemsPerPage(count) {
-    ITEMS_PER_PAGE = count;
-    currentPage = 1; // Reset to first page when changing items per page
-    renderProductsPage(currentPage);
-    setupPagination();
-}
-
-function renderProductsPage(page) {
-  const productContainer = document.querySelector('.product_grid');
-  productContainer.innerHTML = ''; // Clear existing products
-  
-  const startIndex = (page - 1) * ITEMS_PER_PAGE;
-  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, allProducts.length);
-  const pageProducts = allProducts.slice(startIndex, endIndex);
-  
-  pageProducts.forEach(product => {
-    const productElement = createProductElement(product);
-    productContainer.appendChild(productElement);
-  });
-
-  updateProductCount();
-}
-
-
-function updateProductCount() {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE + 1;
-    let endIndex = Math.min(currentPage * ITEMS_PER_PAGE, allProducts.length);
-    const totalProducts = allProducts.length;
-    const productCountElement = document.getElementById('product-count');
-    productCountElement.textContent = `Showing ${startIndex}-${endIndex} of ${totalProducts}`;
-} 
-
-function setupPagination() {
-  const totalPages = Math.ceil(allProducts.length / ITEMS_PER_PAGE);
-  const pageNumbers = document.getElementById('pageNumbers');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  
-  pageNumbers.innerHTML = '';
-  for (let i = 1; i <= totalPages; i++) {
-    const pageNum = document.createElement('span');
-    pageNum.className = `page-num ${i === currentPage ? 'active' : ''}`;
-    pageNum.textContent = i;
-    pageNum.addEventListener('click', () => {
-      currentPage = i;
-      renderProductsPage(currentPage);
-      updatePaginationUI();
-    });
-    pageNumbers.appendChild(pageNum);
-  }
-  
-  prevBtn.addEventListener('click', () => {
-    if (currentPage > 1) {
-      currentPage--;
-      renderProductsPage(currentPage);
-      updatePaginationUI();
-    }
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      renderProductsPage(currentPage);
-      updatePaginationUI();
-    }
-  });
-  
-  updatePaginationUI();
-}
-
-function updatePaginationUI() {
-  const totalPages = Math.ceil(allProducts.length / ITEMS_PER_PAGE);
-  const pageNums = document.querySelectorAll('.page-num');
-  pageNums.forEach((pageNum, index) => {
-    pageNum.classList.toggle('active', index + 1 === currentPage);
-  });
-  
-  document.getElementById('prevBtn').disabled = currentPage === 1;
-  document.getElementById('nextBtn').disabled = currentPage === totalPages;
-}
-
-// Create a single product element
-function createProductElement(product) {
-    const article = document.createElement('article');
-    article.className = 'product';
-
-    const currentPrice = product.prices['100ml'];
-    const originalPrice = product.prices.original;
-    const hasDiscount = currentPrice < originalPrice;
-
-    const priceHTML = hasDiscount ? 
-        `<h3>RM ${currentPrice}
-            <h3 style="text-decoration: line-through; color: #999999;">
-                RM ${originalPrice}
-            </h3>
-            <div class="discount_badge">
-                -${calculateDiscount(currentPrice, originalPrice)}%
-            </div>
-        </h3>` :
-        `<h3>RM ${currentPrice}</h3>`;
-
-    article.innerHTML = `
-        <div class="product_image">
-            <img class="product_img" src="${product.image}" alt="${product.name}">
-        </div>
-        <div class="product_details">
-            <h3 class="product_name">${product.name}</h3>
-
-            <div class="rating-wrapper">
-                ${generateStarRating(product.rating)}
-                ${product.rating}/
-                <span style="font-weight: 100;">5</span>
-            </div>
-
-            <div class="price_wrapper">
-                ${priceHTML}
-            </div>
-        </div>
-    `;
-
-    return article;
-}
-
-// Generate star rating HTML
-function generateStarRating(rating) {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 >= 0.5;
-    let starsHTML = '';
-    
-    for (let i = 0; i < 5; i++) {
-        if (i < fullStars) {
-            starsHTML += '<i class="ri-star-fill star_icon"></i>';
-        } else if (i === fullStars && halfStar) {
-            starsHTML += '<i class="ri-star-half-fill star_icon"></i>';
-        } else {
-            starsHTML += '<i class="ri-star-line star_icon"></i>';
-        }
-    }
-    
-    return starsHTML;
-}
-
-// Calculate discount percentage
-function calculateDiscount(currentPrice, originalPrice) {
-    return Math.round((1 - currentPrice / originalPrice) * 100);
-}
-
-// Initialize everything when DOM loads
 document.addEventListener('DOMContentLoaded', () => {
-    fetchProducts();
+
+    // Check if promo bar state is saved in localStorage
+    const isPromoClosed = localStorage.getItem('promo-bar-closed') === 'true';
+    
+    if (isPromoClosed) {
+        promoBar.classList.add('hidden');
+    }
+
+    // Close Promo Bar
+    promoCloseBtn.addEventListener('click', () => {
+        promoBar.classList.add('hidden');
+        localStorage.setItem('promo-bar-closed', 'true');
+    });
 });
+
+// ============= MENU OVERLAY TOGGLE =============
+function toggleSidePanel() {
+    const sidePanel = document.getElementById('side-panel');
+    const overlay = document.getElementById('overlay');
+    
+    sidePanel.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+// ============ SEARCH OVERLAY TOGGLE =============
+function toggleSearch() {
+    const searchOverlay = document.getElementById('search-overlay');
+    searchOverlay.classList.toggle('active');
+    
+    // Focus the search input when overlay opens
+    if (searchOverlay.classList.contains('active')) {
+        searchOverlay.querySelector('.mobile_search_container').focus();
+    }
+}
+
+// ================= FILTER TOGGLE ================
+const filterMobileButton = document.querySelector('.filter_mobile');
+const filterPanel = document.querySelector('.filter-panel');
+const closeFilterButton = document.querySelector('.close-filter');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const applyBtn = document.getElementById('applyBtn');
+
+filterMobileButton.addEventListener('click', () => {
+    filterPanel.classList.add('open');
+});
+
+closeFilterButton.addEventListener('click', () => {
+    filterPanel.classList.remove('open');
+});
+
+// Store original active states
+let activeFilters = {
+    department: null,
+    price: null,
+    occasion: null
+};
+
+// Add click handlers for filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const filterGroup = this.closest('.filter-buttons');
+        const groupButtons = filterGroup.querySelectorAll('.filter-btn');
+        
+        // If clicking an already active button, deactivate it
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            return;
+        }
+        
+        // Remove active class from other buttons in same group
+        groupButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+    });
+});
+
+// Close panel without applying filters
+closeFilterButton.addEventListener('click', () => {
+    // Reset all buttons to their previous state
+    resetFilters();
+    filterPanel.classList.remove('open');
+});
+
+// Apply filters and close panel
+applyBtn.addEventListener('click', () => {
+    // Save current active states
+    saveActiveStates();
+    filterPanel.classList.remove('open');
+});
+
+function saveActiveStates() {
+    // Save department filters
+    const departmentActive = document.querySelector('.department_filter .filter-btn.active');
+    activeFilters.department = departmentActive ? departmentActive.dataset.filter : null;
+    
+    // Save price filters
+    const priceActive = document.querySelector('.price-filter .filter-btn.active');
+    activeFilters.price = priceActive ? priceActive.dataset.filter : null;
+    
+    // Save occasion filters
+    const occasionActive = document.querySelector('.occasion-filter .filter-btn.active');
+    activeFilters.occasion = occasionActive ? occasionActive.dataset.filter : null;
+}
+
+function resetFilters() {
+    // Reset department filters
+    const departmentButtons = document.querySelectorAll('.department_filter .filter-btn');
+    departmentButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === activeFilters.department);
+    });
+    
+    // Reset price filters
+    const priceButtons = document.querySelectorAll('.price-filter .filter-btn');
+    priceButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === activeFilters.price);
+    });
+    
+    // Reset occasion filters
+    const occasionButtons = document.querySelectorAll('.occasion-filter .filter-btn');
+    occasionButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === activeFilters.occasion);
+    });
+}
+
+
+
+// ============= PAGINATION =================
+function updatePagination() {
+  const pageNumbers = document.getElementById('pageNumbers');
+  const totalPages = 10;
+  
+  // Clear existing page numbers
+  pageNumbers.innerHTML = '';
+  
+  if (window.innerWidth >= 768) {
+      // Desktop view: 1 2 3 ... 8 9 10
+      const desktopPages = [1, 2, 3, '...', 8, 9, 10];
+      
+      desktopPages.forEach(page => {
+          const span = document.createElement('span');
+          if (page === '...') {
+              span.className = 'dots';
+          } else {
+              span.className = `page-num ${page === 1 ? 'active' : ''}`;
+          }
+          span.textContent = page;
+          pageNumbers.appendChild(span);
+      });
+  } else {
+      // Mobile view: 1 2 ... 9 10
+      const mobilePages = [1, 2, '...', 9, 10];
+      
+      mobilePages.forEach(page => {
+          const span = document.createElement('span');
+          if (page === '...') {
+              span.className = 'dots';
+          } else {
+              span.className = `page-num ${page === 1 ? 'active' : ''}`;
+          }
+          span.textContent = page;
+          pageNumbers.appendChild(span);
+      });
+  }
+}
+
+// Add event listener for screen resize
+window.addEventListener('resize', updatePagination);
+
+// Initial call
+updatePagination();
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  reset: false // Animation repeat
+})
+
+sr.reveal(`.product`, {transition: 500, origin:'right', duration: 500})
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
