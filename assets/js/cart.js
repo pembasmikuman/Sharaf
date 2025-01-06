@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (discountLabel) {
                 discountLabel.textContent = 'Discount (-40%)';
             }
+    
+            // Show the popup notification
+            showPopup('Voucher applied!');
         } else {
             isPromoCodeApplied = false;
     
@@ -115,8 +118,29 @@ document.addEventListener('DOMContentLoaded', () => {
             if (discountLabel) {
                 discountLabel.textContent = 'Discount (-20%)';
             }
+    
+            // Optional: Show an error popup
+            showPopup('Invalid promo code!', true);
         }
     });
+    
+    // Function to show a popup notification
+    function showPopup(message, isError = false) {
+        const popup = document.createElement('div');
+        popup.classList.add('popup');
+        if (isError) {
+            popup.style.backgroundColor = 'red'; // Change background color for errors
+        }
+        popup.textContent = message;
+    
+        // Add the popup to the body
+        document.body.appendChild(popup);
+    
+        // Hide the popup after 3 seconds
+        setTimeout(() => {
+            popup.remove();
+        }, 3000);
+    }
     
     
 
