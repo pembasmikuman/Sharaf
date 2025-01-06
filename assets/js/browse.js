@@ -135,49 +135,82 @@ function resetFilters() {
 
 
 // ============= PAGINATION =================
+const pageNumbers = document.getElementById('pageNumbers');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentPage = 1;
+const totalPages = 10;
+
+// Update pagination numbers and states
 function updatePagination() {
-  const pageNumbers = document.getElementById('pageNumbers');
-  const totalPages = 10;
-  
-  // Clear existing page numbers
-  pageNumbers.innerHTML = '';
-  
-  if (window.innerWidth >= 768) {
-      // Desktop view: 1 2 3 ... 8 9 10
-      const desktopPages = [1, 2, 3, '...', 8, 9, 10];
-      
-      desktopPages.forEach(page => {
-          const span = document.createElement('span');
-          if (page === '...') {
-              span.className = 'dots';
-          } else {
-              span.className = `page-num ${page === 1 ? 'active' : ''}`;
-          }
-          span.textContent = page;
-          pageNumbers.appendChild(span);
-      });
-  } else {
-      // Mobile view: 1 2 ... 9 10
-      const mobilePages = [1, 2, '...', 9, 10];
-      
-      mobilePages.forEach(page => {
-          const span = document.createElement('span');
-          if (page === '...') {
-              span.className = 'dots';
-          } else {
-              span.className = `page-num ${page === 1 ? 'active' : ''}`;
-          }
-          span.textContent = page;
-          pageNumbers.appendChild(span);
-      });
-  }
+    pageNumbers.innerHTML = '';
+    
+    if (window.innerWidth >= 768) {
+        // Desktop view: 1 2 3 ... 8 9 10
+        const desktopPages = [1, 2, 3, '...', 8, 9, 10];
+        
+        desktopPages.forEach(page => {
+            const span = document.createElement('span');
+            if (page === '...') {
+                span.className = 'dots';
+                span.textContent = page;
+            } else {
+                span.className = `page-num ${page === currentPage ? 'active' : ''}`;
+                span.textContent = page;
+                span.addEventListener('click', () => handlePageClick(page));
+            }
+            pageNumbers.appendChild(span);
+        });
+    } else {
+        // Mobile view: 1 2 ... 9 10
+        const mobilePages = [1, 2, '...', 9, 10];
+        
+        mobilePages.forEach(page => {
+            const span = document.createElement('span');
+            if (page === '...') {
+                span.className = 'dots';
+                span.textContent = page;
+            } else {
+                span.className = `page-num ${page === currentPage ? 'active' : ''}`;
+                span.textContent = page;
+                span.addEventListener('click', () => handlePageClick(page));
+            }
+            pageNumbers.appendChild(span);
+        });
+    }
+    
+    // Update prev/next button states
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
 }
+
+function handlePageClick(page) {
+    currentPage = page;
+    updatePagination();
+}
+
+// Previous button click handler
+prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+    }
+});
+
+// Next button click handler
+nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+    }
+});
 
 // Add event listener for screen resize
 window.addEventListener('resize', updatePagination);
 
 // Initial call
 updatePagination();
+
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
@@ -187,5 +220,6 @@ const sr = ScrollReveal({
   reset: false // Animation repeat
 })
 
-sr.reveal(`.product`, {transition: 500, origin:'right', duration: 500})
+sr.reveal(`.display_header h1`, {transition: 500, origin: 'left', duration: 500})
+sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
 sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
