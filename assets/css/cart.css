@@ -390,6 +390,10 @@ ul{
     padding-left: 20px;
 }
 
+.promo-code .input{
+    color: rgb(77, 75, 75);
+}
+
 /* General Mobile Styles */
 @media (min-width: 320px) {
     .promo, .navbar-container, .cart-section, .order-summary, .bottom-container {
