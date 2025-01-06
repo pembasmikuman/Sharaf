@@ -900,6 +900,16 @@ header{
 }
 
 @media screen and (min-width: 1024px){
+
+    .promo_bar {
+        display: flex
+;
+        justify-content: center;
+    }
+
+    .promo_wrapper{
+        flex: .5;
+    }
     
     /* Hide mobile menu elements */
     .menu_btn {
@@ -915,6 +925,20 @@ header{
         display: flex;
         gap: 1rem;
         margin-left: 2rem;
+    }
+
+    .nav_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .search_container{
+        flex-grow: 0.7;
+    }
+
+    .search_box{
+        width: 100%;
     }
 
     /* Ensure side panel and overlay are hidden on desktop */
@@ -1067,169 +1091,4 @@ header{
     
 }
 
-@media screen and (min-width: 1440px){
-    
-    .nav_container{
-        justify-content:space-evenly
-    }
-
-    .promo_wrapper,
-    .sign_up_btn,
-    .desktop_nav,
-    .search_box{
-        font-size: 1rem;
-    }
-
-    .cart_icon,
-    .account_icon{
-        font-size: 2rem;
-    }
-
-    .brand_logo{
-        font-size: 2.5rem;
-    }
-
-    .hero_title{
-        font-size: 4rem;
-    }
-
-    .hero_desc,
-    .shop_now_btn{
-        font-size: 1.5rem;
-    }
-
-    .shop_now_btn{
-        width: 50%;
-    }
-    
-    .top_row{
-        width: 100%;
-    }
-
-    .stat_label{
-        font-size: 1.3rem;
-    }
-
-    .swiper-button-next{
-        right: 15rem;
-    }
-
-    .swiper-button-prev{
-        left: 15rem;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev{
-        font-size: 2rem;
-    }
-
-    .browse_box{
-        border-radius: 2rem;
-    }
-
-    .browse_box h1{
-        font-size: 4rem;
-    }
-
-    .occasion_card{
-        height: 18rem;
-    }
-
-    .occasion_card h3{
-        font-size: 2.5rem;
-    }
-
-}
-
-@media screen and (min-width: 1904px){
-
-    .promo_bar{
-        display: flex;
-        justify-content: center;
-    }
-
-    .promo_wrapper{
-        flex: 0.5;
-        font-size: 1rem;
-    }
-
-    .sign_up_btn,
-    .close_promo_btn{
-        font-size: 1rem;
-    }
-
-    .nav_container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .search_container{
-        flex-grow: 0.7;
-    }
-
-    .search_box{
-        width: 100%;
-    }
-
-    .grid_1 {
-        width: 50%;
-        padding: 5%;
-    }
-
-    /* .hero_title{
-        width: 70%;
-    }
-
-    .hero_desc{
-        width: 60%;
-    }
-
-    .shop_now_btn{
-        width: 40%;
-        margin-bottom: 5%;
-    } */
-
-    .grid_2{
-        margin-left: 4.2rem;
-    }
-
-    .swiper_wrapper{
-        height: 10%;
-    }
-
-    .view_all_btn{
-        width: 20%;
-        font-size: 1.5rem;
-    }
-
-    .swiper-button-next{
-        right: 30rem;
-    }
-
-    .swiper-button-prev{
-        left: 30rem;
-    }
-
-    .browse_by{
-        margin-top: 10%;
-        padding: 0 7em;
-    }
-
-    .browse_box{
-        padding: 4rem;
-    }
-
-    .browse_box h1{
-        font-size: 5rem;
-    }
-
-    .occasion_card{
-        height: 18rem;
-    }
-
-    .occasion_card h3{
-        font-size: 3rem;
-    }
-}
     

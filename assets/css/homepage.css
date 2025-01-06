@@ -962,11 +962,6 @@ header{
     .side_panel{
         left: -25rem;
         width: 25rem;
-        font-size: 1.5rem;
-    }
-
-    .side_panel_close{
-        font-size: 1.5rem;
     }
 
     .hero{
@@ -1157,6 +1152,20 @@ header{
         margin-left: 1rem;
     }
 
+    .nav_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .search_container{
+        flex-grow: 0.7;
+    }
+
+    .search_box{
+        width: 100%;
+    }
+
     /* Show desktop navigation */
     .desktop_nav {
         display: flex;
@@ -1273,26 +1282,10 @@ header{
         flex: 0.5;
     }
 
-    .brand_desc{
-        font-size: 1rem;
-    }
-
-    .social_media_icon{
-        font-size: 2rem;
-    }
-
     .right_footer_wrapper{
         display: flex;
         justify-content: space-around;
         flex: 1;
-    }
-
-    .footer_links{
-        font-size: 1rem;
-    }
-
-    .bottom_wrapper{
-        font-size: 1rem;
     }
 
     .payment_icon{
@@ -1318,22 +1311,6 @@ header{
     
     .nav_container{
         justify-content:space-evenly
-    }
-
-    .promo_wrapper,
-    .sign_up_btn,
-    .desktop_nav,
-    .search_box{
-        font-size: 1rem;
-    }
-
-    .cart_icon,
-    .account_icon{
-        font-size: 2rem;
-    }
-
-    .brand_logo{
-        font-size: 2.5rem;
     }
 
     .hero_title{
@@ -1397,12 +1374,6 @@ header{
 
     .promo_wrapper{
         flex: 0.5;
-        font-size: 1rem;
-    }
-
-    .sign_up_btn,
-    .close_promo_btn{
-        font-size: 1rem;
     }
 
     .nav_container{

@@ -1141,7 +1141,7 @@ ul{
     margin-bottom: 20%;
 }
 
-/* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */
+/* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */ 
 @media screen and (min-width: 768px){
 
     .navbar {
@@ -1168,135 +1168,6 @@ ul{
     .side_panel{
         left: -25rem;
         width: 25rem;
-        font-size: 1.5rem;
-    }
-
-    .side_panel_close{
-        font-size: 1.5rem;
-    }
-
-    .hero{
-        min-height: 500px;
-        padding: 2rem;
-    }
-
-    .hero_container{
-        display: flex;
-    }
-
-    .stats_container{
-        padding-left: 1.5rem;
-        padding-bottom: 1rem;
-    }
-    
-    .shop_now_btn{
-        width: 70%;
-    }
-
-    .main_title{
-        font-size: 2.75rem;
-        margin-bottom: 5%;
-    }
-
-    .product{
-        padding: 2rem 1rem;
-    }
-
-    .swiper-scrollbar{
-        display: none;
-    }
-
-    .product_prev,
-    .product_next {
-        display: block;
-        top:initial;
-        bottom: 0;
-        font-size: 1.5rem;
-        color: var(--black-color);
-    }
-
-    .button_wrapper{
-        display: flex;
-        justify-content: center;
-    }
-
-    .view_all_btn{
-        font-size: 1rem;
-        width: 30%;
-    }
-
-    .product_prev::after,
-    .product_next::after {
-        content: '';
-    }
-
-    .product_prev,
-    .product_next {
-        top:initial;
-        bottom: 0;
-        font-size: 1.5rem;
-        color: var(--black-color);
-    }
-
-    .product_prev{
-        left: 8rem;
-    }
-
-    .product_next{
-        right: 8rem;
-    }
-
-    .divider{
-        margin-top: 6%;
-        margin-bottom: 6%;
-        width: 80%;
-    }
-
-    .browse_box{
-        padding: 1.5rem;
-    }
-
-    .browse_box h1{
-        margin: 1.7rem;
-    }
-
-    .first_row{
-        display: grid; 
-        grid-template-columns: 0.75fr 1.25fr; 
-        grid-template-rows: 1fr; 
-        gap: 1em 1em; 
-        grid-template-areas: 
-          ". .";
-    }
-
-    .second_row{
-        display: grid; 
-        grid-template-columns: 1.25fr 0.75fr; 
-        grid-template-rows: 1fr; 
-        gap: 1em 1em; 
-        grid-template-areas: 
-          ". .";
-    }
-
-    .casual_occasion_img{
-        width: 160%;
-    }
-
-    .active_occasion_img{
-        width: 160%;
-    }
-
-    .review_content_header{
-        justify-content: space-evenly;
-        margin-bottom: 2%;
-    }
-
-    .review_content_header h1{
-        font-size: 2rem;
-    }
-
-    .swiper_button_wrapper{
-        flex: 0.1;
     }
 
     .newsletter_card{
@@ -1313,10 +1184,6 @@ ul{
     .email_input_wrapper{
         flex: 1;
     }
-
-    .brand_desc{
-        width: 50%;
-    }
     
     .footer_container{
         padding: 0 1.5rem 1.4375rem;
@@ -1329,17 +1196,8 @@ ul{
         font-size: 100%;
     }
 
-    .logo_footer{
-        font-size: 2.5rem;
-    }
-
     .brand_desc{
-        font-size: 100%;
         width:80%;
-    }
-
-    .social_media_icon{
-        font-size: 1.7rem;
     }
 
     .left_footer_wrapper{
@@ -1359,13 +1217,19 @@ ul{
         display: flex;
         justify-content: space-between;
     }
-
-    .form-container{
-        padding: 2rem 27%;
-    }
 }
 
 @media screen and (min-width: 1024px){
+
+    .promo_wrapper {
+        flex: 0.5;
+    }
+
+    .promo_bar {
+        display: flex;
+        justify-content: center;
+    }    
+    
     
     /* Hide mobile menu elements */
     .menu_btn {
@@ -1392,71 +1256,18 @@ ul{
         display: none;
     }
 
-    .hero {
-        padding: 5rem;
-    }
-
-    .stats_container{
+    .nav_container{
         display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .top_box{
-        border-right: #0000001a 2px solid;
-        padding-right: 3rem;
+    .search_container{
+        flex-grow: 0.7;
     }
 
-    .bottom_box{
-        text-align: left;
-        padding-left: 1rem;
-    }
-
-    .first_star{
-        font-size: 3rem;
-    }
-    .second_star{
-        font-size: 2rem;
-    }
-
-    .home{
-        padding: 2rem;
-    }
-
-    .main_title{
-        font-size: 3rem;
-    }
-
-    .product_details{
-        font-size: 1.25rem;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev{
-        font-size: 2rem;
-    }
-
-    .view_all_btn{
-        width: 30%;
-        font-size: 1.2rem;
-    }
-
-    .divider{
-        margin: 0;
-    }
-
-    .browse_by{
-        padding: 0 5rem;
-    }
-
-    .browse_box h1{
-        font-size: 3rem;
-    }
-
-    .occasion_card{
-        height: 14rem;
-    }
-
-    .occasion_card h3{
-        font-size: 2.25rem;
+    .search_box{
+        width: 100%;
     }
 
     .newsletter_wrapper{
@@ -1478,7 +1289,7 @@ ul{
     .email_icon{
         font-size: 1.5rem;
     }
-    
+
     .email_input,
     .subscribe_btn{
         font-size: 1rem;
@@ -1492,26 +1303,10 @@ ul{
         flex: 0.5;
     }
 
-    .brand_desc{
-        font-size: 1rem;
-    }
-
-    .social_media_icon{
-        font-size: 2rem;
-    }
-
     .right_footer_wrapper{
         display: flex;
         justify-content: space-around;
         flex: 1;
-    }
-
-    .footer_links{
-        font-size: 1rem;
-    }
-
-    .bottom_wrapper{
-        font-size: 1rem;
     }
 
     .payment_icon{
@@ -1527,175 +1322,5 @@ ul{
         gap: 1.5rem;
     }
 
-    .form-container{
-        padding: 2rem 38%;
-    }
     
 }
-
-@media screen and (min-width: 1440px){
-    
-    .nav_container{
-        justify-content:space-evenly
-    }
-
-    .promo_wrapper,
-    .sign_up_btn,
-    .desktop_nav,
-    .search_box{
-        font-size: 1rem;
-    }
-
-    .cart_icon,
-    .account_icon{
-        font-size: 2rem;
-    }
-
-    .brand_logo{
-        font-size: 2.5rem;
-    }
-
-    .hero_title{
-        font-size: 4rem;
-    }
-
-    .hero_desc,
-    .shop_now_btn{
-        font-size: 1.5rem;
-    }
-
-    .shop_now_btn{
-        width: 50%;
-    }
-    
-    .top_row{
-        width: 100%;
-    }
-
-    .stat_label{
-        font-size: 1.3rem;
-    }
-
-    .swiper-button-next{
-        right: 15rem;
-    }
-
-    .swiper-button-prev{
-        left: 15rem;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev{
-        font-size: 2rem;
-    }
-
-    .browse_box{
-        border-radius: 2rem;
-    }
-
-    .browse_box h1{
-        font-size: 4rem;
-    }
-
-    .occasion_card{
-        height: 18rem;
-    }
-
-    .occasion_card h3{
-        font-size: 2.5rem;
-    }
-
-}
-
-@media screen and (min-width: 1904px){
-
-    .promo_bar{
-        display: flex;
-        justify-content: center;
-    }
-
-    .promo_wrapper{
-        flex: 0.5;
-        font-size: 1rem;
-    }
-
-    .sign_up_btn,
-    .close_promo_btn{
-        font-size: 1rem;
-    }
-
-    .nav_container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .search_container{
-        flex-grow: 0.7;
-    }
-
-    .search_box{
-        width: 100%;
-    }
-
-    .grid_1 {
-        width: 50%;
-        padding: 5%;
-    }
-
-    /* .hero_title{
-        width: 70%;
-    }
-
-    .hero_desc{
-        width: 60%;
-    }
-
-    .shop_now_btn{
-        width: 40%;
-        margin-bottom: 5%;
-    } */
-
-    .grid_2{
-        margin-left: 4.2rem;
-    }
-
-    .swiper_wrapper{
-        height: 10%;
-    }
-
-    .view_all_btn{
-        width: 20%;
-        font-size: 1.5rem;
-    }
-
-    .swiper-button-next{
-        right: 30rem;
-    }
-
-    .swiper-button-prev{
-        left: 30rem;
-    }
-
-    .browse_by{
-        margin-top: 10%;
-        padding: 0 7em;
-    }
-
-    .browse_box{
-        padding: 4rem;
-    }
-
-    .browse_box h1{
-        font-size: 5rem;
-    }
-
-    .occasion_card{
-        height: 18rem;
-    }
-
-    .occasion_card h3{
-        font-size: 3rem;
-    }
-}
-    
