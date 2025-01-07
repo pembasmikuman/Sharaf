@@ -708,3 +708,437 @@ ul{
     height: auto;
 }
 
+@media screen and (min-width: 768px) {
+
+    .main{
+        padding: 2rem;
+    }
+
+    .filter_mobile{
+        flex: none;
+    }
+
+    .page-numbers {
+        gap: 0.75rem;
+    }
+    
+    .page-num {
+        min-width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product_grid{
+        display: grid; 
+        grid-auto-flow: row dense; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+            ". . ."
+            ". . ."
+            ". . ."; 
+    }
+
+    .apply_btn{
+        width: 40%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    *{
+        font-size: 104%;
+    }
+
+    .main{
+        padding: 2rem 30rem;
+    }
+
+    .breadcrumb{
+        font-size: 1.2rem;
+    }
+
+    .content_area{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .filter_wrapper{
+        display: block;
+        width: 30%;
+    }
+
+    .filter_mobile{
+        display: none;
+    }
+
+    .apply_btn{
+        width: 90%;
+    }
+    
+    .display{
+        width: 100%;
+        align-items: end;
+    }
+
+    .display_header h1{
+        font-size: var(--h1-font-size);
+    }
+
+    .product_grid{
+        display: grid; 
+        grid-auto-flow: row dense; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          ". . . . ."
+          ". . . . .";
+    }
+}
+
+/* ==== MEDIA QUERIES FOR RESPONSIVE DESIGN ==== */
+@media screen and (min-width: 768px){
+
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .nav_left{
+        align-items: center;
+    }
+
+    .search_container {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    .mobile_search_icon {
+        display: none;
+    }
+
+    .search_overlay {
+        display: none;
+    }
+
+    .side_panel{
+        left: -25rem;
+        width: 25rem;
+    }
+
+    .hero{
+        min-height: 500px;
+        padding: 2rem;
+    }
+
+    .hero_container{
+        display: flex;
+    }
+
+    .stats_container{
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .shop_now_btn{
+        width: 70%;
+    }
+
+    .main_title{
+        font-size: 2.75rem;
+        margin-bottom: 5%;
+    }
+
+    .product{
+        padding: 2rem 1rem;
+    }
+
+    .swiper-scrollbar{
+        display: none;
+    }
+
+    .product_prev,
+    .product_next {
+        display: block;
+        top:initial;
+        bottom: 0;
+        font-size: 1.5rem;
+        color: var(--black-color);
+    }
+
+    .button_wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .view_all_btn{
+        font-size: 1rem;
+        width: 30%;
+    }
+
+    .product_prev::after,
+    .product_next::after {
+        content: '';
+    }
+
+    .product_prev,
+    .product_next {
+        top:initial;
+        bottom: 0;
+        font-size: 1.5rem;
+        color: var(--black-color);
+    }
+
+    .product_prev{
+        left: 8rem;
+    }
+
+    .product_next{
+        right: 8rem;
+    }
+
+    .browse_box{
+        padding: 1.5rem;
+    }
+
+    .browse_box h1{
+        margin: 1.7rem;
+    }
+
+    .first_row{
+        display: grid; 
+        grid-template-columns: 0.75fr 1.25fr; 
+        grid-template-rows: 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          ". .";
+    }
+
+    .second_row{
+        display: grid; 
+        grid-template-columns: 1.25fr 0.75fr; 
+        grid-template-rows: 1fr; 
+        gap: 1em 1em; 
+        grid-template-areas: 
+          ". .";
+    }
+
+    .casual_occasion_img{
+        width: 160%;
+    }
+
+    .active_occasion_img{
+        width: 160%;
+    }
+
+    .review_content_header{
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+    }
+
+    .review_content_header h1{
+        font-size: 2rem;
+    }
+
+    .swiper_button_wrapper{
+        flex: 0.1;
+    }
+
+    .newsletter_card{
+        flex-direction: row;
+        padding: 3rem 1.5rem;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .newsletter_card h2{
+        width: 55%;
+    }
+
+    .email_input_wrapper{
+        flex: 1;
+    }
+
+    .brand_desc{
+        width: 50%;
+    }
+    
+    .footer_container{
+        padding: 0 1.5rem 1.4375rem;
+        display: block;;
+    }
+
+    .footer_link_wrapper{
+        padding: 0 2rem 1.4375rem;
+        display: flex;
+        font-size: 100%;
+    }
+
+    .brand_desc{
+        width:80%;
+    }
+
+    .left_footer_wrapper{
+        flex: 1;
+    }
+
+    .right_footer_wrapper{
+        margin: 3% 0 0;
+    }
+
+    .footer_divider{
+        width: 100%;
+        margin: 2% 0 2%;
+    }
+
+    .bottom_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .promo_wrapper,
+    .sign_up_btn{
+        font-size: 1.2rem;
+    }
+
+    .promo_bar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .promo_wrapper{
+        flex: 0.5;
+    }
+    
+    /* Hide mobile menu elements */
+    .menu_btn {
+        display: none;
+    }
+
+    .nav_left{
+        margin-left: 1rem;
+    }
+
+    .nav_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .search_container{
+        flex-grow: 0.7;
+    }
+
+    .search_box{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .brand_logo{
+        font-size: 3rem;
+    }
+
+    /* Show desktop navigation */
+    .desktop_nav {
+        display: flex;
+        gap: 1rem;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .cart_icon,
+    .account_icon {
+        font-size: 2.2rem;
+    }
+
+    /* Ensure side panel and overlay are hidden on desktop */
+    .side_panel {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .footer_container{
+        padding: 0 30rem 1.4375rem;
+    }
+
+    .newsletter_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter_card{
+        padding: 2rem 1.5rem;
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .newsletter_card h2{
+        width: 38%;
+    }
+
+    .email_icon{
+        font-size: 1.5rem;
+    }
+
+    .email_input,
+    .subscribe_btn{
+        font-size: 1rem;
+    }
+
+    .email_input_wrapper{
+        flex: 0.5;
+    }
+
+    .left_footer_wrapper{
+        flex: 0.5;
+    }
+
+    .right_footer_wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    .payment_icon{
+        max-width: 3.5rem;
+    }
+
+    .nav_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .brand_desc{
+        font-size: 1.1rem;
+    }
+    
+    .footer_links{
+        font-size: 1.1rem;
+    }
+
+    .social_media_icon{
+        font-size: 2rem;
+    }
+
+    .bottom_wrapper{
+        padding: 0 2rem;
+    }
+
+    .bottom_wrapper p{
+        font-size: 1.1rem;
+    }
+    
+}
+
