@@ -1142,6 +1142,20 @@ header{
 }
 
 @media screen and (min-width: 1024px){
+
+    .promo_wrapper,
+    .sign_up_btn{
+        font-size: 1.2rem;
+    }
+
+    .promo_bar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .promo_wrapper{
+        flex: 0.5;
+    }
     
     /* Hide mobile menu elements */
     .menu_btn {
@@ -1163,7 +1177,12 @@ header{
     }
 
     .search_box{
+        font-size: 1.2rem;
         width: 100%;
+    }
+
+    .brand_logo{
+        font-size: 3rem;
     }
 
     /* Show desktop navigation */
@@ -1171,6 +1190,12 @@ header{
         display: flex;
         gap: 1rem;
         margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .cart_icon,
+    .account_icon {
+        font-size: 2.2rem;
     }
 
     /* Ensure side panel and overlay are hidden on desktop */
@@ -1200,11 +1225,24 @@ header{
         padding-left: 1rem;
     }
 
+    .grid_1 {
+        width: 50%;
+        padding: 5%;
+    }
+
+    .grid_2 {
+        margin-left: 4.2rem;
+    }
+
     .first_star{
         font-size: 3rem;
     }
     .second_star{
         font-size: 2rem;
+    }
+
+    .main{
+        padding: 0 30rem;
     }
 
     .home{
@@ -1219,13 +1257,8 @@ header{
         font-size: 1.25rem;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev{
-        font-size: 2rem;
-    }
-
     .view_all_btn{
-        width: 30%;
+        width: 25%;
         font-size: 1.2rem;
     }
 
@@ -1234,19 +1267,11 @@ header{
     }
 
     .browse_by{
-        padding: 0 5rem;
+        padding: 0 30rem;
     }
 
-    .browse_box h1{
-        font-size: 3rem;
-    }
-
-    .occasion_card{
-        height: 14rem;
-    }
-
-    .occasion_card h3{
-        font-size: 2.25rem;
+    .footer_container{
+        padding: 0 30rem 1.4375rem;
     }
 
     .newsletter_wrapper{
@@ -1257,7 +1282,7 @@ header{
 
     .newsletter_card{
         padding: 2rem 1.5rem;
-        width: 90%;
+        width: 70%;
         justify-content: space-between;
     }
 
@@ -1293,8 +1318,12 @@ header{
     }
 
     .review{
-        padding: 0 5rem;
+        padding: 0 30rem;
         margin-bottom: 2rem;
+    }
+
+    .review_card{
+        font-size: 1.2rem;
     }
 
     .review_wrapper{
@@ -1304,13 +1333,11 @@ header{
     .discount_badge{
         width: 12%;
     }
-    
-}
 
-@media screen and (min-width: 1440px){
-    
     .nav_container{
-        justify-content:space-evenly
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .hero_title{
@@ -1363,91 +1390,25 @@ header{
         font-size: 2.5rem;
     }
 
-}
-
-@media screen and (min-width: 1904px){
-
-    .promo_bar{
-        display: flex;
-        justify-content: center;
+    .brand_desc{
+        font-size: 1.1rem;
+    }
+    
+    .footer_links{
+        font-size: 1.1rem;
     }
 
-    .promo_wrapper{
-        flex: 0.5;
+    .social_media_icon{
+        font-size: 2rem;
     }
 
-    .nav_container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    .bottom_wrapper{
+        padding: 0 2rem;
     }
 
-    .search_container{
-        flex-grow: 0.7;
+    .bottom_wrapper p{
+        font-size: 1.1rem;
     }
-
-    .search_box{
-        width: 100%;
-    }
-
-    .grid_1 {
-        width: 50%;
-        padding: 5%;
-    }
-
-    /* .hero_title{
-        width: 70%;
-    }
-
-    .hero_desc{
-        width: 60%;
-    }
-
-    .shop_now_btn{
-        width: 40%;
-        margin-bottom: 5%;
-    } */
-
-    .grid_2{
-        margin-left: 4.2rem;
-    }
-
-    .swiper_wrapper{
-        height: 10%;
-    }
-
-    .view_all_btn{
-        width: 20%;
-        font-size: 1.5rem;
-    }
-
-    .swiper-button-next{
-        right: 30rem;
-    }
-
-    .swiper-button-prev{
-        left: 30rem;
-    }
-
-    .browse_by{
-        margin-top: 10%;
-        padding: 0 7em;
-    }
-
-    .browse_box{
-        padding: 4rem;
-    }
-
-    .browse_box h1{
-        font-size: 5rem;
-    }
-
-    .occasion_card{
-        height: 18rem;
-    }
-
-    .occasion_card h3{
-        font-size: 3rem;
-    }
+    
 }
     
