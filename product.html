@@ -18,7 +18,6 @@
 </head>
 <body>
 
-    <script src="path/to/product.js"></script>
 
     <header class="header" id="header">
         <div class="header_container">
@@ -117,11 +116,11 @@
         </div>
      </header>
 
-    <div class="breadcrumb">
-        <a href="#">Home</a> /
-        <a href="#">Shop</a> /
-        <a href="#">Natural</a>
-    </div>
+    <div class="breadcrumb" style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 1rem 0;">
+    <a href="#">Home</a> /
+    <a href="#">Shop</a> /
+    <a href="#">Natural</a>
+</div>
 
     <div class="product-container">
         <div class="product-images">
@@ -147,10 +146,10 @@
                 Pandan Sticky Rice exudes a fresh, green aroma with hints of vanilla and coconut.
             </p>
             <div class="size-selector">
-                <div class="size-option">5ml</div>
-                <div class="size-option selected">10ml</div>
-                <div class="size-option">100ml</div>
-                <div class="size-option">200ml</div>
+                <div class="size-option" onclick="selectSize(this)">5ml</div>
+                <div class="size-option selected" onclick="selectSize(this)">10ml</div>
+                <div class="size-option" onclick="selectSize(this)">100ml</div>
+                <div class="size-option" onclick="selectSize(this)">200ml</div>
             </div>
             <div class="quantity-container">
                 <button>-</button>
@@ -299,5 +298,35 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/product.js"></script>
+<script>
+    function selectSize(button) {
+        const allButtons = document.querySelectorAll('.size-option');
+        allButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const quantityDisplay = document.querySelector('.quantity-container span');
+        const minusButton = document.querySelector('.quantity-container button:first-child');
+        const plusButton = document.querySelector('.quantity-container button:nth-child(3)');
+
+        minusButton.addEventListener('click', () => {
+            let quantity = parseInt(quantityDisplay.textContent);
+            if (quantity > 1) {
+                quantityDisplay.textContent = quantity - 1;
+            }
+        });
+
+        plusButton.addEventListener('click', () => {
+            let quantity = parseInt(quantityDisplay.textContent);
+            quantityDisplay.textContent = quantity + 1;
+        });
+    });
+</script>
+
+
 </body>
 </html>
