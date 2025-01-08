@@ -10,12 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         loginForm.classList.add('hidden');
         signupForm.classList.remove('hidden');
+
+        sr.reveal(`.form`, {transition:1000, origin: left});
     });
 
     switchToLogin.addEventListener('click', function(e) {
         e.preventDefault();
         signupForm.classList.add('hidden');
         loginForm.classList.remove('hidden');
+
+        sr.reveal(`.form`, {transition:1000, origin: left});
+
     });
 
     signupForm.addEventListener('submit', (e) => {
@@ -32,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-let sr = new ScrollReveal({
-    reset: false,
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
     distance: '60px',
-    duration: 1000,
-    delay: 400
-})
-
-
-sr.reveal(`.footer_container`, {transition: 500, origin:'bottom'})
+    duration: 2500,
+    reset: false // Animation repeat
+  })
+  
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
