@@ -41,3 +41,21 @@ function toggleSearch() {
         searchOverlay.querySelector('.mobile_search_container').focus();
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const viewButtons = document.querySelectorAll('.nav-link');
+
+    viewButtons.forEach(button => {
+        button.addEventListener('click', handleFilterClick);
+    });
+
+    occasionCards.forEach(card => {
+        card.addEventListener('click', handleFilterClick);
+    });
+});
+
+function handleFilterClick(event) {
+    const filter = event.currentTarget.dataset.filter;
+    const filterType = event.currentTarget.classList.contains('occasion_card') ? 'occasion' : 'department';
+    window.location.href = `catalog.html?filterType=${filterType}&filter=${filter}`;
+}

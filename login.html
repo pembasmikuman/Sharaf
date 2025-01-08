@@ -23,9 +23,9 @@
             <div class="promo_bar" id="promo-bar">
 
                 <div class="promo_wrapper">Sign up and get 20% off to your first order.
-                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                    <a href="login.html" class="sign_up_btn" style="text-decoration: underline;">
                         Sign up now
-                    </button>
+                    </a>
                 </div>
 
                 <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Navigation bar -->
-                <nav class="navbar">
+             <nav class="navbar">
                 <div class="nav_container">
                     <div class="nav_left">
 
@@ -45,9 +45,9 @@
                         <a href="index.html" class="brand_logo">SHARAF</a>
 
                         <div class="desktop_nav">
-                            <a href="#">On Sale</a>
-                            <a href="#">New Arrivals</a>
-                            <a href="contact.html">Contact Us</a>
+                            <a class="nav-link" data-filter="top">Top Selling</a>
+                            <a class="nav-link" data-filter="new">New Arrivals</a>
+                            <a class="nav-link" href="contact.html">Contact Us</a>
                         </div>
                     </div>
 
@@ -76,9 +76,9 @@
                     </div>
 
                 </div>
-                </nav>
+             </nav>
 
-                <div class="side_panel" id="side-panel">
+             <div class="side_panel" id="side-panel">
                 <div class="panel_header">
                     <h2>Menu</h2>
                     <button class="close_btn" onclick="toggleSidePanel()">
@@ -87,16 +87,16 @@
                 </div>
 
                 <div class="mobile_nav">
-                    <a href="#">On Sale</a>
-                    <a href="#">New Arrivals</a>
-                    <a href="#">Contact Us</a>
+                    <a class="nav-link" data-filter="top">Top Selling</a>
+                    <a class="nav-link" data-filter="new">New Arrivals</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
-                </div>
+             </div>
 
-                <!-- Overlay for Mobile Menu -->
-                <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+             <!-- Overlay for Mobile Menu -->
+             <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
 
-                <div class="search_overlay" id="search-overlay">
+             <div class="search_overlay" id="search-overlay">
                 <div class="search_overlay_wrapper">
                     <button class="close_search_btn" onclick="toggleSearch()">
                         <i class="ri-close-line"></i>
@@ -109,7 +109,7 @@
                         </button>
                     </div>
                 </div>
-                </div>
+             </div>
         </div>
     </header>
 

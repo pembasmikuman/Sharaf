@@ -20,7 +20,6 @@
 <body>
 
     <!-- ================= HEADER =================== -->
-
     <header class="header" id="header">
         <div class="header_container">
 
@@ -28,9 +27,9 @@
             <div class="promo_bar" id="promo-bar">
 
                 <div class="promo_wrapper">Sign up and get 20% off to your first order.
-                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                    <a href="login.html" class="sign_up_btn" style="text-decoration: underline;">
                         Sign up now
-                    </button>
+                    </a>
                 </div>
 
                 <button class="close_promo_btn" id="close-promo-btn" aria-label="Close Promo">
@@ -50,9 +49,9 @@
                         <a href="index.html" class="brand_logo">SHARAF</a>
 
                         <div class="desktop_nav">
-                            <a href="#">On Sale</a>
-                            <a href="#">New Arrivals</a>
-                            <a href="contact.html">Contact Us</a>
+                            <a class="nav-link" data-filter="top">Top Selling</a>
+                            <a class="nav-link" data-filter="new">New Arrivals</a>
+                            <a class="nav-link" href="contact.html">Contact Us</a>
                         </div>
                     </div>
 
@@ -92,9 +91,9 @@
                 </div>
 
                 <div class="mobile_nav">
-                    <a href="#">On Sale</a>
-                    <a href="#">New Arrivals</a>
-                    <a href="#">Contact Us</a>
+                    <a class="nav-link" data-filter="top">Top Selling</a>
+                    <a class="nav-link" data-filter="new">New Arrivals</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
              </div>
 
@@ -116,7 +115,7 @@
                 </div>
              </div>
         </div>
-     </header>
+    </header>
 
     <div class="breadcrumb" style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 1rem 0;">
     <a href="#">Home</a> /
@@ -300,5 +299,6 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/promo-footer.js"></script>
 </body>
 </html>
