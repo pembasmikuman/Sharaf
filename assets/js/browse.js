@@ -1,217 +1,3 @@
-// ========== CLOSE PROMO BAR =========
-const promoBar = document.getElementById('promo-bar');
-const promoCloseBtn = document.getElementById('close-promo-btn');
-const resetPromoBtn = document.getElementById('reset-promo-btn');
-
-promoBar.classList.remove('hidden');
-localStorage.removeItem('promo-bar-closed');
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    // Check if promo bar state is saved in localStorage
-    const isPromoClosed = localStorage.getItem('promo-bar-closed') === 'true';
-    
-    if (isPromoClosed) {
-        promoBar.classList.add('hidden');
-    }
-
-    // Close Promo Bar
-    promoCloseBtn.addEventListener('click', () => {
-        promoBar.classList.add('hidden');
-        localStorage.setItem('promo-bar-closed', 'true');
-    });
-});
-
-// ============= MENU OVERLAY TOGGLE =============
-function toggleSidePanel() {
-    const sidePanel = document.getElementById('side-panel');
-    const overlay = document.getElementById('overlay');
-    
-    sidePanel.classList.toggle('active');
-    overlay.classList.toggle('active');
-}
-
-// ============ SEARCH OVERLAY TOGGLE =============
-function toggleSearch() {
-    const searchOverlay = document.getElementById('search-overlay');
-    searchOverlay.classList.toggle('active');
-    
-    // Focus the search input when overlay opens
-    if (searchOverlay.classList.contains('active')) {
-        searchOverlay.querySelector('.mobile_search_container').focus();
-    }
-}
-
-// ================= FILTER TOGGLE ================
-const filterMobileButton = document.querySelector('.filter_mobile');
-const filterPanel = document.querySelector('.filter-panel');
-const closeFilterButton = document.querySelector('.close-filter');
-const filterButtons = document.querySelectorAll('.filter-btn');
-const applyBtn = document.getElementById('applyBtn');
-
-filterMobileButton.addEventListener('click', () => {
-    filterPanel.classList.add('open');
-});
-
-closeFilterButton.addEventListener('click', () => {
-    filterPanel.classList.remove('open');
-});
-
-// Store original active states
-let activeFilters = {
-    department: null,
-    price: null,
-    occasion: null
-};
-
-// Add click handlers for filter buttons
-filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const filterGroup = this.closest('.filter-buttons');
-        const groupButtons = filterGroup.querySelectorAll('.filter-btn');
-        
-        // If clicking an already active button, deactivate it
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-            return;
-        }
-        
-        // Remove active class from other buttons in same group
-        groupButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-    });
-});
-
-// Close panel without applying filters
-closeFilterButton.addEventListener('click', () => {
-    // Reset all buttons to their previous state
-    resetFilters();
-    filterPanel.classList.remove('open');
-});
-
-// Apply filters and close panel
-applyBtn.addEventListener('click', () => {
-    // Save current active states
-    saveActiveStates();
-    filterPanel.classList.remove('open');
-});
-
-function saveActiveStates() {
-    // Save department filters
-    const departmentActive = document.querySelector('.department_filter .filter-btn.active');
-    activeFilters.department = departmentActive ? departmentActive.dataset.filter : null;
-    
-    // Save price filters
-    const priceActive = document.querySelector('.price-filter .filter-btn.active');
-    activeFilters.price = priceActive ? priceActive.dataset.filter : null;
-    
-    // Save occasion filters
-    const occasionActive = document.querySelector('.occasion-filter .filter-btn.active');
-    activeFilters.occasion = occasionActive ? occasionActive.dataset.filter : null;
-}
-
-function resetFilters() {
-    // Reset department filters
-    const departmentButtons = document.querySelectorAll('.department_filter .filter-btn');
-    departmentButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === activeFilters.department);
-    });
-    
-    // Reset price filters
-    const priceButtons = document.querySelectorAll('.price-filter .filter-btn');
-    priceButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === activeFilters.price);
-    });
-    
-    // Reset occasion filters
-    const occasionButtons = document.querySelectorAll('.occasion-filter .filter-btn');
-    occasionButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === activeFilters.occasion);
-    });
-}
-
-
-
-// ============= PAGINATION =================
-const pageNumbers = document.getElementById('pageNumbers');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let currentPage = 1;
-const totalPages = 10;
-
-// Update pagination numbers and states
-function updatePagination() {
-    pageNumbers.innerHTML = '';
-    
-    if (window.innerWidth >= 768) {
-        // Desktop view: 1 2 3 ... 8 9 10
-        const desktopPages = [1, 2, 3, '...', 8, 9, 10];
-        
-        desktopPages.forEach(page => {
-            const span = document.createElement('span');
-            if (page === '...') {
-                span.className = 'dots';
-                span.textContent = page;
-            } else {
-                span.className = `page-num ${page === currentPage ? 'active' : ''}`;
-                span.textContent = page;
-                span.addEventListener('click', () => handlePageClick(page));
-            }
-            pageNumbers.appendChild(span);
-        });
-    } else {
-        // Mobile view: 1 2 ... 9 10
-        const mobilePages = [1, 2, '...', 9, 10];
-        
-        mobilePages.forEach(page => {
-            const span = document.createElement('span');
-            if (page === '...') {
-                span.className = 'dots';
-                span.textContent = page;
-            } else {
-                span.className = `page-num ${page === currentPage ? 'active' : ''}`;
-                span.textContent = page;
-                span.addEventListener('click', () => handlePageClick(page));
-            }
-            pageNumbers.appendChild(span);
-        });
-    }
-    
-    // Update prev/next button states
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage === totalPages;
-}
-
-function handlePageClick(page) {
-    currentPage = page;
-    updatePagination();
-}
-
-// Previous button click handler
-prevBtn.addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        updatePagination();
-    }
-});
-
-// Next button click handler
-nextBtn.addEventListener('click', () => {
-    if (currentPage < totalPages) {
-        currentPage++;
-        updatePagination();
-    }
-});
-
-// Add event listener for screen resize
-window.addEventListener('resize', updatePagination);
-
-// Initial call
-updatePagination();
-
-
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
   origin: 'top',
@@ -223,3 +9,255 @@ const sr = ScrollReveal({
 sr.reveal(`.display_header h1`, {transition: 500, origin: 'left', duration: 500})
 sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
 sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
+
+// ================= FILTER TOGGLE ================
+const filterMobileButton = document.querySelector('.filter_mobile');
+const filterPanel = document.querySelector('.filter-panel');
+const closeFilterButton = document.querySelector('.close-filter');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const applyBtnM = document.getElementById('applyBtnM');
+const searchBox = document.querySelector('.search_box');
+searchBox.addEventListener('input', handleSearch);
+
+filterMobileButton.addEventListener('click', () => {
+    filterPanel.classList.add('open');
+});
+
+closeFilterButton.addEventListener('click', () => {
+    filterPanel.classList.remove('open');
+});
+
+// ================= FETCH DATA FOR PRODUCTS ========================
+let Products = [];
+let activeFilters = {
+    department: [],
+    price: [],
+    occasion: []
+};
+
+// Fetch product data
+async function fetchProducts() {
+    try {
+        const response = await fetch('assets/fragrances.json');
+        const data = await response.json();
+        Products = data.fragrances;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterType = urlParams.get('filterType');
+        const filter = urlParams.get('filter');
+        
+        if (filter && filterType) {
+            applyInitialFilter(filterType, filter);
+        } else {
+            renderProducts(Products);
+        }
+
+        console.log(Products);
+        setupSearchFunctionality();
+        setupFilterListeners();
+    } catch (error) {
+        console.error('Error fetching products:', error);
+    }
+}
+
+function applyInitialFilter(filterType, filter) {
+    const filterButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+    if (filterButton) {
+        filterButton.classList.add('active');
+        activeFilters[filterType] = [filter];
+        applyFilters();
+    } else {
+        const filteredProducts = Products.filter(product => 
+            product[filterType].toLowerCase() === filter.toLowerCase()
+        );
+        renderProducts(filteredProducts);
+    }
+}
+
+// Render products
+function renderProducts(products) {
+    const productContainer = document.querySelector('.product_grid');
+    productContainer.innerHTML = ''; // Clear existing products
+    products.forEach(product => {
+        const productElement = createProductElement(product);
+        sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
+        productContainer.appendChild(productElement);
+    });
+}
+
+// Create a single product element
+function createProductElement(product) {
+    const article = document.createElement('article');
+    article.className = 'product';
+
+    const currentPrice = product.prices['100ml'];
+    const originalPrice = product.prices.original;
+    const hasDiscount = currentPrice < originalPrice;
+
+    const priceHTML = hasDiscount ? 
+        `<h3>RM ${currentPrice}
+            <h3 style="text-decoration: line-through; color: #999999;">
+                RM ${originalPrice}
+            </h3>
+            <div class="discount_badge">
+                -${calculateDiscount(currentPrice, originalPrice)}%
+            </div>
+        </h3>` :
+        `<h3>RM ${currentPrice}</h3>`;
+
+    article.innerHTML = `
+        <div class="product_image">
+            <img class="product_img" src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product_details">
+            <h3 class="product_name">${product.name}</h3>
+
+            <div class="rating-wrapper">
+                ${generateStarRating(product.rating)}
+                ${product.rating}/
+                <span style="font-weight: 100;">5</span>
+            </div>
+
+            <div class="price_wrapper">
+                ${priceHTML}
+            </div>
+        </div>
+    `;
+
+    return article;
+}
+
+function setupSearchFunctionality() {
+    const searchBox = document.querySelector('.search_box');
+    const mobileSearchBox = document.querySelector('.mobile_search_box');
+    const searchIcon = document.getElementById('search-icon');
+
+    searchBox.addEventListener('input', handleSearch);
+    mobileSearchBox.addEventListener('input', handleMobileSearch);
+    searchIcon.addEventListener('click', handleMobileSearchIconClick);
+}
+
+function handleSearch(event) {
+    const searchTerm = event.target.value.toLowerCase().trim();
+    filterAndRenderProducts(searchTerm);
+}
+
+function handleMobileSearch(event) {
+    const searchTerm = event.target.value.toLowerCase().trim();
+    filterAndRenderProducts(searchTerm);
+}
+
+function handleMobileSearchIconClick() {
+    const searchTerm = document.querySelector('.mobile_search_box').value.toLowerCase().trim();
+    if (searchTerm !== '') {
+        filterAndRenderProducts(searchTerm);
+        toggleSearch();
+    } else {
+        toggleSearch();
+    }
+}
+
+function filterAndRenderProducts(searchTerm) {
+    const filteredProducts = Products.filter(product => 
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+    );
+    renderProducts(filteredProducts);
+}
+
+// Setup filter listeners
+function setupFilterListeners() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterType = button.closest('.filter-buttons').previousElementSibling.textContent.toLowerCase();
+            const filterValue = button.dataset.filter;
+            
+            if (!activeFilters[filterType]) {
+                activeFilters[filterType] = [];
+            }
+            
+            if (button.classList.contains('active')) {
+                button.classList.remove('active');
+                activeFilters[filterType] = activeFilters[filterType].filter(val => val !== filterValue);
+            } else {
+                button.classList.add('active');
+                activeFilters[filterType].push(filterValue);
+            }
+            
+            console.log('Updated Active Filters:', activeFilters);
+        });
+    });
+
+    const applyButton = document.getElementById('applyBtn');
+    applyButton.addEventListener('click', applyFilters);
+    applyBtnM.addEventListener('click', applyFilters)
+}
+
+
+
+// Apply filters
+function applyFilters() {
+    console.log('applying filters!')
+    const filteredProducts = Products.filter(product => {
+        const departmentMatch = activeFilters.department.length === 0 || activeFilters.department.includes(product.department);
+        const occasionMatch = activeFilters.occasion.length === 0 || activeFilters.occasion.includes(product.occasion);
+        const priceMatch = activeFilters.price.length === 0 || activeFilters.price.some(range => checkPriceRange(product.prices['100ml'], range));
+        
+        console.log(departmentMatch);
+        console.log(occasionMatch);
+        console.log(priceMatch)
+        return departmentMatch && occasionMatch && priceMatch;
+    });
+
+    filterPanel.classList.remove('open');
+    console.log(filteredProducts)
+    renderProducts(filteredProducts);
+}
+
+// Check price range
+function checkPriceRange(price, range) {
+    switch (range) {
+        case 'under100':
+            return price < 100;
+        case '100to500':
+            return price >= 100 && price <= 500;
+        case '500t01000':
+            return price > 500 && price <= 1000;
+        case 'moreThan1000':
+            return price > 1000;
+        default:
+            return false;
+    }
+}
+
+// Generate star rating HTML
+function generateStarRating(rating) {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5;
+    let starsHTML = '';
+    
+    for (let i = 0; i < 5; i++) {
+        if (i < fullStars) {
+            starsHTML += '<i class="ri-star-fill star_icon"></i>';
+        } else if (i === fullStars && halfStar) {
+            starsHTML += '<i class="ri-star-half-fill star_icon"></i>';
+        } else {
+            starsHTML += '<i class="ri-star-line star_icon"></i>';
+        }
+    }
+    
+    return starsHTML;
+}
+
+// Calculate discount percentage
+function calculateDiscount(currentPrice, originalPrice) {
+    return Math.round((1 - currentPrice / originalPrice) * 100);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchProducts();
+});
+
+
+

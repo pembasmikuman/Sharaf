@@ -26,7 +26,7 @@
             <div class="promo_bar" id="promo-bar">
 
                 <div class="promo_wrapper">Sign up and get 20% off to your first order.
-                    <button href="#" class="sign_up_btn" style="text-decoration: underline;">
+                    <button href="login.html" class="sign_up_btn" style="text-decoration: underline;">
                         Sign up now
                     </button>
                 </div>
@@ -176,7 +176,7 @@
                     </div>
 
                     <div class="button_wrapper">
-                        <button href=# class="view_all_btn">View All</button>
+                        <button class="view_all_btn" data-filter="new">View All</button>
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@
                     </div>
 
                     <div class="button_wrapper">
-                        <button href=# class="view_all_btn">View All</button>
+                        <button class="view_all_btn" data-filter="top">View All</button>
                     </div>
                 </div>
             </div>
@@ -217,13 +217,13 @@
                 <h1>BROWSE BY occasion</h1>
 
                 <div class="first_row">
-                    <div class="occasion_card">
+                    <div class="occasion_card" data-filter="casual">
                         <img class ="casual_occasion_img" src="assets/images/casual.svg" alt="casual occasion">
                         
                         <h3>Casual</h3>
                     </div>
     
-                    <div class="occasion_card">
+                    <div class="occasion_card" data-filter="formal">
                         <img class="formal_occasion_img" src="assets/images/formal.svg" alt="formal occasion">
                         
                         <h3>Formal</h3>
@@ -231,13 +231,13 @@
                 </div>
 
                 <div class="second_row">
-                    <div class="occasion_card">
+                    <div class="occasion_card" data-filter="date">
                         <img class="date_occasion_img" src="assets/images/date.svg" alt="date occasion">
                         
                         <h3>Date</h3>
                     </div>
     
-                    <div class="occasion_card">
+                    <div class="occasion_card" data-filter="active">
                         <img class="active_occasion_img" src="assets/images/active.svg" alt="active occasion">
                         
                         <h3>Active</h3>
@@ -485,5 +485,6 @@
 
     <!-- ========== HOMEPAGE JS ============ -->
     <script src="assets/js/homepage.js"></script>
+    <script src="assets/js/promo-footer.js"></script>
 </body>
 </html>

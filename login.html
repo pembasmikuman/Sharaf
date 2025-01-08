@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
 
     <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/browse.css">
+    <link rel="stylesheet" href="assets/css/promo-footer.css">
     <title>Login</title>
 </head>
 <body>
@@ -144,7 +144,9 @@
             </p>
         </form>
         <form id="signupForm" class="form hidden">
-            <h2>Sign Up</h2>
+            <div class="flex-column">
+                <label>Sign up </label>
+            </div>
             <div class="inputForm">
                 <input type="text" class="input" placeholder="Full Name" required>
             </div>
@@ -160,6 +162,13 @@
             <button type="submit" class="button-submit">Sign Up</button>
             <p class="p">Already have an account? <span class="span" id="switchToLogin">Login</span></p>
         </form>
+        <!-- Popup Message -->
+        <div id="Popup" class="popup hidden">
+            <div class="popup-content">
+                <p>You have succesfully signed up. Please head to log in.</p>
+                <button id="closePopup" class="popup-close-button">Close</button>
+            </div>
+        </div>
     </main>
 
     <!--=============== FOOTER ===============-->
@@ -227,6 +236,6 @@
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/login.js"></script>
-    <script src="assets/js/homepage.js"></script>
+    <script src="assets/js/promo-footer.js"></script>
 </body>
 </html>

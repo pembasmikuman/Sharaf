@@ -623,6 +623,211 @@
                 ]
             },
             "department": "top"
+        },
+    
+        {
+            "id": 16,
+            "name": "Code",
+            "prices": {
+                "100ml": 412,
+                "5ml": 15,
+                "original": 420
+            },
+            "description": "Armani Code Cologne is a sophisticated fragrance that features a harmonious blend of notes. In the opening, the head notes introduce a fresh and vibrant combination of lemon and bergamot. Moving to the middle notes, the fragrance reveals a captivating accord of refined and elegant iris, enhanced by the warm and seductive tones of tonka bean absolute. Complementing the composition, clary sage adds a touch of herbal freshness, while musk provides a sensual and inviting base. The result is a classy and well-blended fragrance that exudes confidence and charm. Armani Code Cologne captures the essence of masculinity with its sophisticated iris note, making it a timeless and alluring choice for any occasion.",
+            "rating": 5,
+            "image": "assets/images/armanicode.png",
+            "occasion": "active",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 17,
+            "name": "La Vie Est Belle",
+            "prices": {
+                "100ml": 499,
+                "5ml": 15,
+                "original": 500
+            },
+            "description": "Happiness reigns when you wear this light, floral scent that features top notes of bergamot, raspberry and pink pepper that blend into the heart notes of ylang-ylang and rose before descending into the warmth of patchouli and iris.",
+            "rating": 5,
+            "image": "assets/images/la-vie-est.png",
+            "occasion": "date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 18,
+            "name": "Le Beau Paradise Garden",
+            "prices": {
+                "100ml": 540,
+                "5ml": 15,
+                "original": 625
+            },
+            "description": "Jean Paul Gaultier Le Beau Paradise Garden Cologne by Jean Paul Gaultier",
+            "rating": 5,
+            "image": "assets/images/paradise-garden.png",
+            "occasion": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": "new"
+        },
+
+        {
+            "id": 19,
+            "name": "Pandan Sticky Rice",
+            "prices": {
+                "100ml": 82,
+                "5ml": 15,
+                "original": 95
+            },
+            "description": "The scent opens with the comforting aroma of pandan, instantly transporting you to a familiar place of warmth and togetherness. The rice accord follows, soft and soothing, evoking the essence of home-cooked meals shared with loved ones. White florals delicately weave through the fragrance, adding a layer of elegance and freshness, while a subtle touch of amber grounds the scent, offering a modern twist that lingers softly on the skin.",
+            "rating": 5,
+            "image": "assets/images/pandan-sticky-rice.png",
+            "occasion": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": "new"
+        },
+
+        {
+            "id": 20,
+            "name": "Coconut Nanas",
+            "prices": {
+                "100ml": 90,
+                "5ml": 15,
+                "original": 120
+            },
+            "description": "With the perfect amount of sweetness from pineapple and peach is swirled into a pool of milky coconut vibe it’s a perfect head-turning scent for everyone.",
+            "rating": 5,
+            "image": "assets/images/coconut-nanas.png",
+            "occasion": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
         }
     ]
 }

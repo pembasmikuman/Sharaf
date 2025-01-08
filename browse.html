@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
 
     <link rel="stylesheet" href="assets/css/browse.css">
+    <link rel="stylesheet" href="assets/css/promo-footer.css">
     <title>Find your fragrance</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
             </div>
 
             <!-- Navigation bar -->
-                <nav class="navbar">
+            <nav class="navbar">
                 <div class="nav_container">
                     <div class="nav_left">
 
@@ -75,9 +76,9 @@
                     </div>
 
                 </div>
-                </nav>
+            </nav>
 
-                <div class="side_panel" id="side-panel">
+            <div class="side_panel" id="side-panel">
                 <div class="panel_header">
                     <h2>Menu</h2>
                     <button class="close_btn" onclick="toggleSidePanel()">
@@ -90,25 +91,25 @@
                     <a href="#">New Arrivals</a>
                     <a href="#">Contact Us</a>
                 </div>
-                </div>
+            </div>
 
-                <!-- Overlay for Mobile Menu -->
-                <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
+            <!-- Overlay for Mobile Menu -->
+            <div class="overlay" id="overlay" onclick="toggleSidePanel()"></div>
 
-                <div class="search_overlay" id="search-overlay">
+            <div class="search_overlay" id="search-overlay">
                 <div class="search_overlay_wrapper">
                     <button class="close_search_btn" onclick="toggleSearch()">
                         <i class="ri-close-line"></i>
                     </button>
                     <h2>Search</h2>
                     <div class="mobile_search_container">
-                        <input type="text" class="mobile_search_box" placeholder="Search products...">
-                        <button class="nav_icon">
+                        <input type="text" class="mobile_search_box" placeholder="Search for products...">
+                        <button class="nav_icon" id="search-icon">
                             <i class="ri-search-line"></i>
                         </button>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </header>
 
@@ -119,7 +120,7 @@
                 Home
             </a>
             <span style="color: #666666;"><i class="ri-arrow-right-s-line"></i></span>
-            All Products
+            Product Catalog
         </div>
 
         <div class="content_area">
@@ -131,7 +132,7 @@
                     <i class="ri-sound-module-fill filter_icon"></i>
                 </div>
                 <div class="filter-panel-content">
-                    <div class="department_filter">
+                    <div class="department-filter">
                         <h3>Department</h3>
                         <div class="filter-buttons">
                             <button class="filter-btn" data-filter="new">New Arrivals</button>
@@ -166,7 +167,7 @@
     
             <div class="display">
                 <div class="display_header">
-                    <h1>All Products</h1>
+                    <h1>Product Catalog</h1>
     
                     <button class="filter_mobile">
                         <span class="filter_icon_mobile"><i class="ri-sound-module-fill"></i></span>
@@ -179,7 +180,7 @@
                         <button class="close-filter"><i class="ri-close-line"></i></button>
                     </div>
                     <div class="filter-panel-content">
-                        <div class="department_filter">
+                        <div class="department-filter">
                             <h3>Department</h3>
                             <div class="filter-buttons">
                                 <button class="filter-btn" data-filter="new">New Arrivals</button>
@@ -207,75 +208,12 @@
                             </div>
                         </div>
                         <div class="apply">
-                            <button class="apply_btn" id="applyBtn">Apply Filter</button>
+                            <button class="apply_btn" id="applyBtnM">Apply Filter</button>
                         </div>
-                    </div>
-                </div>
-                
-
-                <div class="sort_wrapper">
-                    <div class="sort_by">
-                        <label for="sort-select">Sort by</label>
-                        <select id="sort-select">
-                            <option value="default">Default</option>
-                            <option value="price-low-high">Price: Low to High</option>
-                            <option value="price-high-low">Price: High to Low</option>
-                            <option value="name-a-z">Name: A to Z</option>
-                            <option value="name-z-a">Name: Z to A</option>
-                        </select>
                     </div>
                 </div>
                 
                 <div class="product_grid">
-                    <article class="product swiper-slide">
-                        <div class="product_image">
-                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
-                        </div>
-                        <div class="product_details">
-                            <h3 class="product_name">Club De Nuit</h3>
-
-                            <div class="rating-wrapper">
-                                <i class="ri-star-fill star_icon"></i>
-                                <i class="ri-star-fill star_icon"></i>
-                                <i class="ri-star-fill star_icon"></i>
-                                <i class="ri-star-fill star_icon"></i>
-                                <i class="ri-star-half-fill star_icon"></i>
-                                4.5/
-                                <span style="font-weight: 100;">5</span>
-                            </div>
-
-                            <div class="price_wrapper">
-                                <h3>RM 120
-                                    <h3 style="text-decoration: line-through; color: #999999;">
-                                        <span class="discount-badge">
-                                        </span>
-                                    </h3>
-                                </h3>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="divider"></div>
-                
-                <div class="pagination">
-                    <button class="page-btn prev" id="prevBtn">
-                        <i class="ri-arrow-left-line"></i>
-                        Previous
-                    </button>
-                    
-                    <div class="page-numbers" id="pageNumbers">
-                        <span class="page-num active">1</span>
-                        <span class="page-num">2</span>
-                        <span class="dots">...</span>
-                        <span class="page-num">9</span>
-                        <span class="page-num">10</span>
-                    </div>
-                    
-                    <button class="page-btn next" id="nextBtn">
-                        Next
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
                 </div>
             </div>
 
@@ -345,6 +283,7 @@
     </footer>
 
     <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/promo-footer.js"></script>
     <script src="assets/js/browse.js"></script>
 </body>
 </html>
