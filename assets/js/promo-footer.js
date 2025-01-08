@@ -48,10 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     viewButtons.forEach(button => {
         button.addEventListener('click', handleFilterClick);
     });
-
-    occasionCards.forEach(card => {
-        card.addEventListener('click', handleFilterClick);
-    });
 });
 
 function handleFilterClick(event) {

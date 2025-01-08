@@ -121,14 +121,14 @@
             </div>
             <div class="inputForm">
                 <span class="icon"><i class="ri-at-line"></i></span>
-                <input placeholder="Enter your Email" class="input" type="text">
+                <input placeholder="Enter your Email" class="input" id="loginEmail" type="text">
             </div>
             
             <div class="flex-column">
             <label>Password </label></div>
             <div class="inputForm">  
                 <span class="icon"><i class="ri-lock-fill"></i></span>   
-                <input placeholder="Enter your Password" class="input" type="password">
+                <input placeholder="Enter your Password" class="input" id="loginPassword" type="password">
             </div>
             
             <div class="flex-row">
@@ -148,13 +148,13 @@
                 <label>Sign up </label>
             </div>
             <div class="inputForm">
-                <input type="text" class="input" placeholder="Full Name" required>
+                <input type="text" class="input" id="signupUsername" placeholder="Username" required>
             </div>
             <div class="inputForm">
-                <input type="email" class="input" placeholder="Email" required>
+                <input type="email" class="input" id="signupEmail" placeholder="Email" required>
             </div>
             <div class="inputForm">
-                <input type="password" class="input" placeholder="Password" required>
+                <input type="password" class="input" id="signupPassword" placeholder="Password" required>
             </div>
             <div class="inputForm">
                 <input type="password" class="input" placeholder="Confirm Password" required>
@@ -162,13 +162,6 @@
             <button type="submit" class="button-submit">Sign Up</button>
             <p class="p">Already have an account? <span class="span" id="switchToLogin">Login</span></p>
         </form>
-        <!-- Popup Message -->
-        <div id="Popup" class="popup hidden">
-            <div class="popup-content">
-                <p>You have succesfully signed up. Please head to log in.</p>
-                <button id="closePopup" class="popup-close-button">Close</button>
-            </div>
-        </div>
     </main>
 
     <!--=============== FOOTER ===============-->
