@@ -280,23 +280,23 @@ ul{
     }
 
     label{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .icon{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .input{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .flex-row > div > label {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .span{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
   
     .form {
@@ -312,11 +312,11 @@ ul{
     .button-submit,
     .btn {
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 }
 
