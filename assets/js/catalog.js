@@ -132,9 +132,9 @@ function setupSearchFunctionality() {
     const mobileSearchBox = document.querySelector('.mobile_search_box');
     const searchIcon = document.getElementById('search-icon');
 
-    searchBox.addEventListener('input', handleSearch);
-    mobileSearchBox.addEventListener('input', handleMobileSearch);
-    searchIcon.addEventListener('click', handleMobileSearchIconClick);
+    searchBox?.addEventListener('input', handleSearch);
+    mobileSearchBox?.addEventListener('input', handleMobileSearch);
+    searchIcon?.addEventListener('click', handleMobileSearchIconClick);
 }
 
 function handleSearch(event) {
