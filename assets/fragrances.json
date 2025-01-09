@@ -93,7 +93,7 @@
                 "100ml": 315,
                 "50ml": 254,
                 "5ml": 15,
-                "original": 400
+                "original": 315
             },
             "description": "You'll be greeted with fresh, flirty top notes of lime, lemon, bergamot, jasmine, orange, mandarin and neroli followed by juicy middle notes of peach, freesia, rosemary, violet, rose and nutmeg. Grounding this light yet masculine fragrance are earthy base notes of white musk, cedar, oakmoss, patchouli and amber. These fragrance notes blend wonderfully to create a fresh masculine scent that's sure to tantalize and delight the senses.",
             "rating": 4.5,
@@ -136,7 +136,7 @@
                 "100ml": 293,
                 "50ml": 219,
                 "5ml": 15,
-                "original": 300
+                "original": 293
             },
             "description": " Versace Eros Cologne by Versace, When it comes to men's fragrances that exude power, confidence, and seduction, Versace Eros stands out as a true masterpiece, a scent that is subtle yet suggestive and has a quiet strength that any modern man will appreciate. Inspired by Eros, the Greek god of love and desire, this fragrance captures the essence of masculinity in a captivating and alluring manner.",
             "rating": 4.5,
@@ -303,7 +303,7 @@
                 "200ml": 360,
                 "100ml": 241,
                 "5ml": 15,
-                "original": 300
+                "original": 241
             },
             "description": "Versace Pour Homme Cologne by Versace is a popular aromatic fougere for the modern man that features a blend of Mediterranean-inspired ingredients, starting with top notes of neroli, lemon, bergamot, and rose de Mai. The Versace cologne Pour Homme then delves into warm heart notes of clary sage, geranium, cedar, and hyacinth before finishing off with base notes of amber, tonka bean, and musk, creating a sensual fragrance that's warm and inviting while still being light. Versace Pour Homme cologne has moderate sillage and longevity, which makes it a perfect choice for a finishing touch to your everyday wardrobe all year round. It also makes a great gift! Treat someone special to a bottle of Versace Pour Homme eau de toilette today, or stock up on this designer cologne for yourself: ",
             "rating": 4.5,
@@ -385,7 +385,7 @@
             "prices": {
                 "100ml": 214,
                 "5ml": 15,
-                "original": 320
+                "original": 214
             },
             "description": "Afnan 9pm Rebel opens with a dynamic burst of freshness, featuring top notes of zesty citrus and vibrant spices that immediately captivate the senses. The charm of the perfume is changed to a heart where the sweet floral scents are mixed with the seductive spices creating a tricky yet attractive aura. The woody deep notes of the base make the fragrance lasting, the warmth and the depth of it are emphasized with the almost unnoticeable hints of amber and musk that create an attractive ending.",
             "rating": 4.5,
@@ -549,12 +549,12 @@
             "prices": {
                 "100ml": 315,
                 "5ml": 15,
-                "original": 330
+                "original": 315
             },
             "description": "Delight in the fresh, citrus notes of Light Blue Eau Intense Cologne. Starting with the top notes of mandarin orange and frozen grapefruit, this cologne blends into the heart notes of juniper and salty marine accords. It finishes with a smooth base of amber, wood and musk.",
             "rating": 4.5,
             "image": "assets/images/light-blue.png",
-            "occasion": "casual",
+            "occasion": "active",
             "reviews": {
                 "total_count": 2,
                 "average_rating": 4.5,
@@ -801,6 +801,211 @@
             "rating": 5,
             "image": "assets/images/coconut-nanas.png",
             "occasion": "casual",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 21,
+            "name": "Voyage",
+            "prices": {
+                "100ml": 80,
+                "5ml": 15,
+                "original": 120
+            },
+            "description": "Nautica Voyage contains top notes of fresh green apples and budding leaves. Citrus fruits and lotus are the middle notes, which give the cologne even more freshness and brightness. Rounding out the bottom notes are scents of amber and cedar, making Nautica Voyage a well-balanced fragrance that anyone can wear whenever they want to feel uplifted and invigorated.",
+            "rating": 5,
+            "image": "assets/images/nautica-voyage.png",
+            "occasion": "active",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 22,
+            "name": "The One EDP",
+            "prices": {
+                "100ml": 371,
+                "5ml": 15,
+                "original": 400
+            },
+            "description": "The top notes of Grapefruit, Coriander, and Basil provide a fresh and invigorating opening. The heart consists of sparkling notes of Ginger, Cardamom, and Orange Blossom add a spicy and vibrant touch. The base notes of Amber, Tobacco, and Cedar create a warm and rich foundation. Together, these notes blend to create an alluring and masculine fragrance with a touch of freshness and warmth.",
+            "rating": 5,
+            "image": "assets/images/the-one.png",
+            "occasion": "formal",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": "top"
+        },
+
+        {
+            "id": 23,
+            "name": "Irish Tweed",
+            "prices": {
+                "100ml": 1164,
+                "5ml": 15,
+                "original": 1164
+            },
+            "description": "Green Irish Tweed Cologne by Creed, This sporty mix is sure to make any man feel like a famous movie star. With hints of violet leaves, Mysore sandalwood, Florentine iris, ambergris, and French verbena, Green Irish Tweed is known for its longevity and reasonable sillage. Though certainly not overpowering, its refreshing and luxurious aroma lingers on the mind long after its wearer has departed the room. Furthermore, it's widely considered to be one of the defining scents of the brand’s catalogue. Green Irish Tweed was first released in 1985 and originally made for Hollywood icon Cary Grant. Creed has a long and storied history in the fragrance world with over 250 years in business. Founded by James Henry Creed after designing a fragrance for King George Iii, the company’s products present a modernized scent of past triumphs. Many iconic figures throughout history have enjoyed the company's products, including Queen Maria Cristina of Spain, Emperor Franz-Josef of Austria-Hungary, and Empress Eugenie of France.",
+            "rating": 5,
+            "image": "assets/images/irish-tweed.png",
+            "occasion": "active",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 24,
+            "name": "Acqua Di Gio Profumo" ,
+            "prices": {
+                "100ml": 550,
+                "5ml": 15,
+                "original": 550
+            },
+            "description": "Dive into the depth and intensity of the Mediterranean Sea with Acqua Di Gio Profumo by Giorgio Armani. This captivating men's fragrance embodies sophistication and intense masculinity, making it an unforgettable choice for the modern man. Just as the sea meets the rock, this scent marries freshness with robustness, creating a harmonious blend that lingers on the skin.",
+            "rating": 5,
+            "image": "assets/images/adg-profumo.png",
+            "occasion": "formal",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 25,
+            "name": "Terre D' Hermes" ,
+            "prices": {
+                "100ml": 371,
+                "5ml": 15,
+                "original": 371
+            },
+            "description": "Terre D'Hermes cologne is a warm fragrance for men with vibrant bursts of fruits and elevating fresh spices. Orange and grapefruit provide a citrusy opening, and the heart warms up with pepper, pelargonium and flint. The fragrance settles into its earthiness with coarse vetiver and other warm accords including cedar, patchouli and benzoin.",
+            "rating": 5,
+            "image": "assets/images/terre.png",
+            "occasion": "formal",
             "reviews": {
                 "total_count": 2,
                 "average_rating": 5,
