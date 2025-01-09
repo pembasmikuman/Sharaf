@@ -79,3 +79,20 @@ const ProductModule = (() => {
 
 // Initialize the Product Module
 window.addEventListener('DOMContentLoaded', ProductModule.init);
+
+const swiper = new Swiper('.swiper', {
+  loop: false,
+  grabCursor: true,
+  slidesPerView: '3',
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: '4',
+      spacebetween: 30
+    }
+  }
+})

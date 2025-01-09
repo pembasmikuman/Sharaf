@@ -117,15 +117,19 @@
         </div>
     </header>
 
-    <div class="breadcrumb" style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 1rem 0;">
-    <a href="#">Home</a> /
-    <a href="#">Shop</a> /
-    <a href="#">Natural</a>
-</div>
+    <div class="breadcrumb">
+        <a class="index" href="index.html" style="color: #666666;">
+            Home
+        </a>
+        <span style="color: #666666;"><i class="ri-arrow-right-s-line"></i></span>
+        Product
+    </div>
 
     <div class="product-container">
         <div class="product-images">
-            <div class="main-image"></div>
+            <div class="main-image">
+                <img class="product_img" src="assets/images/pandan-sticky-rice.png" alt="pandan sticky rice">
+            </div>
             <div class="thumbnail-list">
                 <div class="thumbnail"></div>
                 <div class="thumbnail"></div>
@@ -133,15 +137,29 @@
             </div>
         </div>
         <div class="product-info">
-            <h1 class="product-title">Pandan Sticky Rice</h1>
-            <div class="rating-container">
-                ⭐⭐⭐⭐⭐
-                <span>4.5/5</span>
-            </div>
-            <div class="price-container">
-                <span class="current-price">RM 200</span>
-                <span class="original-price">RM 400</span>
-                <span class="discount-badge">-50%</span>
+            <div class="product_details">
+                <h3 class="product-name">Pandan Sticky Rice</h3>
+
+                <div class="rating-wrapper">
+                    <i class="ri-star-fill star_icon"></i>
+                    <i class="ri-star-fill star_icon"></i>
+                    <i class="ri-star-fill star_icon"></i>
+                    <i class="ri-star-fill star_icon"></i>
+                    <i class="ri-star-fill star_icon"></i>
+                    5/
+                    <span style="font-weight: 100;">5</span>
+                </div>
+
+                <div class="price_wrapper">
+                    <h3>RM 90
+                        <h3 style="text-decoration: line-through; color: #999999;">
+                            RM 100
+                        </h3>
+                        <div class="discount_badge">
+                            -10%
+                        </div>
+                    </h3>
+                </div>
             </div>
             <p class="product-description">
                 Pandan Sticky Rice exudes a fresh, green aroma with hints of vanilla and coconut.
@@ -162,10 +180,10 @@
     </div>
 
     <div class="tabs" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-evenly; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">
-    <div class="tab">Product Details</div>
-    <div class="tab active">Rating & Reviews</div>
-    <div class="tab">FAQs</div>
-</div>
+        <div class="tab">Product Details</div>
+        <div class="tab active">Rating & Reviews</div>
+        <div class="tab">FAQs</div>
+    </div>
 
     <div class="reviews-section" style="max-width: 1200px; margin: 0 auto; padding: 2rem; text-align: center;">
         <div class="reviews-header">
@@ -215,7 +233,173 @@
     <div class="you-might-also-like">
         <h2>You might also like</h2>
         <div class="related-products">
-            
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-related swiper-slide">
+                        <div class="product_image">
+                            <img class= "product_img" src="assets/images/club-de-nuit.png" alt="club de nuit">
+                        </div>
+                        <div class="product_details">
+                            <h3 class="product_name">Club De Nuit</h3>
+    
+                            <div class="rating-wrapper">
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-fill star_icon"></i>
+                                <i class="ri-star-half-fill star_icon"></i>
+                                4.5/
+                                <span style="font-weight: 100;">5</span>
+                            </div>
+    
+                            <div class="price_wrapper">
+                                <h3>RM 120
+                                    <h3 style="text-decoration: line-through; color: #999999;">
+                                                    <span class="discount-badge">
+                                                    </span>
+                                    </h3>
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+    
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </div>
@@ -299,6 +483,7 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/product.js"></script>
     <script src="assets/js/promo-footer.js"></script>
 </body>
 </html>
