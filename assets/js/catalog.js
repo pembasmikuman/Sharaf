@@ -108,11 +108,12 @@ function createProductElement(product) {
         `<h3>RM ${currentPrice}</h3>`;
 
     article.innerHTML = `
-        <div class="product_image">
+    <a href="product.html?id=${product.id}" class="product-name-link">
+            <div class="product_image">
             <img class="product_img" src="${product.image}" alt="${product.name}">
         </div>
         <div class="product_details">
-            <a href="product.html?id=${product.id}" class="product-name-link"><h3 class="product_name">${product.name}</h3></a>
+            <h3 class="product_name">${product.name}</h3>
 
             <div class="rating-wrapper">
                 ${generateStarRating(product.rating)}
@@ -124,6 +125,7 @@ function createProductElement(product) {
                 ${priceHTML}
             </div>
         </div>
+        </a>
     `;
 
     return article;
