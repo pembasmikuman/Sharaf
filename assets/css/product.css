@@ -241,7 +241,7 @@ ul{
 
 .price_wrapper_like{
     display: flex;
-    gap: 1rem;
+    gap: 2%;
     align-items: center;
 }
 

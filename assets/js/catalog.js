@@ -271,5 +271,3 @@ document.querySelectorAll('.product-name-link').forEach(productLink => {
         window.location.href = `product.html?id=${productId}`;
     });
 });
-
-

@@ -140,7 +140,8 @@ ul{
     background-color: var(--white-color);
     padding: .5rem;
     box-shadow: 0 2px 4px #0000001a;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: var(--z-fixed);
 }
 
