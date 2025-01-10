@@ -224,7 +224,7 @@ ul{
 }
 
 .rating-value{
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-left: 1rem;
 }
 
@@ -235,12 +235,22 @@ ul{
 
 .price_wrapper{
     display: flex;
-    gap: 2%;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price_wrapper_like{
+    display: flex;
+    gap: 1rem;
     align-items: center;
 }
 
 .price_wrapper h3{
     font-size: 1.5rem;
+}
+
+.price_wrapper_like h3{
+    font-size: 1rem;
 }
 
 .discount_badge{

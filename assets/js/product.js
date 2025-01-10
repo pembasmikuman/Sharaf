@@ -161,7 +161,7 @@ function generateRelatedProducts() {
                       ${generateRatingStars(product.rating)}
                   </div>
 
-                  <div class="price_wrapper">
+                  <div class="price_wrapper_like">
                       <h3>RM ${product.prices['100ml']}
                           ${product.prices['100ml'] < product.prices.original ? `
                               <h3 style="text-decoration: line-through; color: #999999;">
