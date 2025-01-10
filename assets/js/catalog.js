@@ -112,7 +112,7 @@ function createProductElement(product) {
             <img class="product_img" src="${product.image}" alt="${product.name}">
         </div>
         <div class="product_details">
-            <h3 class="product_name">${product.name}</h3>
+            <a href="product.html?id=${product.id}" class="product-name-link"><h3 class="product_name">${product.name}</h3></a>
 
             <div class="rating-wrapper">
                 ${generateStarRating(product.rating)}
@@ -261,5 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
 });
 
+
+document.querySelectorAll('.product-name-link').forEach(productLink => {
+    productLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const productId = this.dataset.id;
+        window.location.href = `product.html?id=${productId}`;
+    });
+});
 
 
