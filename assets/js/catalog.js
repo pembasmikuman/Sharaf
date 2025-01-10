@@ -7,7 +7,9 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.display_header h1`, {transition: 500, origin: 'left', duration: 500})
-sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
+sr.reveal(`.filter_wrapper`, {transition: 500, origin:'left', duration: 500, delay: 100})
+sr.reveal(`.product_grid`, {transition: 500, origin:'left', duration: 1500, delay: 200})
+sr.reveal(`.product`, {transition: 500, origin:'left', duration: 1500})
 sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
 
 // ================= FILTER TOGGLE ================

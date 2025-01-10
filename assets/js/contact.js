@@ -20,9 +20,10 @@ closePopupButton.addEventListener('click', () => {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2500,
-    reset: false // Animation repeat
+    duration: 1000,
+    reset: true, // Animation repeat
+    once: true
 })
   
-sr.reveal(`.main`, {transition: 500, origin: 'left', duration: 500})
+sr.reveal(`.contact-container`, {transition: 500, origin: 'left'})
 sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
