@@ -134,7 +134,8 @@ function createProductElement(product) {
         `<h3>RM ${currentPrice}</h3>`;
 
     article.innerHTML = `
-        <div class="product_image">
+        <a href="product.html?id=${product.id}" class="product-name-link">
+            <div class="product_image">
             <img class="product_img" src="${product.image}" alt="${product.name}">
         </div>
         <div class="product_details">
@@ -150,11 +151,19 @@ function createProductElement(product) {
                 ${priceHTML}
             </div>
         </div>
+        </a>
     `;
 
     return article;
 }
 
+document.querySelectorAll('.product-name-link').forEach(productLink => {
+    productLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const productId = this.dataset.id;
+        window.location.href = `product.html?id=${productId}`;
+    });
+  });
 
 // Generate star rating HTML
 function generateStarRating(rating) {
