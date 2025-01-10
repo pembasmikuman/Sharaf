@@ -83,13 +83,17 @@ window.addEventListener('DOMContentLoaded', ProductModule.init);
 const swiper = new Swiper('.swiper', {
   loop: false,
   grabCursor: true,
-  slidesPerView: '3',
+  slidesPerView: '2',
 
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 
   breakpoints: {
+    768: {
+      slidesPerView: '3',
+      spacebetween: 30
+    },
     1024: {
       slidesPerView: '4',
       spacebetween: 30
