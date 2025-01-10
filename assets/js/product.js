@@ -107,7 +107,7 @@ function generateRatingStars(rating) {
     return Array(5).fill('')
         .map((_, index) => `<i class="ri-star-${index < rating ? 'fill' : 'line'} star_icon"></i>`)
         .join('') + 
-        `${rating}/<span style="font-weight: 100;">5</span>`;
+        `<div class="rating-value">${rating}/<span style="font-weight: 100;">5</span></div>`;
 }
 
 function calculateDiscount(currentPrice, originalPrice) {

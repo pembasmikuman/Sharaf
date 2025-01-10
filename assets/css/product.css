@@ -218,14 +218,29 @@ ul{
     object-fit: cover;
 }
 
+.rating-wrapper{
+    display: flex;
+    align-items: baseline;
+}
+
+.rating-value{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
 .star_icon{
-    color: #ffc205
+    color: #ffc205;
+    font-size: 1.4rem;
 }
 
 .price_wrapper{
     display: flex;
     gap: 2%;
     align-items: center;
+}
+
+.price_wrapper h3{
+    font-size: 1.5rem;
 }
 
 .discount_badge{
@@ -238,7 +253,6 @@ ul{
 }
 
 .product-description {
-    margin-top: 15px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -461,7 +475,7 @@ ul{
 
 .product_details {
     margin-top: 6%;
-    margin-bottom: 8%;
+    margin-bottom: 2%;
 }
 
 @media (min-width: 1024px) {
