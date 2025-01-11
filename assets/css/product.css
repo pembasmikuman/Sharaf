@@ -112,6 +112,7 @@ ul{
     .product-container {
         grid-template-columns: 1fr 1fr;
         max-width: 1200px;
+        height: auto;
     }
 }
 
@@ -143,9 +144,6 @@ ul{
 }
 
 @media (min-width: 768px) {
-    .product-images {
-        grid-template-columns: 1fr 3fr;
-    }
 
     .thumbnail-list {
         flex-direction: column;
@@ -495,7 +493,7 @@ ul{
     }
 
     .related-products {
-        padding: 1rem 30rem 0;
+        padding: 1rem 20rem 0;
         gap: 2.5rem;
     }
 
