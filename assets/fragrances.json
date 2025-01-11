@@ -750,88 +750,6 @@
 
         {
             "id": 19,
-            "name": "Pandan Sticky Rice",
-            "prices": {
-                "100ml": 82,
-                "5ml": 15,
-                "original": 95
-            },
-            "description": "The scent opens with the comforting aroma of pandan, instantly transporting you to a familiar place of warmth and togetherness. The rice accord follows, soft and soothing, evoking the essence of home-cooked meals shared with loved ones. White florals delicately weave through the fragrance, adding a layer of elegance and freshness, while a subtle touch of amber grounds the scent, offering a modern twist that lingers softly on the skin.",
-            "rating": 5,
-            "image": "assets/images/pandan-sticky-rice.png",
-            "occasion": "casual",
-            "reviews": {
-                "total_count": 2,
-                "average_rating": 5,
-                "comments": [
-                    {
-                        "id": "rev_001",
-                        "user_name": "John D.",
-                        "rating": 5,
-                        "verified_purchase": true,
-                        "date": "2024-01-01",
-                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
-                        "helpful_votes": 12,
-                        "size_purchased": "100ml"
-                    },
-                    {
-                        "id": "rev_002",
-                        "user_name": "Sarah S.",
-                        "rating": 5,
-                        "verified_purchase": true,
-                        "date": "2023-12-28",
-                        "comment": "Great scent but could last longer",
-                        "helpful_votes": 8,
-                        "size_purchased": "5ml"
-                    }
-                ]
-            },
-            "department": "new"
-        },
-
-        {
-            "id": 20,
-            "name": "Coconut Nanas",
-            "prices": {
-                "100ml": 90,
-                "5ml": 15,
-                "original": 120
-            },
-            "description": "With the perfect amount of sweetness from pineapple and peach is swirled into a pool of milky coconut vibe it’s a perfect head-turning scent for everyone.",
-            "rating": 5,
-            "image": "assets/images/coconut-nanas.png",
-            "occasion": "casual",
-            "reviews": {
-                "total_count": 2,
-                "average_rating": 5,
-                "comments": [
-                    {
-                        "id": "rev_001",
-                        "user_name": "John D.",
-                        "rating": 5,
-                        "verified_purchase": true,
-                        "date": "2024-01-01",
-                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
-                        "helpful_votes": 12,
-                        "size_purchased": "100ml"
-                    },
-                    {
-                        "id": "rev_002",
-                        "user_name": "Sarah S.",
-                        "rating": 5,
-                        "verified_purchase": true,
-                        "date": "2023-12-28",
-                        "comment": "Great scent but could last longer",
-                        "helpful_votes": 8,
-                        "size_purchased": "5ml"
-                    }
-                ]
-            },
-            "department": ""
-        },
-
-        {
-            "id": 21,
             "name": "Voyage",
             "prices": {
                 "100ml": 80,
@@ -872,7 +790,7 @@
         },
 
         {
-            "id": 22,
+            "id": 20,
             "name": "The One EDP",
             "prices": {
                 "100ml": 371,
@@ -913,7 +831,7 @@
         },
 
         {
-            "id": 23,
+            "id": 21,
             "name": "Irish Tweed",
             "prices": {
                 "100ml": 1164,
@@ -954,7 +872,7 @@
         },
 
         {
-            "id": 24,
+            "id": 22,
             "name": "Acqua Di Gio Profumo" ,
             "prices": {
                 "100ml": 550,
@@ -995,7 +913,7 @@
         },
 
         {
-            "id": 25,
+            "id": 23,
             "name": "Terre D' Hermes" ,
             "prices": {
                 "100ml": 371,
