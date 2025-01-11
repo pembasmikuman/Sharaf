@@ -951,6 +951,130 @@
                 ]
             },
             "department": ""
+        },
+
+        {
+            "id": 24,
+            "name": "Replica Jazz Club" ,
+            "prices": {
+                "100ml": 358,
+                "5ml": 15,
+                "original": 358
+            },
+            "description": "Replica Jazz Club Cologne by Maison Margiela, Saunter in wearing your fanciest suit and join your friends on the dance floor for a night of endless fun while wearing Replica Jazz Club. This heady men's fragrance combines spicy, balsamic, powdery and aromatic accords for a well-crafted olfactory treat that deserves to be enjoyed with a designer cocktail in hand. Top notes of zesty lemon, fresh neroli and bright pink pepper instantly set the scene with their vibrancy and exuberance. Adding to this are heart notes of Java vetiver oil, clary sage and rum, which lend a smoky, herbal ambience to the formula that imitates the dark rooms of the club itself. Finally, base notes of styrax, vanilla bean and tobacco leaf leave a creamy rich foundation that's sure to settle into your skin for hours after last call.",
+            "rating": 5,
+            "image": "assets/images/jazz-club.png",
+            "occasion": "Date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 25,
+            "name": "Baccarat Rouge 540" ,
+            "prices": {
+                "200ml": 4100,
+                "100ml": 2050,
+                "5ml": 15,
+                "original": 2050
+            },
+            "description": "Baccarat Rouge 540 extrait de parfum intensifies the radiance of the three auras found in the eau de parfum without betraying the original inspiration. The perfumer’s mastered craft and the wisdom gained with time gave birth to this woody extrait de perfume, an ultimate accomplishment for Francis Kurkdjian. The Grandiflorum jasmine head note gently underscores the craftsman’s voice. The hint of fire is enhanced with powdered epicurean facets of bitter almond. Lastly, the mineral note built around ambergris is tamed with an ambery and woody accord. Adding to the intensity of the extrait, the perfume bottle also plays with light. Its aesthetic dons a brilliant red robe reminiscent of Baccarat red. Baccarat Rouge 540 Maison Francis Kurkdjian extrait de parfum embodies the profusion and fusion of elements that can only be tamed by the art of the perfumer and the wisdom gained with time.",
+            "rating": 3.5,
+            "image": "assets/images/rouge-540.png",
+            "occasion": "Date",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
+        },
+
+        {
+            "id": 26,
+            "name": "Tuxedo" ,
+            "prices": {
+                "100ml": 1250,
+                "5ml": 15,
+                "original": 1250
+            },
+            "description": "TUXEDO captivates just like the iconic suit whose name it borrows. The lushness of Patchouli attracts and embraces, while the sensual mystery of Spices mesmerizes and arouses. A contemporary elegance perpetually reinvented with that particular impertinent touch that makes it so unique.",
+            "rating": 3.5,
+            "image": "assets/images/tuxedo.png",
+            "occasion": "formal",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
         }
     ]
 }
