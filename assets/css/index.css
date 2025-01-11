@@ -267,6 +267,10 @@ ul{
     object-fit: cover;
 }
 
+.product_img:hover{
+    transform: scale(1.1);
+}
+
 .product_details{
     margin-top: 6%;
     margin-bottom: 8%;

@@ -251,6 +251,10 @@ ul{
     object-fit: cover;
 }
 
+.product_img:hover{
+    transform: scale(1.1);
+}
+
 .star_icon{
     color: #ffc205
 }
