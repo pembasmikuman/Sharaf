@@ -29,7 +29,7 @@ This is our web development course project where we need to develop a website fo
 4. Start the server
 
 ```bash
-  npm run server.mjs
+  node server.mjs
 ```
 
 
