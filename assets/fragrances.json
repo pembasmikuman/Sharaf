@@ -1080,7 +1080,7 @@
 
         {
             "id": 27,
-            "name": "Blanco Aqua" ,
+            "name": "Aqua" ,
             "prices": {
                 "100ml": 19.90,
                 "5ml": 4.90,
@@ -1121,7 +1121,7 @@
         
         {
             "id": 28,
-            "name": "Szindore King Smokey" ,
+            "name": "King Smokey" ,
             "prices": {
                 "100ml": 19.90,
                 "5ml": 4.90,
