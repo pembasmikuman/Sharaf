@@ -10,7 +10,7 @@ This is our web development course project where we need to develop a website fo
 
 ```bash
   winget install node.js
-  winget install Git.Git
+  winget install git.git
 ```
 
 ### If already have Git and Node.js
