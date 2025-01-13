@@ -5,7 +5,7 @@ This is our web development course project where we need to develop a website fo
 
 ## Run Locally
 
-### Pre-requisite (Can skip to step no.2 if already installed Git and Node.js)
+### Pre-requisite (can skip to step no. 2 if you have already installed Git and Node.js.)
 1. On Windows, open Terminal
 
 ```bash
