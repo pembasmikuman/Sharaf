@@ -6,26 +6,27 @@ This is our web development course project where we need to develop a website fo
 
 ## Run Locally
 
-### Pre-requisite (Follow if you don't have git and node install yet)
-On Windows, open Terminal
+### Pre-requisite (Can just skip to Step No.2 if already have Git and Node.js)
+1. On Windows, open Terminal
 
 ```bash
   winget install node.js && winget install git
 ```
 
-Clone the project
+### If already have Git and Node.js
+2. Clone the project
 
 ```bash
   git clone https://github.com/pembasmikuman/Sharaf.git
 ```
 
-Go to the project directory
+3. Go to the project directory
 
 ```bash
   cd Sharaf
 ```
 
-Start the server
+4. Start the server
 
 ```bash
   npm run server.mjs
