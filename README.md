@@ -5,6 +5,7 @@ This is our web development course project where we need to develop a website fo
 
 
 ## Run Locally
+Make sure to have Node.js installed on your environment.
 
 Clone the project
 
@@ -16,12 +17,6 @@ Go to the project directory
 
 ```bash
   cd Sharaf
-```
-
-Install dependencies
-
-```bash
-  npm install chalk
 ```
 
 Start the server
