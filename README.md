@@ -32,6 +32,19 @@ This is our web development course project where we need to develop a website fo
   node server.mjs
 ```
 
+5. Alternatively, you can open using VS Code.
+
+```
+  cd ~
+  code .\Sharaf
+```
+
+6. Then, install Live Server Extension inside VS Code (if not yet).
+
+7. Open index.html
+
+8. Then click "Go Live" on status bar (bottom bar of the vs code). OR "ALT+L ALT+O"
+
 
 ## Screenshots
 Some sneak peek of our website.
