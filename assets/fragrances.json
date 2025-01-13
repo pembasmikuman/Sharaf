@@ -1075,6 +1075,47 @@
                 ]
             },
             "department": ""
+        },
+
+        {
+            "id": 27,
+            "name": "Blanco Aqua" ,
+            "prices": {
+                "100ml": 19.90,
+                "5ml": 4.90,
+                "original": 69.90
+            },
+            "description": "The more you sweat the better Aqua has to offer, good for outdoor use, truly a masterpiece by Wan Said himself",
+            "rating": 5,
+            "image": "assets/images/blancoaqua.png",
+            "occasion": "active",
+            "reviews": {
+                "total_count": 2,
+                "average_rating": 5,
+                "comments": [
+                    {
+                        "id": "rev_001",
+                        "user_name": "John D.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2024-01-01",
+                        "comment": "Amazing longevity and projection. Perfect for daily wear!",
+                        "helpful_votes": 12,
+                        "size_purchased": "100ml"
+                    },
+                    {
+                        "id": "rev_002",
+                        "user_name": "Sarah S.",
+                        "rating": 5,
+                        "verified_purchase": true,
+                        "date": "2023-12-28",
+                        "comment": "Great scent but could last longer",
+                        "helpful_votes": 8,
+                        "size_purchased": "5ml"
+                    }
+                ]
+            },
+            "department": ""
         }
     ]
 }
