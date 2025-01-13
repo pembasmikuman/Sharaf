@@ -1,16 +1,16 @@
-
-# Sharaf - fragrance e-commerce website
+# Sharaf - a fragrance e-commerce website
 
 This is our web development course project where we need to develop a website focusing on client-side scripting using vanilla HTML, CSS and JavaScript.
 
 
 ## Run Locally
 
-### Pre-requisite (Can just skip to Step No.2 if already have Git and Node.js)
+### Pre-requisite (can skip to step no. 2 if you have already installed Git and Node.js.)
 1. On Windows, open Terminal
 
 ```bash
-  winget install node.js && winget install git
+  winget install node.js
+  winget install git.git
 ```
 
 ### If already have Git and Node.js
@@ -29,7 +29,7 @@ This is our web development course project where we need to develop a website fo
 4. Start the server
 
 ```bash
-  npm run server.mjs
+  node server.mjs
 ```
 
 
