@@ -296,6 +296,14 @@ const checkoutButton = document.querySelector('.checkout-button');
 const cartItemsContainer = document.querySelector('.cart-items');
 
 checkoutButton.addEventListener('click', () => {
+
+    const cartItems = document.querySelectorAll('.cart-item');
+    
+    if (cartItems.length === 0) {
+        showPopup('Cart is empty!', true);
+        return;
+    }
+    
     // Clear cart from localStorage
     localStorage.removeItem('cart');
     
