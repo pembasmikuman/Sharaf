@@ -36,7 +36,7 @@ This is our web development course project where we need to develop a website fo
 
 ```
   cd ~
-  code .\Sharaf
+  code '.\Sharaf'
 ```
 
 6. Then, install Live Server Extension inside VS Code (if not yet).
