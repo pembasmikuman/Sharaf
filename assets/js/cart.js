@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 priceElement.textContent = `RM ${(basePrice * currentQuantity).toFixed(2)}`;
                 updateCartSummary();
             }
-        }); // Missing closing bracket was here
+        }); 
         
         // Increase quantity
         increaseButton.addEventListener('click', () => {
@@ -152,8 +152,6 @@ function updateCartSummary() {
     }
 }
 
-
-
 function displayCartItems() {
     const cartItemsContainer = document.querySelector('.cart-items');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -190,7 +188,6 @@ function displayCartItems() {
     updateCartSummary();
 }
 
-// Add this to cart.js
 function setupRemoveIcons() {
     const removeIcons = document.querySelectorAll('.remove-icon');
     
@@ -318,6 +315,19 @@ function submitNewsletter(email) {
 function displayPopup(message, isError = false) {
     const popup = document.createElement('div');
     popup.className = `popup ${isError ? 'error' : 'success'}`;
+
+    popup.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        border-radius: 5px;
+        z-index: 1000;
+        background-color: ${isError ? '#ff4444' : '#4CAF50'};
+        color: white;
+        animation: slideIn 0.3s ease-out;
+    `;
+
     popup.textContent = message;
     
     document.body.appendChild(popup);
