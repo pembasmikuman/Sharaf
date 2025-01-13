@@ -9,7 +9,8 @@ This is our web development course project where we need to develop a website fo
 1. On Windows, open Terminal
 
 ```bash
-  winget install node.js && winget install git
+  winget install node.js
+  winget install git
 ```
 
 ### If already have Git and Node.js
