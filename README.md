@@ -1,12 +1,11 @@
-
-# Sharaf - fragrance e-commerce website
+# Sharaf - a fragrance e-commerce website
 
 This is our web development course project where we need to develop a website focusing on client-side scripting using vanilla HTML, CSS and JavaScript.
 
 
 ## Run Locally
 
-### Pre-requisite (Can just skip to Step No.2 if already have Git and Node.js)
+### Pre-requisite (Can skip to step no.2 if already installed Git and Node.js)
 1. On Windows, open Terminal
 
 ```bash
