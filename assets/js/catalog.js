@@ -76,16 +76,67 @@ function applyInitialFilter(filterType, filter) {
     }
 }
 
-// Render products
 function renderProducts(products) {
     const productContainer = document.querySelector('.product_grid');
-    productContainer.innerHTML = ''; // Clear existing products
+    const displayHeader = document.querySelector('.display_header h1');
+    productContainer.innerHTML = '';
+    
+    // Get all active filters
+    let activeFilterTexts = [];
+    Object.entries(activeFilters).forEach(([type, filters]) => {
+        filters.forEach(filter => {
+            switch(filter.toLowerCase()) {
+                case 'new':
+                    activeFilterTexts.push('New Arrivals');
+                    break;
+                case 'top':
+                    activeFilterTexts.push('Top Selling');
+                    break;
+                case 'date':
+                    activeFilterTexts.push('Date Occasion');
+                    break;
+                case 'formal':
+                    activeFilterTexts.push('Formal Occasion');
+                    break;
+                case 'casual':
+                    activeFilterTexts.push('Casual Occasion');
+                    break;
+                case 'active':
+                    activeFilterTexts.push('Active Occasion');
+                    break;
+                case 'under100':
+                    activeFilterTexts.push('Under RM 100');
+                    break;
+                case '100to500':
+                    activeFilterTexts.push('RM 100 - RM 500');
+                    break;
+                case '500to1000':
+                    activeFilterTexts.push('RM 500 - RM 1000');
+                    break;
+                case 'morethan1000':
+                    activeFilterTexts.push('More than RM 1000');
+                    break;
+            }
+        });
+    });
+    
+    // Set header text
+    let headerText = activeFilterTexts.length > 0 
+        ? activeFilterTexts.join(' & ') 
+        : 'All Products';
+    
+    if (displayHeader) {
+        displayHeader.textContent = headerText;
+    }
+    
+    // Render products
     products.forEach(product => {
         const productElement = createProductElement(product);
         sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
         productContainer.appendChild(productElement);
     });
 }
+
 
 // Create a single product element
 function createProductElement(product) {
@@ -110,7 +161,7 @@ function createProductElement(product) {
     article.innerHTML = `
     <a href="product.html?id=${product.id}" class="product-name-link">
             <div class="product_image">
-            <img class="product_img" src="${product.image}" alt="${product.name}">
+            <img loading="lazy" class="product_img" src="${product.image}" alt="${product.name}">
         </div>
         <div class="product_details">
             <h3 class="product_name">${product.name}</h3>

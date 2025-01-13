@@ -136,7 +136,7 @@ function createProductElement(product) {
     article.innerHTML = `
         <a href="product.html?id=${product.id}" class="product-name-link">
             <div class="product_image">
-            <img class="product_img" src="${product.image}" alt="${product.name}">
+            <img loading="lazy" class="product_img" src="${product.image}" alt="${product.name}">
         </div>
         <div class="product_details">
             <h3 class="product_name">${product.name}</h3>

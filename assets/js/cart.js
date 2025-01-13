@@ -31,76 +31,133 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCartSummary();
         });
     });
- // Promo code functionality
- const promoCodeInput = document.querySelector('.promo-code .input');
- const applyButton = document.querySelector('.promo-code .apply-button');
 
- applyButton.addEventListener('click', () => {
-     const promoCode = promoCodeInput.value.trim().toLowerCase();
-     const discountLabel = document.querySelector('.discount-label');
+    // Promo code functionality
+    const promoCodeInput = document.querySelector('.promo-code .input');
+    const applyButton = document.querySelector('.promo-code .apply-button');
 
-     if (promoCode === 'webtech') {
-         isPromoCodeApplied = true;
-         updateCartSummary();
-         if (discountLabel) {
-             discountLabel.textContent = 'Discount (-40%)';
-         }
-         showPopup('Voucher applied!');
-     } else {
-         isPromoCodeApplied = false;
-         if (discountLabel) {
-             discountLabel.textContent = 'Discount (-20%)';
-         }
-         showPopup('Invalid promo code!', true);
-     }
- });
+    applyButton.addEventListener('click', () => {
+        const promoCode = promoCodeInput.value.trim().toLowerCase();
+        const discountLabel = document.querySelector('.discount-label');
 
- // Add this function before the promo code event listener
-function showPopup(message, isError = false) {
-    const popup = document.createElement('div');
-    popup.classList.add('popup');
-    
-    if (isError) {
-        popup.style.backgroundColor = '#ff4444';
-        popup.style.color = 'white';
-    } else {
-        popup.style.backgroundColor = '#4CAF50';
-        popup.style.color = 'white';
+        if (promoCode === 'webtech') {
+            isPromoCodeApplied = true;
+            updateCartSummary();
+            if (discountLabel) {
+                discountLabel.textContent = 'Discount (-40%)';
+            }
+            showPopup('Voucher applied!');
+        } else {
+            isPromoCodeApplied = false;
+            if (discountLabel) {
+                discountLabel.textContent = 'Discount (-20%)';
+            }
+            showPopup('Invalid promo code!', true);
+        }
+    });
+
+    // Add this function before the promo code event listener
+    function showPopup(message, isError = false) {
+        const popup = document.createElement('div');
+        popup.classList.add('popup');
+        
+        if (isError) {
+            popup.style.backgroundColor = '#ff4444';
+            popup.style.color = 'white';
+        } else {
+            popup.style.backgroundColor = '#4CAF50';
+            popup.style.color = 'white';
+        }
+        
+        popup.textContent = message;
+        popup.style.position = 'fixed';
+        popup.style.top = '20px';
+        popup.style.right = '20px';
+        popup.style.padding = '15px 25px';
+        popup.style.borderRadius = '5px';
+        popup.style.zIndex = '1000';
+        popup.style.animation = 'slideIn 0.3s ease-out';
+        
+        document.body.appendChild(popup);
+        
+        setTimeout(() => {
+            popup.remove();
+        }, 3000);
     }
-    
-    popup.textContent = message;
-    popup.style.position = 'fixed';
-    popup.style.top = '20px';
-    popup.style.right = '20px';
-    popup.style.padding = '15px 25px';
-    popup.style.borderRadius = '5px';
-    popup.style.zIndex = '1000';
-    popup.style.animation = 'slideIn 0.3s ease-out';
-    
-    document.body.appendChild(popup);
-    
-    setTimeout(() => {
-        popup.remove();
-    }, 3000);
-}
 
-// Add this CSS for the animation
-const style = document.createElement('style');
-style.textContent = `
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
+    // Add this CSS for the animation
+    const style = document.createElement('style');
+    style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-`;
-document.head.appendChild(style);
-
+    `;
+    document.head.appendChild(style);
 });
+
+function setupQuantityControls() {
+    const quantityControls = document.querySelectorAll('.quantity-control');
+    
+    quantityControls.forEach(control => {
+        const quantityElement = control.querySelector('.quantity');
+        const decreaseButton = control.querySelector('.quantity-decrease');
+        const increaseButton = control.querySelector('.quantity-increase');
+        const cartItem = control.closest('.cart-item');
+        const itemId = cartItem.dataset.id;
+        const itemSize = cartItem.dataset.size;
+        
+        // Get base price from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemData = cart.find(item => item.id === parseInt(itemId) && item.size === itemSize);
+        const basePrice = cartItemData ? cartItemData.basePrice : 0;
+        
+        // Decrease quantity
+        decreaseButton.addEventListener('click', () => {
+            let currentQuantity = parseInt(quantityElement.textContent, 10);
+            if (currentQuantity > 1) {
+                currentQuantity -= 1;
+                updateQuantity(itemId, itemSize, currentQuantity, basePrice);
+            }
+        });
+        
+        // Increase quantity
+        increaseButton.addEventListener('click', () => {
+            let currentQuantity = parseInt(quantityElement.textContent, 10);
+            currentQuantity += 1;
+            updateQuantity(itemId, itemSize, currentQuantity, basePrice);
+        });
+    });
+}
+
+function updateQuantity(itemId, itemSize, newQuantity, basePrice) {
+    // Update localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const itemIndex = cart.findIndex(item => item.id === parseInt(itemId) && item.size === itemSize);
+    
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity = newQuantity;
+        cart[itemIndex].price = basePrice * newQuantity;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Update DOM
+        const cartItem = document.querySelector(`.cart-item[data-id="${itemId}"][data-size="${itemSize}"]`);
+        if (cartItem) {
+            cartItem.querySelector('.quantity').textContent = newQuantity;
+            cartItem.querySelector('.item-price').textContent = `RM ${(basePrice * newQuantity).toFixed(2)}`;
+        }
+        
+        // Update cart summary
+        updateCartSummary();
+    }
+}
+
 
 function updateCartSummary() {
     let subtotal = 0;
@@ -175,9 +232,9 @@ function displayCartItems() {
                         <div class="item-actions">
                             <span class="remove-icon"><i class="ri-delete-bin-line remove-icon"></i></span>
                             <div class="quantity-control">
-                                <span class="quantity-decrease"><ion-icon name="remove-outline"></ion-icon></span>
+                                <button class="quantity-decrease"><ion-icon name="remove-outline"></ion-icon></button>
                                 <div class="quantity">${item.quantity}</div>
-                                <span class="quantity-increase"><ion-icon name="add-outline"></ion-icon></span>
+                                <button class="quantity-increase"><ion-icon name="add-outline"></ion-icon></button>
                             </div>
                         </div>
                     </div>
@@ -205,10 +262,11 @@ function setupRemoveIcons() {
             
             // Remove from UI
             cartItem.remove();
+            checkEmptyCart();
             updateCartSummary();
             
             // Show removal message
-            showRemoveMessage();
+            showPopup('Item removed from cart', true);
         });
     });
 }
@@ -225,20 +283,13 @@ function removeFromLocalStorage(itemId, itemSize) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-function showRemoveMessage() {
-    const message = document.createElement('div');
-    message.className = 'remove-message';
-    message.innerHTML = `
-        <div class="message-content">
-            <i class="ri-delete-bin-line"></i>
-            Item removed from cart
-        </div>
-    `;
-    document.body.appendChild(message);
+function checkEmptyCart() {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const cartItems = document.querySelectorAll('.cart-item');
     
-    setTimeout(() => {
-        message.remove();
-    }, 2000);
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
+    }
 }
 
 const checkoutButton = document.querySelector('.checkout-button');
@@ -357,11 +408,10 @@ function handleNewsletterSubmission(event) {
     }
 }
 
-// Initialize cart display when cart.html loads
 document.addEventListener('DOMContentLoaded', ()=> {
-
     displayCartItems();
     setupRemoveIcons();
+    setupQuantityControls();
 });
 
 

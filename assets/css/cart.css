@@ -403,6 +403,10 @@ ul{
     .summary-item {
         flex: 1 1 calc(50% - 10px);
     }
+
+    .apply-button{
+        width: 30%;
+    }
 }
 
 /* Desktop Styles */

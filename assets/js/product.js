@@ -54,7 +54,7 @@ async function fetchProductDetails() {
         const productHTML = `
             <div class="product-images">
                 <div class="main-image">
-                    <img class="product_img" src="${currentProduct.image}" alt="${currentProduct.name}">
+                    <img loading="lazy" class="product_img" src="${currentProduct.image}" alt="${currentProduct.name}">
                 </div>
             </div>
             <div class="product-info">
@@ -152,7 +152,7 @@ function generateRelatedProducts() {
       const slide = `
           <article class="product-related swiper-slide">
               <div class="product_image">
-                  <img class="product_img" src="${product.image}" alt="${product.name}">
+                  <img loading="lazy" class="product_img" src="${product.image}" alt="${product.name}">
               </div>
               <div class="product_details">
                   <a href="product.html?id=${product.id}" class="product-name-link"><h3 class="product_name">${product.name}</h3></a>
