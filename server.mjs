@@ -21,18 +21,29 @@ const MIME_TYPES = {
 
 const server = http.createServer(async (req, res) => {
     try {
-        // Get the file path from the URL
-        let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
-        
+        // Parse URL and query parameters
+        const url = new URL(req.url, `http://${req.headers.host}`);
+        let filePath;
+
+        // Handle root path
+        if (url.pathname === '/') {
+            filePath = path.join(__dirname, 'index.html');
+        }
+        // Handle dynamic product pages
+        else if (url.pathname.includes('product.html')) {
+            filePath = path.join(__dirname, 'product.html');
+        }
         // Handle assets folder requests
-        if (req.url.startsWith('/assets/')) {
-            filePath = path.join(__dirname, req.url);
+        else if (url.pathname.startsWith('/assets/')) {
+            filePath = path.join(__dirname, url.pathname);
+        }
+        // Handle other static files
+        else {
+            filePath = path.join(__dirname, url.pathname);
         }
 
-        // Get file extension
+        // Get file extension and content type
         const ext = path.extname(filePath);
-        
-        // Set content type based on file extension
         const contentType = MIME_TYPES[ext] || 'text/plain';
 
         try {
@@ -40,14 +51,18 @@ const server = http.createServer(async (req, res) => {
             res.writeHead(200, { 'Content-Type': contentType });
             res.end(data);
         } catch (error) {
-            // If file not found, serve index.html for client-side routing
-            if (error.code === 'ENOENT' && ext === '.html') {
-                const indexHtml = await fs.readFile(path.join(__dirname, 'index.html'));
-                res.writeHead(200, { 'Content-Type': 'text/html' });
-                res.end(indexHtml);
+            if (error.code === 'ENOENT') {
+                // If HTML file not found, serve index.html for client-side routing
+                if (ext === '.html') {
+                    const indexHtml = await fs.readFile(path.join(__dirname, 'index.html'));
+                    res.writeHead(200, { 'Content-Type': 'text/html' });
+                    res.end(indexHtml);
+                } else {
+                    res.writeHead(404, { 'Content-Type': 'text/plain' });
+                    res.end('404 Not Found');
+                }
             } else {
-                res.writeHead(404, { 'Content-Type': 'text/plain' });
-                res.end('404 Not Found');
+                throw error;
             }
         }
     } catch (error) {
