@@ -6,7 +6,7 @@ This is our web development course project where we need to develop a website fo
 
 ## Run Locally
 
-###Pre-requisite (Follow if you don't have git and node install yet)
+### Pre-requisite (Follow if you don't have git and node install yet)
 On Windows, open Terminal
 
 ```bash
