@@ -384,3 +384,15 @@ function handleNewsletterSubmission(event) {
         displayPopup('Please enter a valid email address', true);
     }
 }
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    reset: false // Animation repeat
+})
+
+sr.reveal(`.product-container`, {transition:1000, origin: 'left', duration: 1000})
+sr.reveal(`.review-list, .review`, {transition:1000, origin:'bottom', duration:1000})
+sr.reveal(`.you-might-also-like h2`, {transition:1000, origin:'left', duration:1000})
+sr.reveal(`.footer_container`, {transition: 500, origin:'bottom', delay: 100})
