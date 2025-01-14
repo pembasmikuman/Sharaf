@@ -2,6 +2,12 @@
 
 This is our web development course project where we need to develop a website focusing on client-side scripting using vanilla HTML, CSS and JavaScript.
 
+## THINGS YOU NEED TO KNOW BEFORE RUNNING
+
+1. Basically, all page is link to one another, no placeholder and etc.
+2. searching only works on catalog page.
+3. For authentication, need to sign up first since account is stored in localStorage.
+4. Can use promo code "webtech" to get 40% OFF when checking out ! YEAY
 
 ## Run Locally
 
