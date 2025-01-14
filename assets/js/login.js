@@ -22,25 +22,45 @@ document.addEventListener('DOMContentLoaded', function() {
         sr.reveal(`.hidden`, {transition:1000, origin: 'left'});
     });
 });
-function showPopup(message, isSuccess) {
-    const popup = document.createElement('div');
-    popup.textContent = message;
-    popup.style.position = 'fixed';
-    popup.style.top = '20px';
-    popup.style.right = '20px';
-    popup.style.animation = 'slideIn 0.3s ease-out';
-    popup.style.padding = '10px 20px';
-    popup.style.borderRadius = '5px';
-    popup.style.color = 'white';
-    popup.style.backgroundColor = isSuccess ? 'green' : 'red';
-    popup.style.zIndex = '1000';
-  
-    document.body.appendChild(popup);
-  
-    setTimeout(() => {
-      popup.remove();
-    }, 3000);
-  }
+
+function showPopup(message, isError = false) {
+
+  const $popup = $('<div>', {
+      class: 'popup',
+      text: message
+  }).css({
+      position: 'fixed',
+      top: '20px',
+      right: '-300px', 
+      padding: '15px 25px',
+      borderRadius: '5px',
+      zIndex: 1000,
+      backgroundColor: isError ? '#ff4444' : '#4CAF50',
+      color: 'white'
+  });
+
+  $('body').append($popup);
+
+  $popup.animate({
+      right: '20px'
+  }, {
+      duration: 300,
+      easing: 'swing'
+  });
+
+  setTimeout(() => {
+      $popup.animate({
+          right: '-300px'
+      }, {
+          duration: 300,
+          easing: 'swing',
+          complete: function() {
+              $(this).remove();
+          }
+      });
+  }, 2000);
+}
+
 
 function handleSignup(e) {
   e.preventDefault();

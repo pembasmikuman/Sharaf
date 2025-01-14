@@ -318,28 +318,42 @@ checkoutButton.addEventListener('click', () => {
 });
 
 function showPopup(message, isError = false) {
-    const popup = document.createElement('div');
-    popup.classList.add('popup');
-    
-    popup.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 15px 25px;
-        border-radius: 5px;
-        z-index: 1000;
-        background-color: ${isError ? '#ff4444' : '#4CAF50'};
-        color: white;
-        animation: slideIn 0.3s ease-out;
-    `;
-    
-    popup.textContent = message;
-    document.body.appendChild(popup);
-    
+
+    const $popup = $('<div>', {
+        class: 'popup',
+        text: message
+    }).css({
+        position: 'fixed',
+        top: '20px',
+        right: '-300px', 
+        padding: '15px 25px',
+        borderRadius: '5px',
+        zIndex: 1000,
+        backgroundColor: isError ? '#ff4444' : '#4CAF50',
+        color: 'white'
+    });
+  
+    $('body').append($popup);
+  
+    $popup.animate({
+        right: '20px'
+    }, {
+        duration: 300,
+        easing: 'swing'
+    });
+  
     setTimeout(() => {
-        popup.remove();
+        $popup.animate({
+            right: '-300px'
+        }, {
+            duration: 300,
+            easing: 'swing',
+            complete: function() {
+                $(this).remove();
+            }
+        });
     }, 2000);
-}
+  }
 
 const newsletterForm = document.querySelector('.newsletter_card');
 newsletterForm.addEventListener('submit', handleNewsletterSubmission);
