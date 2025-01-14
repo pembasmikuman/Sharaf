@@ -2,6 +2,10 @@
 
 This is our web development course project where we need to develop a website focusing on client-side scripting using vanilla HTML, CSS and JavaScript.
 
+## THINGS YOU NEED TO KNOW BEFORE RUNNING
+
+1. Basically, all page is link to one another, no placeholder and etc.
+2. searching only works on catalog page.
 
 ## Run Locally
 
