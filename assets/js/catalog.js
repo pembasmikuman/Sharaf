@@ -38,34 +38,38 @@ let activeFilters = {
 };
 
 // Fetch product data
-async function fetchProducts() {
-    try {
-        const response = await fetch('assets/fragrances.json');
-        const data = await response.json();
-        Products = data.fragrances;
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const filterType = urlParams.get('filterType');
-        const filter = urlParams.get('filter');
-        
-        if (filter && filterType) {
-            applyInitialFilter(filterType, filter);
-        } else {
-            renderProducts(Products);
+function fetchProducts() {
+    $.ajax({
+        url: 'assets/fragrances.json',
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            Products = data.fragrances;
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const filterType = urlParams.get('filterType');
+            const filter = urlParams.get('filter');
+            
+            if (filter && filterType) {
+                applyInitialFilter(filterType, filter);
+            } else {
+                renderProducts(Products);
+            }
+            
+            console.log(Products);
+            setupSearchFunctionality();
+            setupFilterListeners();
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching products:', error);
         }
-
-        console.log(Products);
-        setupSearchFunctionality();
-        setupFilterListeners();
-    } catch (error) {
-        console.error('Error fetching products:', error);
-    }
+    });
 }
 
 function applyInitialFilter(filterType, filter) {
-    const filterButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-    if (filterButton) {
-        filterButton.classList.add('active');
+    const $filterButton = $(`.filter-btn[data-filter="${filter}"]`);
+    if ($filterButton.length) {
+        $filterButton.addClass('active');
         activeFilters[filterType] = [filter];
         applyFilters();
     } else {
@@ -77,13 +81,12 @@ function applyInitialFilter(filterType, filter) {
 }
 
 function renderProducts(products) {
-    const productContainer = document.querySelector('.product_grid');
-    const displayHeader = document.querySelector('.display_header h1');
-    productContainer.innerHTML = '';
+    const $productContainer = $('.product_grid');
+    const $displayHeader = $('.display_header h1');
+    $productContainer.empty();
     
-    // Get all active filters
     let activeFilterTexts = [];
-    Object.entries(activeFilters).forEach(([type, filters]) => {
+    $.each(activeFilters, function(type, filters) {
         filters.forEach(filter => {
             switch(filter.toLowerCase()) {
                 case 'new':
@@ -120,22 +123,21 @@ function renderProducts(products) {
         });
     });
     
-    // Set header text
     let headerText = activeFilterTexts.length > 0 
         ? activeFilterTexts.join(' & ') 
         : 'All Products';
     
-    if (displayHeader) {
-        displayHeader.textContent = headerText;
+    if ($displayHeader.length) {
+        $displayHeader.text(headerText);
     }
     
-    // Render products
     products.forEach(product => {
         const productElement = createProductElement(product);
-        sr.reveal(`.product`, {transition: 500, origin:'left', duration: 500, delay: 100})
-        productContainer.appendChild(productElement);
+        sr.reveal('.product', {transition: 500, origin:'left', duration: 500, delay: 100});
+        $productContainer.append(productElement);
     });
 }
+
 
 
 // Create a single product element
