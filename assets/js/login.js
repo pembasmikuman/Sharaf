@@ -27,8 +27,8 @@ function showPopup(message, isSuccess) {
     popup.textContent = message;
     popup.style.position = 'fixed';
     popup.style.top = '20px';
-    popup.style.left = '50%';
-    popup.style.transform = 'translateX(-50%)';
+    popup.style.right = '20px';
+    popup.style.animation = 'slideIn 0.3s ease-out';
     popup.style.padding = '10px 20px';
     popup.style.borderRadius = '5px';
     popup.style.color = 'white';
