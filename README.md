@@ -4,10 +4,12 @@ This is our web development course project where we need to develop a website fo
 
 ## THINGS YOU NEED TO KNOW BEFORE RUNNING
 
-1. Basically, all page is link to one another, no placeholder and etc.
-2. searching only works on catalog page.
-3. For authentication, need to sign up first since account is stored in localStorage.
-4. Can use promo code "webtech" to get 40% OFF when checking out ! YEAY
+1. Basically, all page is link to one another, no placeholder and etc (can directly open from any page).
+2. Product data is stored in JSON file and are fetch and display during page load.
+3. Searching functionaly only works on catalog page.
+4. For authentication, need to sign up first since account is stored in localStorage.
+5. We implement JQuery UI on function showPopup (with slide-in animation) on both login and cart page.
+6. Can use promo code "webtech" to get 40% OFF when checking out! YAY
 
 ## Run Locally
 
@@ -49,7 +51,7 @@ This is our web development course project where we need to develop a website fo
 
 7. Open index.html
 
-8. Then click "Go Live" on status bar (bottom bar of the vs code). OR "ALT+L ALT+O"
+8. Then click "Go Live" on status bar (bottom bar of the vs code).
 
 
 ## Screenshots
